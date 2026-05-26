@@ -89,7 +89,7 @@ export default function Navbar() {
               alt="TechSisConsult"
               width={180}
               height={52}
-              className="h-40 w-40 object-contain"
+              className="h-40 w-48 object-contain"
               priority
             />
           </a>

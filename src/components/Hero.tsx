@@ -155,7 +155,7 @@ export default function Hero() {
           />
 
           {/* Animated glow blob */}
-          <motion.div
+          {/* <motion.div
             animate={{ scale: [1, 1.18, 1], opacity: [0.1, 0.2, 0.1] }}
             transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
             className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full pointer-events-none"
@@ -163,10 +163,10 @@ export default function Hero() {
               background: `radial-gradient(circle, ${slide.shape}33 0%, transparent 70%)`,
               filter: 'blur(60px)',
             }}
-          />
+          /> */}
 
           {/* Decorative vertical gold line */}
-          <motion.div
+          {/* <motion.div
             initial={{ scaleY: 0, opacity: 0 }}
             animate={{ scaleY: 1, opacity: 1 }}
             transition={{ duration: 0.9, ease, delay: 0.3 }}
@@ -174,10 +174,10 @@ export default function Hero() {
             style={{
               background: `linear-gradient(to bottom, transparent, ${slide.shape}, transparent)`,
             }}
-          />
+          /> */}
 
           {/* ── CONTENT ── */}
-          <div className="relative h-full max-w-[1280px] mx-auto px-6 lg:px-16 flex flex-col justify-center gap-7">
+          <div className="relative h-full max-w-[1280px] mx-auto px-6 lg:px-16 flex flex-col justify-center gap-7 pt-[100px]">
             {/* Badge */}
             <motion.div
               custom={0}
@@ -185,8 +185,8 @@ export default function Hero() {
               initial="hidden"
               animate="visible"
             >
-              <span className="inline-flex items-center gap-2 border border-[#d4a843]/40 bg-[#d4a843]/10 text-[#d4a843] text-[11px] font-bold uppercase tracking-[0.18em] px-4 py-1.5 rounded-full backdrop-blur-sm">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#d4a843] animate-pulse" />
+              <span className="inline-flex items-center gap-2 bg-[#d4a843]/10 text-[#d4a843] text-[11px] font-bold uppercase tracking-[0.18em] px-4 py-1.5 rounded-md backdrop-blur-sm">
+                {/* <span className="w-1.5 h-1.5 rounded-full bg-[#d4a843] animate-pulse" /> */}
                 {slide.badge}
               </span>
             </motion.div>
