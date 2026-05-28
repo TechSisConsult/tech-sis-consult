@@ -3,16 +3,18 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import Image from 'next/image';
-import { FaBook, FaFacebook, FaTiktok, FaTwitter } from 'react-icons/fa';
+import { FaBook, FaFacebook, FaTiktok } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa6';
 import { MdOutlineEmail } from 'react-icons/md';
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Portfolio', href: '#portfolio' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Services', href: '/services' },
+  { label: 'Portfolio', href: '/portfolio' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 const socials = [
@@ -24,7 +26,14 @@ const socials = [
   {
     label: 'Twitter',
     href: '#',
-    svg: <FaTwitter />,
+    svg: (
+      <Image
+        src={'/twitter-x-gray.png'}
+        alt="twitter-logo"
+        width={20}
+        height={20}
+      />
+    ),
   },
   {
     label: 'Instagram',
@@ -38,9 +47,10 @@ const socials = [
   },
 ];
 
-export default function Navbar() {
+export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -51,24 +61,24 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       <div className="w-full bg-[#003049]">
-        <div className="max-w-[1280px] mx-auto px-6 h-9 flex items-center justify-between">
-          <a
-            href="mailto:fatimaoyiza18@gmail.com"
-            className="flex items-center gap-2 text-white/65 hover:text-[#d4a843] text-xs transition-colors duration-200"
+        <div className="max-w-[1280px] mx-auto px-6 h-9 flex items-center justify-between py-6">
+          <Link
+            href="mailto:hello@techsisconsult.org"
+            className="flex items-center gap-2 text-white/65 hover:text-[#d4a843] text-sm transition-colors duration-200"
           >
             <MdOutlineEmail className="w-4 h-4" />
             hello@techsisconsult.org
-          </a>
+          </Link>
           <div className="flex items-center gap-3.5">
             {socials.map((s) => (
-              <a
+              <Link
                 key={s.label}
                 href={s.href}
                 aria-label={s.label}
                 className="text-white/55 hover:text-[#d4a843] transition-colors duration-200"
               >
                 {s.svg}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -83,38 +93,44 @@ export default function Navbar() {
       >
         <div className="max-w-[1280px] mx-auto px-6 h-[68px] flex items-center justify-between gap-6">
           {/* Logo */}
-          <a href="#home" className="flex-shrink-0">
+          <Link href="/" className="flex-shrink-0">
             <Image
               src="/website-logo.png"
               alt="TechSisConsult"
               width={180}
               height={52}
-              className="h-40 w-48 object-contain"
+              className="h-28 w-auto object-contain"
               priority
             />
-          </a>
+          </Link>
 
           {/* Desktop links */}
           <nav className="hidden lg:flex items-center gap-10">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="relative text-[#003049] hover:text-[#d4a843] text-lg font-semibold tracking-wide transition-colors duration-200 py-1 group"
-              >
-                {link.label}
-                <span className="absolute -bottom-0.5 left-0 w-0 h-[2px] bg-[#003049] rounded-full transition-all duration-300 group-hover:w-full" />
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const isActive =
+                link.href === '/'
+                  ? pathname === '/'
+                  : pathname.startsWith(link.href);
+              return (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className={`relative ${isActive ? 'text-[#d4a843] scale-125' : 'text-[#003049] hover:text-[#d4a843]'} text-lg font-semibold tracking-wide transition-colors duration-200 py-1 group`}
+                >
+                  {link.label}
+                  {/* <span className="absolute -bottom-0.5 left-0 w-0 h-[2px] bg-[#003049] rounded-full transition-all duration-300 group-hover:w-full" /> */}
+                </Link>
+              );
+            })}
           </nav>
 
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="hidden lg:inline-flex items-center gap-2 border border-[#bf9630] hover:bg-[#bf9630] text-[#003049] text-sm font-bold px-5 py-2.5 rounded-xs transition-all duration-200 hover:shadow-lg hover:shadow-[#d4a843]/30 hover:-translate-y-px flex-shrink-0"
           >
             Book an Appointment
             <FaBook />
-          </a>
+          </Link>
 
           {/* Mobile burger */}
           <button
@@ -149,23 +165,29 @@ export default function Navbar() {
             className="lg:hidden bg-white border-b border-gray-100 shadow-lg overflow-hidden"
           >
             <nav className="max-w-[1280px] mx-auto px-6 py-5 flex flex-col gap-1">
-              {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="text-[#003049] hover:text-[#d4a843] font-semibold text-sm py-2.5 border-b border-gray-50 last:border-0 transition-colors"
-                >
-                  {link.label}
-                </a>
-              ))}
-              <a
-                href="#contact"
+              {navLinks.map((link) => {
+                const isActive =
+                  link.href === '/'
+                    ? pathname === '/'
+                    : pathname.startsWith(link.href);
+                return (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => setMenuOpen(false)}
+                    className={`${isActive ? 'text-[#d4a843] scale-75' : 'text-[#003049] hover:text-[#d4a843]'} font-semibold text-sm py-2.5 border-b border-gray-50 last:border-0 transition-colors`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+              <Link
+                href="/contact"
                 onClick={() => setMenuOpen(false)}
                 className="mt-3 flex justify-center items-center bg-[#d4a843] text-[#003049] font-bold py-3 rounded-full text-sm"
               >
                 Book an Appointment
-              </a>
+              </Link>
             </nav>
           </motion.div>
         )}

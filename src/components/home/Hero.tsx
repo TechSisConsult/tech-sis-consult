@@ -13,8 +13,8 @@ const SLIDES = [
     headline: ['Your Business Deserves', 'More Than a Basic', 'Website.'],
     highlight: 2,
     sub: "We design and build professional websites that don't just look good — they convert visitors into paying customers, 24/7.",
-    cta1: { label: 'Get Your Website', href: '#contact' },
-    cta2: { label: 'See Our Work', href: '#portfolio' },
+    cta1: { label: 'Get Your Website', href: '/contact' },
+    cta2: { label: 'See Our Work', href: '/portfolio' },
     shape: '#d4a843',
   },
   {
@@ -22,12 +22,12 @@ const SLIDES = [
     bg: '/bg-2.png',
     bgGradient: 'from-[#1a0e00] via-[#2d1a00] to-[#1a0e00]',
     accent: '#003049',
-    badge: 'Ecommerce Stores',
+    badge: 'E-commerce Stores',
     headline: ['Ready to Sell', 'Online and', 'Scale Fast?'],
     highlight: 2,
-    sub: 'From product listings to checkout — we build ecommerce stores that are fast, beautiful, and built to sell. Your store. Open always.',
-    cta1: { label: 'Build My Store', href: '#contact' },
-    cta2: { label: 'Our Services', href: '#services' },
+    sub: 'From product listings to checkout — we build e-commerce stores that are fast, beautiful, and built to sell. Your store. Open always.',
+    cta1: { label: 'Book a Free Consult', href: '/contact' },
+    cta2: { label: 'Our Services', href: '/services' },
     shape: '#d4a843',
   },
   {
@@ -39,8 +39,8 @@ const SLIDES = [
     headline: ['Stop Doing', 'Repetitive Tasks.', 'Let Tech Work for You.'],
     highlight: 1,
     sub: 'We automate your lead capture, email follow-ups, bookings, and payments — so you focus on what matters most: growing your business.',
-    cta1: { label: 'Automate My Business', href: '#contact' },
-    cta2: { label: 'Learn How', href: '#services' },
+    cta1: { label: 'Automate My Business', href: '/contact' },
+    cta2: { label: 'Learn How', href: '/services' },
     shape: '#d4a843',
   },
 ];
@@ -142,7 +142,7 @@ export default function Hero() {
           )}
 
           {/* Dark overlay so text is always readable over real images */}
-          <div className="absolute inset-0 bg-[#003049]/70" />
+          <div className="absolute inset-0 bg-[#003049]/60" />
 
           {/* Dot-grid texture */}
           <div
@@ -153,28 +153,6 @@ export default function Hero() {
               backgroundSize: '38px 38px',
             }}
           />
-
-          {/* Animated glow blob */}
-          {/* <motion.div
-            animate={{ scale: [1, 1.18, 1], opacity: [0.1, 0.2, 0.1] }}
-            transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-            className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full pointer-events-none"
-            style={{
-              background: `radial-gradient(circle, ${slide.shape}33 0%, transparent 70%)`,
-              filter: 'blur(60px)',
-            }}
-          /> */}
-
-          {/* Decorative vertical gold line */}
-          {/* <motion.div
-            initial={{ scaleY: 0, opacity: 0 }}
-            animate={{ scaleY: 1, opacity: 1 }}
-            transition={{ duration: 0.9, ease, delay: 0.3 }}
-            className="absolute left-6 lg:left-16 top-[12%] bottom-[12%] w-[3px] rounded-full origin-top"
-            style={{
-              background: `linear-gradient(to bottom, transparent, ${slide.shape}, transparent)`,
-            }}
-          /> */}
 
           {/* ── CONTENT ── */}
           <div className="relative h-full max-w-[1280px] mx-auto px-6 lg:px-16 flex flex-col justify-center gap-7 pt-[100px]">

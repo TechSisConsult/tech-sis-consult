@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Instrument_Serif } from 'next/font/google';
 import './globals.css';
+import Header from '@/components/home/Header';
+import Footer from '@/components/home/Footer';
 
 const geistInstrumentSerif = Instrument_Serif({
   variable: '--font-instrument-serif',
@@ -31,7 +33,9 @@ export default function RootLayout({
       <body
         className={`${geistInstrumentSerif.variable} min-h-full flex flex-col`}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
