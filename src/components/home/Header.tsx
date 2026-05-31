@@ -128,7 +128,7 @@ export default function Header() {
             href="/contact"
             className="hidden lg:inline-flex items-center gap-2 border border-[#bf9630] hover:bg-[#bf9630] text-[#003049] text-sm font-bold px-5 py-2.5 rounded-xs transition-all duration-200 hover:shadow-lg hover:shadow-[#d4a843]/30 hover:-translate-y-px flex-shrink-0"
           >
-            Book an Appointment
+            Book a Free Consult
             <FaBook />
           </Link>
 
@@ -175,7 +175,7 @@ export default function Header() {
                     key={link.label}
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className={`${isActive ? 'text-[#d4a843] scale-75' : 'text-[#003049] hover:text-[#d4a843]'} font-semibold text-sm py-2.5 border-b border-gray-50 last:border-0 transition-colors`}
+                    className={`${isActive ? 'text-[#d4a843] scale-100 lg:scale-75' : 'text-[#003049] hover:text-[#d4a843]'} font-semibold text-sm py-2.5 border-b border-gray-50 last:border-0 transition-colors`}
                   >
                     {link.label}
                   </Link>

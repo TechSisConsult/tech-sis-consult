@@ -133,7 +133,7 @@ export default function Footer() {
             },
             {
               icon: <FaLocationDot />,
-              label: 'Enugu State, Nigeria',
+              label: 'Nigeria',
               href: '#',
             },
           ].map((item) => (

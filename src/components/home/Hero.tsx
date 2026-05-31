@@ -110,7 +110,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative w-full overflow-hidden bg-[#003049]"
+      className="relative w-full overflow-hidden"
       style={{
         height: 'calc(100vh - 0px)',
         minHeight: '600px',
