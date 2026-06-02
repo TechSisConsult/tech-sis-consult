@@ -123,8 +123,8 @@ export default function Footer() {
           {[
             {
               icon: <MdOutlineEmail />,
-              label: 'hello@techsisconsult.org',
-              href: 'mailto:hello@techsisconsult.org',
+              label: 'hello@techsisconsult.com',
+              href: 'mailto:hello@techsisconsult.com',
             },
             {
               icon: <FaPhone />,

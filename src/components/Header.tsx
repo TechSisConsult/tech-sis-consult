@@ -3,9 +3,9 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import Image from 'next/image';
-import { FaBook, FaFacebook, FaTiktok } from 'react-icons/fa';
+import { FaFacebook, FaTiktok } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa6';
-import { MdOutlineEmail } from 'react-icons/md';
+import { MdCall, MdOutlineEmail } from 'react-icons/md';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
@@ -15,6 +15,7 @@ const navLinks = [
   { label: 'Services', href: '/services' },
   { label: 'Portfolio', href: '/portfolio' },
   { label: 'Contact', href: '/contact' },
+  { label: 'FAQs', href: '/faq' },
 ];
 
 const socials = [
@@ -63,11 +64,11 @@ export default function Header() {
       <div className="w-full bg-[#003049]">
         <div className="max-w-[1280px] mx-auto px-6 h-9 flex items-center justify-between py-6">
           <Link
-            href="mailto:hello@techsisconsult.org"
+            href="mailto:hello@techsisconsult.com"
             className="flex items-center gap-2 text-white/65 hover:text-[#d4a843] text-sm transition-colors duration-200"
           >
             <MdOutlineEmail className="w-4 h-4" />
-            hello@techsisconsult.org
+            hello@techsisconsult.com
           </Link>
           <div className="flex items-center gap-3.5">
             {socials.map((s) => (
@@ -128,8 +129,8 @@ export default function Header() {
             href="/contact"
             className="hidden lg:inline-flex items-center gap-2 border border-[#bf9630] hover:bg-[#bf9630] text-[#003049] text-sm font-bold px-5 py-2.5 rounded-xs transition-all duration-200 hover:shadow-lg hover:shadow-[#d4a843]/30 hover:-translate-y-px flex-shrink-0"
           >
-            Book a Free Consult
-            <FaBook />
+            Book a Free Call
+            <MdCall />
           </Link>
 
           {/* Mobile burger */}
@@ -186,7 +187,7 @@ export default function Header() {
                 onClick={() => setMenuOpen(false)}
                 className="mt-3 flex justify-center items-center bg-[#d4a843] text-[#003049] font-bold py-3 rounded-full text-sm"
               >
-                Book an Appointment
+                Book a Free Call
               </Link>
             </nav>
           </motion.div>
