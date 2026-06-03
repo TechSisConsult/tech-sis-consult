@@ -106,7 +106,7 @@ export default function Footer() {
                 {items.map((item) => (
                   <li key={item}>
                     <a
-                      href="#"
+                      href="/services#services-grid"
                       className="text-white/45 hover:text-[#d4a843] text-sm transition-colors duration-200"
                     >
                       {item}
@@ -123,8 +123,8 @@ export default function Footer() {
           {[
             {
               icon: <MdOutlineEmail />,
-              label: 'hello@techsisconsult.org',
-              href: 'mailto:hello@techsisconsult.org',
+              label: 'hello@techsisconsult.com',
+              href: 'mailto:hello@techsisconsult.com',
             },
             {
               icon: <FaPhone />,
