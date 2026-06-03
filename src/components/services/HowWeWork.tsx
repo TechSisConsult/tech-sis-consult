@@ -10,7 +10,7 @@ import {
   FaSearch,
 } from 'react-icons/fa';
 import { FaBullseye, FaRocket } from 'react-icons/fa6';
-import { MdChatBubble, MdChatBubbleOutline } from 'react-icons/md';
+import { MdChatBubbleOutline } from 'react-icons/md';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 

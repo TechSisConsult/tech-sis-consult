@@ -111,6 +111,121 @@ const TIERS = [
   },
 ];
 
+const MAINTENANCE_TIERS = [
+  {
+    name: 'Essential',
+    tag: 'For small business websites',
+    pricing: {
+      monthly: { ngn: '35,000', usd: '50' },
+      quarterly: {
+        ngn: '95,000', // ~5% discount
+        usd: '140',
+      },
+      biAnnual: {
+        ngn: '180,000', // ~15% discount
+        usd: '260',
+      },
+      yearly: {
+        ngn: '330,000', // ~20% discount
+        usd: '480',
+      },
+    },
+    desc: 'Reliable maintenance and monitoring to keep your website secure, updated, and running smoothly.',
+    highlight: false,
+    badge: null,
+    features: [
+      'Plugin & software updates',
+      'Security monitoring',
+      'Weekly website backups',
+      'Uptime monitoring',
+      'Broken link checks',
+      'Minor content updates',
+      'Email support',
+      'Monthly maintenance report',
+    ],
+    notIncluded: [
+      'Performance optimisation',
+      'Priority support',
+      'Advanced technical fixes',
+    ],
+    cta: 'Protect My Website',
+    ctaHref: '/contact',
+  },
+
+  {
+    name: 'Growth',
+    tag: 'Most popular',
+    pricing: {
+      monthly: { ngn: '75,000', usd: '100' },
+      quarterly: {
+        ngn: '205,000',
+        usd: '290',
+      },
+      biAnnual: {
+        ngn: '390,000',
+        usd: '550',
+      },
+      yearly: {
+        ngn: '720,000',
+        usd: '1000',
+      },
+    },
+    desc: 'Proactive website management with performance improvements and faster support.',
+    highlight: true,
+    badge: 'Most Popular',
+    features: [
+      'Everything in Essential',
+      'Performance & speed optimisation',
+      'Bi-weekly backups',
+      'Priority support',
+      'SEO health monitoring',
+      'Bug fixes & troubleshooting',
+      'Monthly performance report',
+      'Website health consultation',
+    ],
+    notIncluded: ['Dedicated account manager', 'Custom development hours'],
+    cta: 'Get Website Support',
+    ctaHref: '/contact',
+  },
+
+  {
+    name: 'Premium',
+    tag: 'For high-growth businesses',
+    pricing: {
+      monthly: { ngn: '150,000', usd: '250' },
+      quarterly: {
+        ngn: '420,000',
+        usd: '600',
+      },
+      biAnnual: {
+        ngn: '780,000',
+        usd: '1100',
+      },
+      yearly: {
+        ngn: '1,440,000',
+        usd: '2000',
+      },
+    },
+    desc: 'Full-scale website care with priority support, optimization, and strategic improvements.',
+    highlight: false,
+    badge: null,
+    features: [
+      'Everything in Growth',
+      'Priority response times',
+      'Weekly performance optimisation',
+      'Advanced security monitoring',
+      'Emergency recovery support',
+      'Monthly strategy call',
+      'Dedicated account manager',
+      'Custom development hours included',
+      'Detailed analytics reporting',
+    ],
+    notIncluded: [],
+    cta: 'Get Premium Support',
+    ctaHref: '/contact',
+  },
+];
+
 export default function Pricing() {
   const [currency, setCurrency] = useState<'ngn' | 'usd'>('ngn');
   const headerRef = useRef(null);

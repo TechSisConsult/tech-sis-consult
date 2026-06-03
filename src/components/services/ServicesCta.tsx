@@ -13,7 +13,7 @@ const FAQS = [
   },
   {
     q: 'Do I need to pay everything upfront?',
-    a: 'No. We work on a 50% deposit to begin, and the remaining 50% on delivery. Larger projects can be broken into milestones.',
+    a: 'No. We work on a 60% deposit to begin, and the remaining 40% on delivery. Larger projects can be broken into milestones.',
   },
   {
     q: 'What if I need changes after launch?',

@@ -15,7 +15,7 @@ const navLinks = [
   { label: 'Services', href: '/services' },
   { label: 'Portfolio', href: '/portfolio' },
   { label: 'Contact', href: '/contact' },
-  { label: 'FAQs', href: '/faq' },
+  { label: 'FAQs', href: '/faqs' },
 ];
 
 const socials = [
