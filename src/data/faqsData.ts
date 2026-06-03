@@ -8,7 +8,7 @@ export const FAQS = [
   {
     question: 'How can a website help me get more customers?',
     answer:
-      'A well-designed website works as a 24/7 sales and marketing tool. It helps potential customers discover your business, learn about your services, and take action through calls, forms, bookings, or WhatsApp.',
+      'A well-designed website works as your 24/7 sales and marketing employee. It helps potential customers discover your business, learn about your services, and take action through calls, forms, bookings, or WhatsApp.',
   },
 
   {

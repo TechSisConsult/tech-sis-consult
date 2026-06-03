@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useInView, AnimatePresence } from 'motion/react';
-import { useRef, useState } from 'react';
+import { Fragment, useRef, useState } from 'react';
 import { FaArrowCircleRight, FaPlus } from 'react-icons/fa';
 import { FAQS } from '@/data/faqsData';
 import { MdChatBubbleOutline } from 'react-icons/md';
@@ -38,7 +38,7 @@ function AccordionItem({
       <button
         onClick={onToggle}
         aria-expanded={isOpen}
-        className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left group bg-white"
+        className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left group bg-white cursor-pointer"
       >
         <div className="flex items-center gap-4 min-w-0">
           <span
