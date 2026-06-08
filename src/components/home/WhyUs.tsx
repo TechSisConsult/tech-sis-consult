@@ -153,8 +153,7 @@ export default function WhyUs() {
               ))}
             </div>
             <p className="text-gray-600 text-xs leading-relaxed mb-3 italic">
-              &ldquo;They didn&apos;t just build our site — they transformed how
-              we do business online.&rdquo;
+              &ldquo;They created a modern website that has enhanced our hospital&apos;s visibility and credibility.&rdquo;
             </p>
             <div className="flex items-center gap-2.5">
               <Image
