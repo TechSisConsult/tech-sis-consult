@@ -4,7 +4,7 @@ import { motion, useInView } from 'motion/react';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { FaBookOpen, FaCheckCircle, FaHeart, FaStar } from 'react-icons/fa';
-import { MdFlashAuto, MdFlashOn, MdMonitor } from 'react-icons/md';
+import { MdFlashOn, MdMonitor } from 'react-icons/md';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -65,7 +65,7 @@ export default function WhyUs() {
         {/* LEFT — text + reasons list */}
         <div className="flex flex-col gap-8">
           <Reveal delay={0.05}>
-            <p className="text-[#d4a843] text-[11px] font-bold uppercase tracking-[0.22em]">
+            <p className="text-[#d4a843] text-sm font-bold uppercase tracking-[0.22em]">
               Why Choose Us
             </p>
           </Reveal>
@@ -113,27 +113,23 @@ export default function WhyUs() {
             transition={{ duration: 0.8, ease }}
             className="relative rounded-3xl overflow-hidden bg-gradient-to-br aspect-square max-w-[480px] ml-auto"
           >
-            {/* placeholder texture */}
             <div
-              className="absolute inset-0 opacity-[0.6]"
+              className="absolute inset-0 opacity-[0.8]"
               style={{
-                backgroundImage: "url('bg-4.png')",
-                backgroundSize: '420px 600px',
+                backgroundImage: "url('client-sites/hospital-site.jpg')",
+                backgroundSize: '480px 600px',
                 backgroundRepeat: 'no-repeat',
               }}
             />
-            {/* silhouette accent */}
             <div className="absolute inset-0 flex items-end justify-center pb-0">
               <div className="w-full h-3/4 bg-gradient-to-t from-[#003049]/80 to-transparent" />
             </div>
 
-            {/* Gold top-right corner accent */}
-            <div className="absolute top-0 right-0 w-24 h-24 bg-[#d4a843]/15 rounded-bl-[4rem]" />
-            <div className="absolute top-4 right-4 text-[#d4a843]/60">
+            <div className="absolute top-0 right-0 w-24 h-24 bg-[#d4a843]/30 rounded-bl-[4rem]" />
+            <div className="absolute top-4 right-4 text-[#d4a843]">
               <MdFlashOn className="w-8 h-8" />
             </div>
 
-            {/* Label inside image */}
             <div className="absolute px-4 py-2 bg-[#003049]/80">
               <p className="text-[#d4a843] text-[11px] font-bold uppercase tracking-widest mb-2">
                 Our Approach
@@ -144,7 +140,6 @@ export default function WhyUs() {
             </div>
           </motion.div>
 
-          {/* Floating review card */}
           <motion.div
             initial={{ opacity: 0, scale: 0.85, x: 20 }}
             animate={imgInView ? { opacity: 1, scale: 1, x: 0 } : {}}

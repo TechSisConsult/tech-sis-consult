@@ -7,12 +7,18 @@ import { MdOutlineEmail } from 'react-icons/md';
 
 const LINKS = {
   Services: [
-    'Business Websites',
-    'E-commerce Stores',
-    'Website Redesign',
-    'Business Automation',
+    { label: 'Business Websites', href: '/services#services-grid' },
+    { label: 'E-commerce Stores', href: '/services#services-grid' },
+    { label: 'Website Redesign', href: '/services#services-grid' },
+    { label: 'Business Automation', href: '/services#services-grid' },
   ],
-  Company: ['About Us', 'Our Work', 'Testimonials', 'Contact'],
+  Company: [
+    { label: 'About Us', href: '/about' },
+    { label: 'Services', href: '/services' },
+    { label: 'Portfolio', href: '/portfolio' },
+    { label: 'Contact', href: '/contact' },
+    { label: 'FAQs', href: '/faqs' },
+  ],
 };
 
 const SOCIALS = [
@@ -102,14 +108,15 @@ export default function Footer() {
               <h4 className="text-white text-sm font-bold mb-5 tracking-wide">
                 {heading}
               </h4>
+
               <ul className="flex flex-col gap-3">
                 {items.map((item) => (
-                  <li key={item}>
+                  <li key={item.label}>
                     <a
-                      href="/services#services-grid"
+                      href={item.href}
                       className="text-white/45 hover:text-[#d4a843] text-sm transition-colors duration-200"
                     >
-                      {item}
+                      {item.label}
                     </a>
                   </li>
                 ))}

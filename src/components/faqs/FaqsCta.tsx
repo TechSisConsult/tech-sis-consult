@@ -20,11 +20,6 @@ const QUICK_LINKS = [
     href: '/portfolio',
     icon: <FaFileImage />,
   },
-  {
-    label: 'View Pricing',
-    href: '/services#pricing',
-    icon: <FaMoneyBills />,
-  },
 ];
 
 export default function FAQsCTA() {

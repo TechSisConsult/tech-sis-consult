@@ -232,7 +232,7 @@ export default function Pricing() {
   const headerInView = useInView(headerRef, { once: true, margin: '-60px' });
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
+    <section className="py-24 bg-white overflow-hidden" id="pricing">
       <div className="max-w-[1280px] mx-auto px-6">
         {/* header */}
         <div ref={headerRef} className="text-center max-w-2xl mx-auto mb-14">

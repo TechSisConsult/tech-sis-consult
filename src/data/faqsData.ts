@@ -8,7 +8,7 @@ export const FAQS = [
   {
     question: 'How can a website help me get more customers?',
     answer:
-      'A well-designed website works as a 24/7 sales and marketing tool. It helps potential customers discover your business, learn about your services, and take action through calls, forms, bookings, or WhatsApp.',
+      'A well-designed website works as your 24/7 sales and marketing employee. It helps potential customers discover your business, learn about your services, and take action through calls, forms, bookings, or WhatsApp.',
   },
 
   {
@@ -24,15 +24,9 @@ export const FAQS = [
   },
 
   {
-    question: 'Can you help my business automate repetitive tasks?',
-    answer:
-      'Yes. We can automate processes such as lead follow-ups, appointment bookings, customer notifications, invoicing, and other routine tasks to save time and improve efficiency.',
-  },
-
-  {
     question: 'What is business automation and why should I care?',
     answer:
-      'Business automation uses technology to handle repetitive work automatically. This allows you to spend less time on administration and more time serving customers and growing your business.',
+      'Business automation reduces the time spent on repetitive tasks by allowing software to handle processes such as customer inquiries, appointment scheduling, payment confirmations, and follow-up messages. This improves efficiency, saves time, and helps you serve customers faster.',
   },
 
   {
@@ -60,33 +54,9 @@ export const FAQS = [
   },
 
   {
-    question: 'How do you track whether the website is performing well?',
-    answer:
-      'We set up analytics tools that allow you to see visitor numbers, traffic sources, popular pages, and other valuable insights about your website performance.',
-  },
-
-  {
-    question: 'Can I update my website myself after launch?',
-    answer:
-      'Yes. We build websites with easy-to-manage systems and provide guidance on how to make basic updates when needed.',
-  },
-
-  {
-    question: 'What information do you need from me to get started?',
-    answer:
-      'We typically need information about your business, services, goals, branding, and any content or materials you already have available.',
-  },
-
-  {
     question: 'How long does it take to complete a project?',
     answer:
       'Most business websites are completed within 2–4 weeks, while ecommerce stores, redesigns, and advanced projects may take longer depending on requirements.',
-  },
-
-  {
-    question: 'Will I own my website once it is completed?',
-    answer:
-      'Yes. After project completion and final payment, the website belongs to you.',
   },
 
   {
@@ -99,24 +69,6 @@ export const FAQS = [
     question: 'What happens if my website experiences issues later?',
     answer:
       'Clients on our maintenance plans receive monitoring, updates, backups, and technical support to help keep their websites running smoothly.',
-  },
-
-  {
-    question: 'How much does a website cost?',
-    answer:
-      'Our website projects typically start from ₦300,000 ($500), with final pricing depending on your goals, required features, and project complexity.',
-  },
-
-  {
-    question: 'How much does an e-commerce store cost?',
-    answer:
-      'E-commerce projects typically start from ₦550,000 ($1500) and vary based on the number of products, integrations, and custom functionality required.',
-  },
-
-  {
-    question: 'Do I need to pay the full amount upfront?',
-    answer:
-      'No. Most projects are structured around milestone payments, with an initial deposit required before work begins and the remaining balance spread across project stages.',
   },
 
   {

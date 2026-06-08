@@ -38,7 +38,7 @@ function AccordionItem({
       <button
         onClick={onToggle}
         aria-expanded={isOpen}
-        className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left group bg-white"
+        className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left group bg-white cursor-pointer"
       >
         <div className="flex items-center gap-4 min-w-0">
           <span
