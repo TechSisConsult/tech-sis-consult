@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useInView, AnimatePresence } from 'motion/react';
-import { Fragment, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { FaArrowCircleRight, FaPlus } from 'react-icons/fa';
 import { FAQS } from '@/data/faqsData';
 import { MdChatBubbleOutline } from 'react-icons/md';

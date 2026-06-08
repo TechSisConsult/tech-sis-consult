@@ -71,8 +71,7 @@ export default function FAQsHero() {
               transition={{ duration: 0.65, delay: 0.18, ease }}
               className="text-4xl sm:text-5xl font-extrabold text-white leading-[1.1] tracking-tight"
             >
-              Before You Invest in a Website,{' '}
-              <span className="text-[#d4a843]">Read This.</span>
+              We&apos;ve Got <span className="text-[#d4a843]">Answers</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 16 }}

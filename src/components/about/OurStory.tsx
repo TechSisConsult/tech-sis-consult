@@ -3,6 +3,8 @@
 import { motion, useInView } from 'motion/react';
 import Image from 'next/image';
 import { useRef } from 'react';
+import FounderImage from '../../../public/founder.png';
+import { FaCheck } from 'react-icons/fa6';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -30,29 +32,6 @@ function Reveal({
   );
 }
 
-const MILESTONES = [
-  {
-    year: '2019',
-    title: 'The Problem We Saw',
-    desc: "Watching talented business owners — with real products, real passion, real value — go unnoticed online simply because they didn't have a proper website. Not because they couldn't afford it, but because no one had shown them what was possible.",
-  },
-  {
-    year: '2020',
-    title: 'The Decision to Act',
-    desc: 'We stopped waiting for someone else to fix it. TechSisConsult was founded on one belief: every business deserves a digital presence that works as hard as its owner does — even at 2am on a Sunday.',
-  },
-  {
-    year: '2022',
-    title: 'Expanding the Vision',
-    desc: 'It was never just about websites. We expanded into ecommerce, redesigns, and full business automation — building complete digital ecosystems that let our clients earn, grow, and scale without being chained to their desks.',
-  },
-  {
-    year: 'Now',
-    title: 'Building the Future',
-    desc: 'Today, TechSisConsult is on a mission to help 500+ businesses across Africa and beyond build the digital presence they deserve. Boutique by choice. Relentless by nature.',
-  },
-];
-
 const WHAT_WE_BELIEVE = [
   "A website isn't an expense — it's your best-performing employee.",
   'Your business should earn revenue while you sleep.',
@@ -78,48 +57,50 @@ export default function OurStory() {
 
             <Reveal delay={0.13}>
               <h2 className="text-4xl xl:text-[2.8rem] font-extrabold text-[#003049] leading-[1.1]">
-                I Watched Great Businesses Stay{' '}
-                <span className="text-[#d4a843]">Invisible Online.</span> So I
-                Did Something About It.
+                I Noticed Something Most Businesses Overlook{' '}
+                <span className="text-[#d4a843]">
+                  About Their Online Presence.
+                </span>{' '}
+                So I Did Something About It.
               </h2>
             </Reveal>
 
             <Reveal delay={0.2}>
               <p className="text-gray-500 text-base leading-relaxed">
-                I kept meeting the same type of person — a driven, hard-working
-                business owner with a genuinely great product or service,
-                hustling every single day, yet barely visible to the customers
-                who were already searching for exactly what they offered.
+                I kept meeting hardworking business owners with strong products
+                and real results — people already doing business, already
+                serving customers, and even active on social media. But
+                something was still missing: structure, clarity, and a central
+                place where everything about their business truly lived.
               </p>
             </Reveal>
 
             <Reveal delay={0.27}>
               <p className="text-gray-500 text-base leading-relaxed">
-                The problem wasn&apos;t effort. It was the absence of the right
-                digital foundation. No website, or one that was outdated and
-                untrustworthy. No way for customers to find them at midnight, on
-                a holiday, on the other side of the country. No system capturing
-                leads while they slept, no storefront open 24 hours a day, 7
-                days a week.
+                Social media helped them get attention, but it didn’t fully
+                represent their brand. Important details were scattered,
+                credibility wasn’t always clear at first glance, and potential
+                customers often had no single place to understand who they were,
+                what they offered, and why they should be trusted.
               </p>
             </Reveal>
 
             <Reveal delay={0.34}>
               <p className="text-gray-500 text-base leading-relaxed">
-                A well-built website isn&apos;t just a page on the internet.
-                It&apos;s your most tireless salesperson — always on, always
-                professional, always converting. It builds credibility before
-                you even pick up the phone. It sells while you sleep. It opens
-                doors you didn&apos;t even know existed. And most businesses
-                were operating without it.
+                That’s where a well-built website changes everything. It brings
+                structure to your business online. It organizes your services,
+                communicates your value clearly, and builds trust instantly —
+                without needing constant explanation or back-and-forth.
               </p>
             </Reveal>
 
             <Reveal delay={0.41}>
               <p className="text-gray-600 text-base leading-relaxed font-semibold border-l-4 border-[#d4a843] pl-5 italic">
-                &ldquo;That&apos;s exactly why TechSisConsult exists — to give
-                every modern business the smart digital foundation it needs to
-                grow, compete, and win online.&rdquo;
+                “That’s exactly why TechSis Consult exists — to help modern
+                businesses convert their online presence into something that
+                consistently attract customers, builds trust instantly, and
+                gives them a real advantage over competitors who still look
+                unstructured online.”
               </p>
             </Reveal>
 
@@ -132,19 +113,7 @@ export default function OurStory() {
                 {WHAT_WE_BELIEVE.map((b, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#d4a843]/15 flex items-center justify-center mt-0.5">
-                      <svg
-                        className="w-3 h-3 text-[#d4a843]"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        strokeWidth={3}
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <FaCheck className="w-3 h-3 text-[#d4a843]" />
                     </div>
                     <p className="text-gray-600 text-sm leading-relaxed">{b}</p>
                   </div>
@@ -161,7 +130,7 @@ export default function OurStory() {
               className="relative rounded-3xl overflow-hidden bg-[#003049] aspect-[4/4] max-w-[420px] ml-auto"
             >
               <Image
-                src="/founder.png"
+                src={FounderImage}
                 fill
                 alt="Founder"
                 className="object-cover"
@@ -176,7 +145,6 @@ export default function OurStory() {
               />
               <div className="absolute top-0 right-0 w-1.5 h-full bg-[#d4a843]" />
 
-              {/* Large quote mark watermark */}
               <div className="absolute top-8 left-8 text-[#d4a843]/10 text-[120px] font-serif leading-none select-none">
                 &ldquo;
               </div>

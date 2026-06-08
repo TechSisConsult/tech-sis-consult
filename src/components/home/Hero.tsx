@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { MdArrowCircleDown, MdArrowLeft, MdArrowRight } from 'react-icons/md';
 
 const SLIDES = [
   {
@@ -10,10 +11,10 @@ const SLIDES = [
     bgGradient: 'from-[#001f30] via-[#003049] to-[#002540]',
     accent: '#d4a843',
     badge: 'Business Websites',
-    headline: ['Your Business Deserves', 'More Than a Basic', 'Website.'],
+    headline: ['Turn More Website', 'Visitors Into', 'Paying Customers.'],
     highlight: 2,
-    sub: "We design and build professional websites that don't just look good — they convert visitors into paying customers, 24/7.",
-    cta1: { label: 'Get Your Website', href: '/contact' },
+    sub: 'We build professional business websites designed to increase trust, generate leads, and help your business grow online.',
+    cta1: { label: 'Get My Website', href: '/contact' },
     cta2: { label: 'See Our Work', href: '/portfolio' },
     shape: '#d4a843',
   },
@@ -23,10 +24,10 @@ const SLIDES = [
     bgGradient: 'from-[#1a0e00] via-[#2d1a00] to-[#1a0e00]',
     accent: '#003049',
     badge: 'E-commerce Stores',
-    headline: ['Ready to Sell', 'Online and', 'Scale Fast?'],
+    headline: ['Start Selling Online', 'Even While', 'You Sleep.'],
     highlight: 2,
-    sub: 'From product listings to checkout — we build e-commerce stores that are fast, beautiful, and built to sell. Your store. Open always.',
-    cta1: { label: 'Book a Free Consult', href: '/contact' },
+    sub: 'We create e-commerce stores that make it easy for customers to discover, buy, and pay for your products anytime, anywhere.',
+    cta1: { label: 'Launch My Store', href: '/contact' },
     cta2: { label: 'Our Services', href: '/services' },
     shape: '#d4a843',
   },
@@ -36,9 +37,13 @@ const SLIDES = [
     bgGradient: 'from-[#001a20] via-[#002535] to-[#001520]',
     accent: '#d4a843',
     badge: 'Business Automation',
-    headline: ['Stop Doing', 'Repetitive Tasks.', 'Let Tech Work for You.'],
+    headline: [
+      'Spend Less Time',
+      'on Admin.',
+      'More Time Growing Your Business.',
+    ],
     highlight: 1,
-    sub: 'We automate your lead capture, email follow-ups, bookings, and payments — so you focus on what matters most: growing your business.',
+    sub: 'Automate bookings, payments, customer follow-ups, and lead management so your business runs smoother every day.',
     cta1: { label: 'Automate My Business', href: '/contact' },
     cta2: { label: 'Learn How', href: '/services' },
     shape: '#d4a843',
@@ -98,10 +103,9 @@ export default function Hero() {
     setCurrent(n);
   }, [current]);
 
-  // Auto-advance every 6s unless paused
   useEffect(() => {
     if (paused) return;
-    const id = setInterval(next, 6000);
+    const id = setInterval(next, 4000);
     return () => clearInterval(id);
   }, [paused, next]);
 
@@ -129,7 +133,6 @@ export default function Hero() {
           exit="exit"
           className="absolute inset-0"
         >
-          {/* Background: image or gradient */}
           {slide.bg ? (
             <div
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -141,10 +144,8 @@ export default function Hero() {
             />
           )}
 
-          {/* Dark overlay so text is always readable over real images */}
           <div className="absolute inset-0 bg-[#003049]/60" />
 
-          {/* Dot-grid texture */}
           <div
             className="absolute inset-0 opacity-[0.04] pointer-events-none"
             style={{
@@ -154,7 +155,6 @@ export default function Hero() {
             }}
           />
 
-          {/* ── CONTENT ── */}
           <div className="relative h-full max-w-[1280px] mx-auto px-6 lg:px-16 flex flex-col justify-center gap-7 pt-[100px]">
             {/* Badge */}
             <motion.div
@@ -164,12 +164,10 @@ export default function Hero() {
               animate="visible"
             >
               <span className="inline-flex items-center gap-2 bg-[#d4a843]/10 text-[#d4a843] text-[11px] font-bold uppercase tracking-[0.18em] px-4 py-1.5 rounded-md backdrop-blur-sm">
-                {/* <span className="w-1.5 h-1.5 rounded-full bg-[#d4a843] animate-pulse" /> */}
                 {slide.badge}
               </span>
             </motion.div>
 
-            {/* Headline — each line animates in separately */}
             <h1 className="flex flex-col gap-1">
               {slide.headline.map((line, i) => (
                 <motion.span
@@ -187,7 +185,6 @@ export default function Hero() {
               ))}
             </h1>
 
-            {/* Sub-copy */}
             <motion.p
               custom={slide.headline.length + 1}
               variants={textVariants}
@@ -198,7 +195,6 @@ export default function Hero() {
               {slide.sub}
             </motion.p>
 
-            {/* CTAs */}
             <motion.div
               custom={slide.headline.length + 2}
               variants={textVariants}
@@ -236,25 +232,12 @@ export default function Hero() {
         </motion.div>
       </AnimatePresence>
 
-      {/* ── PREV / NEXT ARROWS ── */}
       <button
         onClick={prev}
         aria-label="Previous slide"
         className="absolute left-4 lg:left-8 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/8 hover:bg-[#d4a843] border border-white/15 hover:border-[#d4a843] text-white/70 hover:text-[#003049] flex items-center justify-center transition-all duration-200 backdrop-blur-sm"
       >
-        <svg
-          className="w-4 h-4"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={2.5}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M15 19l-7-7 7-7"
-          />
-        </svg>
+        <MdArrowLeft className="w-6 h-6" />
       </button>
 
       <button
@@ -262,18 +245,9 @@ export default function Hero() {
         aria-label="Next slide"
         className="absolute right-4 lg:right-8 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/8 hover:bg-[#d4a843] border border-white/15 hover:border-[#d4a843] text-white/70 hover:text-[#003049] flex items-center justify-center transition-all duration-200 backdrop-blur-sm"
       >
-        <svg
-          className="w-4 h-4"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={2.5}
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-        </svg>
+        <MdArrowRight className="w-6 h-6" />
       </button>
 
-      {/* ── DOT INDICATORS + PROGRESS BAR ── */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-3">
         {/* dots */}
         <div className="flex gap-2.5">
@@ -308,14 +282,12 @@ export default function Hero() {
           ))}
         </div>
 
-        {/* slide counter */}
         <p className="text-white/30 text-[10px] font-bold tracking-[0.2em] uppercase">
           {String(current + 1).padStart(2, '0')} /{' '}
           {String(SLIDES.length).padStart(2, '0')}
         </p>
       </div>
 
-      {/* ── SLIDE THUMBNAIL STRIP (desktop only) ── */}
       <div className="absolute right-6 top-1/2 -translate-y-1/2 z-20 hidden xl:flex flex-col gap-3">
         {SLIDES.map((s, i) => (
           <button
@@ -334,7 +306,6 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* ── SCROLL HINT ── */}
       <motion.div
         animate={{ y: [0, 7, 0] }}
         transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
@@ -343,19 +314,7 @@ export default function Hero() {
         <span className="text-[10px] tracking-[0.22em] uppercase font-semibold rotate-90 mb-2">
           Scroll
         </span>
-        <svg
-          className="w-3.5 h-3.5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={2}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M19 9l-7 7-7-7"
-          />
-        </svg>
+        <MdArrowCircleDown className="w-6 h-6" />
       </motion.div>
     </section>
   );
