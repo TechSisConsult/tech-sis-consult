@@ -61,7 +61,7 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      <div className="w-full bg-[#003049]">
+      <section className="w-full bg-[#003049]">
         <div className="max-w-[1280px] mx-auto px-6 h-9 flex items-center justify-between py-6">
           <Link
             href="mailto:hello@techsisconsult.com"
@@ -83,9 +83,9 @@ export default function Header() {
             ))}
           </div>
         </div>
-      </div>
+      </section>
 
-      <div
+      <section
         className={`w-full bg-white transition-shadow duration-300 ${
           scrolled
             ? 'shadow-[0_4px_20px_rgba(0,48,73,0.10)]'
@@ -93,7 +93,6 @@ export default function Header() {
         }`}
       >
         <div className="max-w-[1280px] mx-auto px-6 h-[68px] flex items-center justify-between gap-6">
-          {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
               src="/website-logo.png"
@@ -105,7 +104,6 @@ export default function Header() {
             />
           </Link>
 
-          {/* Desktop links */}
           <nav className="hidden lg:flex items-center gap-10">
             {navLinks.map((link) => {
               const isActive =
@@ -119,7 +117,6 @@ export default function Header() {
                   className={`relative ${isActive ? 'text-[#d4a843] scale-125' : 'text-[#003049] hover:text-[#d4a843]'} text-lg font-semibold tracking-wide transition-colors duration-200 py-1 group`}
                 >
                   {link.label}
-                  {/* <span className="absolute -bottom-0.5 left-0 w-0 h-[2px] bg-[#003049] rounded-full transition-all duration-300 group-hover:w-full" /> */}
                 </Link>
               );
             })}
@@ -153,7 +150,7 @@ export default function Header() {
             />
           </button>
         </div>
-      </div>
+      </section>
 
       {/* Mobile drawer */}
       <AnimatePresence>

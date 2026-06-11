@@ -11,6 +11,7 @@ const LINKS = {
     { label: 'E-commerce Stores', href: '/services#services-grid' },
     { label: 'Website Redesign', href: '/services#services-grid' },
     { label: 'Business Automation', href: '/services#services-grid' },
+    { label: 'Website Maintenance', href: '/services#services-grid' },
   ],
   Company: [
     { label: 'About Us', href: '/about' },
