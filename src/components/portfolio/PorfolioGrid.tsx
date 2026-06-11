@@ -4,7 +4,11 @@ import { motion, useInView } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRef, useState } from 'react';
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import {
+  FaArrowCircleRight,
+  FaArrowCircleUp,
+  FaExternalLinkAlt,
+} from 'react-icons/fa';
 import { FaArrowRight } from 'react-icons/fa6';
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -18,7 +22,7 @@ const PROJECTS = [
     title:
       'A Modern Digital Presence Designed to Build Trust and Improve Patient Access',
     desc: 'Akulue Memorial Hospital needed a professional online presence that reflected the quality of care they provide. We designed and developed a fast, mobile-friendly website that makes it easy for patients to learn about services, access important information, and connect with the hospital from anywhere. The result is a modern healthcare website that strengthens credibility, improves accessibility, and supports patient engagement.',
-    imgMain: '/client-site.png',
+    imgMain: '/client-sites/hospital-site.jpg',
     imgDetail: '/client-site.png',
     mainBg: 'bg-gradient-to-br from-[#003049] to-[#004a6e]',
     detailBg: 'bg-[#d4a843]/10',
@@ -199,9 +203,9 @@ function FeaturedCard({ p }: { p: (typeof PROJECTS)[0] }) {
           </Link>
           <Link
             href="/contact"
-            className="text-sm font-bold text-[#d4a843] hover:underline transition-all"
+            className="text-sm font-bold text-[#d4a843] hover:underline transition-all flex items-center"
           >
-            Want something like this? <FaArrowRight />
+            Get Mine <FaArrowCircleRight className="ml-2" />
           </Link>
         </div>
       </div>

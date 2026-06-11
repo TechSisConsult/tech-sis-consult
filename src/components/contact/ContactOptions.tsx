@@ -2,14 +2,14 @@
 
 import { motion, useInView } from 'motion/react';
 import { useRef } from 'react';
+import { MdCalendarMonth } from 'react-icons/md';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const OPTIONS = [
   {
     id: 'call',
-    emoji: '📅',
-    tag: 'Best for: Ready to start',
+    emoji: <MdCalendarMonth className="w-12 h-12" />,
     title: 'Book a Free Strategy Call',
     desc: "Tell us about your project over a 30-minute call. We'll listen, ask the right questions, and tell you exactly how we can help — no pitch, no pressure.",
     cta: 'Schedule a Call',
@@ -27,7 +27,6 @@ const OPTIONS = [
   {
     id: 'form',
     emoji: '📝',
-    tag: 'Best for: International clients',
     title: 'Request a Quote',
     desc: "Fill out our project form and we'll send you a tailored proposal within 24 hours — including scope, timeline, and exact pricing.",
     cta: 'Request a Quote',
@@ -40,7 +39,6 @@ const OPTIONS = [
   {
     id: 'whatsapp',
     emoji: '💬',
-    tag: 'Best for: Quick questions',
     title: 'Chat on WhatsApp',
     desc: "Have a quick question or just want to say hello? Send us a message on WhatsApp and we'll get back to you fast.",
     cta: 'WhatsApp Us',
@@ -65,13 +63,12 @@ export default function ContactOptions() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-[1280px] mx-auto px-6">
-        {/* header */}
         <div ref={ref} className="text-center max-w-xl mx-auto mb-12">
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, ease }}
-            className="text-[#d4a843] text-[11px] font-bold uppercase tracking-[0.22em] mb-3"
+            className="text-[#d4a843] text-sm font-bold uppercase tracking-[0.22em] mb-3"
           >
             Choose Your Path
           </motion.p>
@@ -86,7 +83,6 @@ export default function ContactOptions() {
           </motion.h2>
         </div>
 
-        {/* three options */}
         <div className="grid md:grid-cols-3 gap-6">
           {OPTIONS.map((opt, i) => (
             <motion.div
@@ -100,21 +96,8 @@ export default function ContactOptions() {
                   : 'border-gray-100 bg-white hover:border-[#003049]/10 hover:shadow-[#003049]/6'
               }`}
             >
-              {/* popular badge */}
-              {opt.highlight && (
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
-                  <span className="bg-[#d4a843] text-[#003049] text-[10px] font-extrabold uppercase tracking-widest px-4 py-1.5 rounded-full whitespace-nowrap shadow-md">
-                    Most Popular
-                  </span>
-                </div>
-              )}
-
-              {/* emoji + tag */}
               <div className="flex flex-col gap-2">
                 <span className="text-4xl leading-none">{opt.emoji}</span>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-[#d4a843]">
-                  {opt.tag}
-                </span>
               </div>
 
               {/* text */}
