@@ -42,7 +42,7 @@ function Reveal({
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-70px' });
   return (
-    <motion.div
+    <motion.article
       ref={ref}
       initial={{ y: 36, opacity: 0 }}
       animate={inView ? { y: 0, opacity: 1 } : {}}
@@ -50,7 +50,7 @@ function Reveal({
       className={className}
     >
       {children}
-    </motion.div>
+    </motion.article>
   );
 }
 
@@ -67,7 +67,7 @@ export default function AboutSnippet() {
       <div className="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
         {/* ── Visual card ── */}
         <div ref={boxRef} className="relative">
-          <motion.div
+          <motion.article
             initial={{ x: -50, opacity: 0 }}
             animate={boxInView ? { x: 0, opacity: 1 } : {}}
             transition={{ duration: 0.8, ease }}
@@ -98,10 +98,10 @@ export default function AboutSnippet() {
                 that drive real growth.
               </p>
             </div>
-          </motion.div>
+          </motion.article>
 
           {/* floating stat badge */}
-          {/* <motion.div
+          {/* <motion.article
             initial={{ opacity: 0, scale: 0.82, y: 20 }}
             animate={boxInView ? { opacity: 1, scale: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.45, ease }}
@@ -111,7 +111,7 @@ export default function AboutSnippet() {
             <p className="text-[#003049]/70 text-xs font-semibold mt-0.5">
               Client Retention Rate
             </p>
-          </motion.div> */}
+          </motion.article> */}
         </div>
 
         {/* ── Text side ── */}

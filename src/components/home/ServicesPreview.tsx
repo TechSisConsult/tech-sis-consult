@@ -102,7 +102,7 @@ function Card({ s, i }: { s: (typeof SERVICES)[0]; i: number }) {
   const inView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
-    <motion.div
+    <motion.article
       ref={ref}
       initial={{ y: 44, opacity: 0 }}
       animate={inView ? { y: 0, opacity: 1 } : {}}
@@ -179,7 +179,7 @@ function Card({ s, i }: { s: (typeof SERVICES)[0]; i: number }) {
         Book a Free Consultation
         <FaArrowCircleRight />
       </a>
-    </motion.div>
+    </motion.article>
   );
 }
 

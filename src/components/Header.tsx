@@ -158,7 +158,7 @@ export default function Header() {
       {/* Mobile drawer */}
       <AnimatePresence>
         {menuOpen && (
-          <motion.div
+          <motion.article
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -190,7 +190,7 @@ export default function Header() {
                 Book a Free Call
               </Link>
             </nav>
-          </motion.div>
+          </motion.article>
         )}
       </AnimatePresence>
     </header>

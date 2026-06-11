@@ -55,7 +55,7 @@ function FeaturedCard({ p }: { p: (typeof PROJECTS)[0] }) {
   const inView = useInView(ref, { once: true, margin: '-60px' });
 
   return (
-    <motion.div
+    <motion.article
       ref={ref}
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -209,7 +209,7 @@ function FeaturedCard({ p }: { p: (typeof PROJECTS)[0] }) {
           </Link>
         </div>
       </div>
-    </motion.div>
+    </motion.article>
   );
 }
 
@@ -228,7 +228,7 @@ export default function PortfolioGrid() {
       <div className="max-w-[1280px] mx-auto px-6 flex flex-col gap-14">
         {/* filter tabs */}
         {/* <div ref={headerRef}>
-          <motion.div
+          <motion.article
             initial={{ opacity: 0, y: 16 }}
             animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, ease }}
@@ -247,7 +247,7 @@ export default function PortfolioGrid() {
                 {f}
               </button>
             ))}
-          </motion.div>
+          </motion.article>
         </div> */}
 
         {filtered.length > 0 ? (
@@ -257,7 +257,7 @@ export default function PortfolioGrid() {
             ))}
           </div>
         ) : (
-          <motion.div
+          <motion.article
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-center py-20"
@@ -265,7 +265,7 @@ export default function PortfolioGrid() {
             <p className="text-gray-400 text-sm">
               No projects in this category yet — check back soon.
             </p>
-          </motion.div>
+          </motion.article>
         )}
       </div>
     </section>

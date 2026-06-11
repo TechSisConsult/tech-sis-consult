@@ -18,7 +18,7 @@ function Reveal({
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-60px' });
   return (
-    <motion.div
+    <motion.article
       ref={ref}
       initial={{ y: 30, opacity: 0 }}
       animate={inView ? { y: 0, opacity: 1 } : {}}
@@ -26,7 +26,7 @@ function Reveal({
       className={className}
     >
       {children}
-    </motion.div>
+    </motion.article>
   );
 }
 
@@ -265,7 +265,7 @@ export default function Pricing() {
           </motion.p>
 
           {/* currency toggle */}
-          <motion.div
+          <motion.article
             initial={{ opacity: 0, scale: 0.95 }}
             animate={headerInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ duration: 0.5, delay: 0.3, ease }}
@@ -284,7 +284,7 @@ export default function Pricing() {
                 {c === 'ngn' ? '₦ NGN' : '$ USD'}
               </button>
             ))}
-          </motion.div>
+          </motion.article>
         </div>
 
         {/* pricing cards */}

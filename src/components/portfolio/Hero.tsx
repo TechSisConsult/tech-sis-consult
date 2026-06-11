@@ -48,7 +48,7 @@ export default function PortfolioHero() {
             </motion.p>
           </div>
 
-          <motion.div
+          <motion.article
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.55, delay: 0.35, ease }}
@@ -75,7 +75,7 @@ export default function PortfolioHero() {
                 Coming
               </p>
             </div>
-          </motion.div>
+          </motion.article>
         </div>
       </div>
       <div className="h-px bg-gradient-to-r from-transparent via-[#d4a843]/30 to-transparent" />

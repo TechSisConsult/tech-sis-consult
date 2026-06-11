@@ -14,7 +14,7 @@ export default function AboutCTA() {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-[1280px] mx-auto px-6">
-        <motion.div
+        <motion.article
           ref={ref}
           initial={{ opacity: 0, y: 40, scale: 0.98 }}
           animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
@@ -72,7 +72,7 @@ export default function AboutCTA() {
               foundation that works for your business every hour of every day.
             </motion.p>
 
-            <motion.div
+            <motion.article
               initial={{ opacity: 0, y: 14 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.5 }}
@@ -91,9 +91,9 @@ export default function AboutCTA() {
               >
                 Explore Our Services
               </Link>
-            </motion.div>
+            </motion.article>
           </div>
-        </motion.div>
+        </motion.article>
       </div>
     </section>
   );

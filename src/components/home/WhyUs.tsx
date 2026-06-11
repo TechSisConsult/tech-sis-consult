@@ -20,7 +20,7 @@ function Reveal({
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-70px' });
   return (
-    <motion.div
+    <motion.article
       ref={ref}
       initial={{ y: 30, opacity: 0 }}
       animate={inView ? { y: 0, opacity: 1 } : {}}
@@ -28,7 +28,7 @@ function Reveal({
       className={className}
     >
       {children}
-    </motion.div>
+    </motion.article>
   );
 }
 
@@ -107,7 +107,7 @@ export default function WhyUs() {
         {/* RIGHT — image with overlapping stat card */}
         <div ref={imgRef} className="relative">
           {/* Main image placeholder */}
-          <motion.div
+          <motion.article
             initial={{ x: 50, opacity: 0 }}
             animate={imgInView ? { x: 0, opacity: 1 } : {}}
             transition={{ duration: 0.8, ease }}
@@ -138,9 +138,9 @@ export default function WhyUs() {
                 Where strategy meets beautiful execution
               </p>
             </div>
-          </motion.div>
+          </motion.article>
 
-          <motion.div
+          <motion.article
             initial={{ opacity: 0, scale: 0.85, x: 20 }}
             animate={imgInView ? { opacity: 1, scale: 1, x: 0 } : {}}
             transition={{ duration: 0.65, delay: 0.45, ease }}
@@ -153,7 +153,8 @@ export default function WhyUs() {
               ))}
             </div>
             <p className="text-gray-600 text-xs leading-relaxed mb-3 italic">
-              &ldquo;They created a modern website that has enhanced our hospital&apos;s visibility and credibility.&rdquo;
+              &ldquo;They created a modern website that has enhanced our
+              hospital&apos;s visibility and credibility.&rdquo;
             </p>
             <div className="flex items-center gap-2.5">
               <Image
@@ -172,7 +173,7 @@ export default function WhyUs() {
                 </p>
               </div>
             </div>
-          </motion.div>
+          </motion.article>
         </div>
       </div>
     </section>

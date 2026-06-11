@@ -56,7 +56,7 @@ export default function AboutHero() {
         }}
       />
 
-      <motion.div
+      <motion.article
         initial={{ scaleY: 0, opacity: 0 }}
         animate={{ scaleY: 1, opacity: 1 }}
         transition={{ duration: 1, ease, delay: 0.3 }}
@@ -66,7 +66,7 @@ export default function AboutHero() {
             'linear-gradient(to bottom, transparent, #d4a843, transparent)',
         }}
       />
-      <motion.div
+      <motion.article
         initial={{ scaleY: 0, opacity: 0 }}
         animate={{ scaleY: 1, opacity: 1 }}
         transition={{ duration: 1, ease, delay: 0.45 }}
@@ -119,7 +119,7 @@ export default function AboutHero() {
         </motion.p>
 
         {/* divider */}
-        <motion.div
+        <motion.article
           {...fadeUp(0.42)}
           className="flex items-center gap-5 w-full max-w-md"
         >
@@ -128,10 +128,10 @@ export default function AboutHero() {
             Smart Tech for Modern Businesses
           </span>
           <div className="h-px flex-1 bg-white/12" />
-        </motion.div>
+        </motion.article>
 
         {/* trust pills */}
-        <motion.div
+        <motion.article
           {...fadeUp(0.5)}
           className="flex flex-wrap justify-center gap-3"
         >
@@ -146,9 +146,9 @@ export default function AboutHero() {
               </span>
             </div>
           ))}
-        </motion.div>
+        </motion.article>
 
-        <motion.div
+        <motion.article
           {...fadeUp(0.6)}
           className="flex flex-wrap justify-center gap-4 mt-1"
         >
@@ -177,7 +177,7 @@ export default function AboutHero() {
           >
             Our Services
           </Link>
-        </motion.div>
+        </motion.article>
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-none z-10">

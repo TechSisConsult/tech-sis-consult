@@ -124,7 +124,7 @@ export default function Hero() {
       onMouseLeave={() => setPaused(false)}
     >
       <AnimatePresence initial={false} custom={direction} mode="sync">
-        <motion.div
+        <motion.article
           key={slide.id}
           custom={direction}
           variants={slideVariants}
@@ -157,7 +157,7 @@ export default function Hero() {
 
           <div className="relative h-full max-w-[1280px] mx-auto px-6 lg:px-16 flex flex-col justify-center gap-7 pt-[100px]">
             {/* Badge */}
-            <motion.div
+            <motion.article
               custom={0}
               variants={textVariants}
               initial="hidden"
@@ -166,7 +166,7 @@ export default function Hero() {
               <span className="inline-flex items-center gap-2 bg-[#d4a843]/10 text-[#d4a843] text-[11px] font-bold uppercase tracking-[0.18em] px-4 py-1.5 rounded-md backdrop-blur-sm">
                 {slide.badge}
               </span>
-            </motion.div>
+            </motion.article>
 
             <h1 className="flex flex-col gap-1">
               {slide.headline.map((line, i) => (
@@ -195,7 +195,7 @@ export default function Hero() {
               {slide.sub}
             </motion.p>
 
-            <motion.div
+            <motion.article
               custom={slide.headline.length + 2}
               variants={textVariants}
               initial="hidden"
@@ -227,9 +227,9 @@ export default function Hero() {
               >
                 {slide.cta2.label}
               </a>
-            </motion.div>
+            </motion.article>
           </div>
-        </motion.div>
+        </motion.article>
       </AnimatePresence>
 
       <button
@@ -306,7 +306,7 @@ export default function Hero() {
         ))}
       </div>
 
-      <motion.div
+      <motion.article
         animate={{ y: [0, 7, 0] }}
         transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
         className="absolute bottom-8 right-8 lg:right-16 hidden sm:flex flex-col items-center gap-1.5 text-white/25 pointer-events-none"
@@ -315,7 +315,7 @@ export default function Hero() {
           Scroll
         </span>
         <MdArrowCircleDown className="w-6 h-6" />
-      </motion.div>
+      </motion.article>
     </section>
   );
 }

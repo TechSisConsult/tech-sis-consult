@@ -85,7 +85,7 @@ export default function ContactOptions() {
 
         <div className="grid md:grid-cols-3 gap-6">
           {OPTIONS.map((opt, i) => (
-            <motion.div
+            <motion.article
               key={opt.id}
               initial={{ y: 40, opacity: 0 }}
               animate={inView ? { y: 0, opacity: 1 } : {}}
@@ -132,7 +132,7 @@ export default function ContactOptions() {
                   />
                 </svg>
               </a>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
       </div>

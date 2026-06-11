@@ -14,7 +14,7 @@ export default function PortfolioCTA() {
   return (
     <section className="py-20 bg-gray-50 border-t border-gray-100">
       <div className="max-w-[1280px] mx-auto px-6">
-        <motion.div
+        <motion.article
           ref={ref}
           initial={{ opacity: 0, y: 36, scale: 0.98 }}
           animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
@@ -71,7 +71,7 @@ export default function PortfolioCTA() {
               View Our Services
             </Link>
           </div>
-        </motion.div>
+        </motion.article>
       </div>
     </section>
   );

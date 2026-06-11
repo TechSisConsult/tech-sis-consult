@@ -122,7 +122,7 @@ export default function ContactForm() {
         <div className="grid lg:grid-cols-[1fr_1.6fr] gap-12 lg:gap-16 items-start">
           {/* ── LEFT: context ── */}
           <div ref={ref} className="flex flex-col gap-8 lg:sticky lg:top-32">
-            <motion.div
+            <motion.article
               initial={{ opacity: 0, x: -30 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.7, ease }}
@@ -140,10 +140,10 @@ export default function ContactForm() {
                 with a tailored proposal — clear scope, honest pricing, no
                 obligation.
               </p>
-            </motion.div>
+            </motion.article>
 
             {/* what happens next */}
-            <motion.div
+            <motion.article
               initial={{ opacity: 0, x: -20 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.15, ease }}
@@ -168,10 +168,10 @@ export default function ContactForm() {
                   </p>
                 </div>
               ))}
-            </motion.div>
+            </motion.article>
 
             {/* trust note */}
-            <motion.div
+            <motion.article
               initial={{ opacity: 0, x: -20 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.7, delay: 0.25, ease }}
@@ -191,17 +191,17 @@ export default function ContactForm() {
                 />
               </svg>
               Your information is private and will never be shared.
-            </motion.div>
+            </motion.article>
           </div>
 
           {/* ── RIGHT: form ── */}
-          <motion.div
+          <motion.article
             initial={{ opacity: 0, y: 30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1, ease }}
           >
             {formState === 'success' ? (
-              <motion.div
+              <motion.article
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, ease }}
@@ -236,7 +236,7 @@ export default function ContactForm() {
                 >
                   Submit another enquiry →
                 </button>
-              </motion.div>
+              </motion.article>
             ) : (
               <form
                 onSubmit={handleSubmit}
@@ -456,7 +456,7 @@ export default function ContactForm() {
                 </p>
               </form>
             )}
-          </motion.div>
+          </motion.article>
         </div>
       </div>
     </section>
