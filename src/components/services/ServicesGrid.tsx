@@ -191,7 +191,7 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
   const inView = useInView(ref, { once: true, margin: '-50px' });
 
   return (
-    <motion.div
+    <motion.article
       ref={ref}
       id={s.id}
       initial={{ y: 48, opacity: 0 }}
@@ -303,7 +303,7 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
       {/* ── expandable detail panel ── */}
       <AnimatePresence initial={false}>
         {expanded && (
-          <motion.div
+          <motion.article
             key="detail"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
@@ -401,10 +401,10 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
                 </svg>
               </a>
             </div>
-          </motion.div>
+          </motion.article>
         )}
       </AnimatePresence>
-    </motion.div>
+    </motion.article>
   );
 }
 

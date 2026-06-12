@@ -11,6 +11,7 @@ const LINKS = {
     { label: 'E-commerce Stores', href: '/services#services-grid' },
     { label: 'Website Redesign', href: '/services#services-grid' },
     { label: 'Business Automation', href: '/services#services-grid' },
+    { label: 'Website Maintenance', href: '/services#services-grid' },
   ],
   Company: [
     { label: 'About Us', href: '/about' },
@@ -140,7 +141,7 @@ export default function Footer() {
             },
             {
               icon: <FaLocationDot />,
-              label: 'Nigeria',
+              label: 'Enugu State, Nigeria',
               href: '#',
             },
           ].map((item) => (

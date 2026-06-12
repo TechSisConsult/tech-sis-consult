@@ -1,16 +1,19 @@
-import ContactForm from '@/components/contact/ContactForm';
-import ContactOptions from '@/components/contact/ContactOptions';
 import ContactHero from '@/components/contact/Hero';
-import React from 'react';
+import StrategyCall from '@/components/contact/StrategyCall';
 
-const page = () => {
+export const metadata = {
+  title: 'Contact Us — TechSisConsult',
+  description:
+    'Book a free 30-minute strategy call or chat with us on WhatsApp. We help businesses grow online.',
+};
+
+const ContactPage = () => {
   return (
     <>
       <ContactHero />
-      <ContactOptions />
-      <ContactForm />
+      <StrategyCall />
     </>
   );
 };
 
-export default page;
+export default ContactPage;

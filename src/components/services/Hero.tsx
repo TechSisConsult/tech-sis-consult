@@ -58,7 +58,7 @@ export default function ServicesHero() {
         }}
       />
 
-      <motion.div
+      <motion.article
         initial={{ scaleY: 0, opacity: 0 }}
         animate={{ scaleY: 1, opacity: 1 }}
         transition={{ duration: 1, ease, delay: 0.3 }}
@@ -68,7 +68,7 @@ export default function ServicesHero() {
             'linear-gradient(to bottom, transparent, #d4a843, transparent)',
         }}
       />
-      <motion.div
+      <motion.article
         initial={{ scaleY: 0, opacity: 0 }}
         animate={{ scaleY: 1, opacity: 1 }}
         transition={{ duration: 1, ease, delay: 0.45 }}
@@ -117,7 +117,7 @@ export default function ServicesHero() {
           trust, and generate revenue around the clock.
         </motion.p>
 
-        <motion.div
+        <motion.article
           {...fadeUp(0.42)}
           className="flex items-center gap-5 w-full max-w-md"
         >
@@ -126,9 +126,9 @@ export default function ServicesHero() {
             Smart Tech for Modern Businesses
           </span>
           <div className="h-px flex-1 bg-white/12" />
-        </motion.div>
+        </motion.article>
 
-        <motion.div
+        <motion.article
           {...fadeUp(0.5)}
           className="flex flex-wrap justify-center gap-3"
         >
@@ -141,10 +141,10 @@ export default function ServicesHero() {
               {s.label}
             </a>
           ))}
-        </motion.div>
+        </motion.article>
 
         {/* CTAs */}
-        <motion.div
+        <motion.article
           {...fadeUp(0.6)}
           className="flex flex-wrap justify-center gap-4 mt-1"
         >
@@ -161,13 +161,13 @@ export default function ServicesHero() {
           >
             Explore Services
           </Link>
-        </motion.div>
+        </motion.article>
       </div>
-      <motion.div
+      <motion.article
         animate={{ y: [0, 7, 0] }}
         transition={{ duration: 2.2, repeat: Infinity, ease: 'easeInOut' }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-white/25 pointer-events-none z-10"
-      ></motion.div>
+      ></motion.article>
 
       {/* wave */}
       <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-none z-10">

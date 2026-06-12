@@ -4,7 +4,11 @@ import { motion, useInView } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRef, useState } from 'react';
-import { FaExternalLinkAlt } from 'react-icons/fa';
+import {
+  FaArrowCircleRight,
+  FaArrowCircleUp,
+  FaExternalLinkAlt,
+} from 'react-icons/fa';
 import { FaArrowRight } from 'react-icons/fa6';
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -18,7 +22,7 @@ const PROJECTS = [
     title:
       'A Modern Digital Presence Designed to Build Trust and Improve Patient Access',
     desc: 'Akulue Memorial Hospital needed a professional online presence that reflected the quality of care they provide. We designed and developed a fast, mobile-friendly website that makes it easy for patients to learn about services, access important information, and connect with the hospital from anywhere. The result is a modern healthcare website that strengthens credibility, improves accessibility, and supports patient engagement.',
-    imgMain: '/client-site.png',
+    imgMain: '/client-sites/hospital-site.jpg',
     imgDetail: '/client-site.png',
     mainBg: 'bg-gradient-to-br from-[#003049] to-[#004a6e]',
     detailBg: 'bg-[#d4a843]/10',
@@ -51,7 +55,7 @@ function FeaturedCard({ p }: { p: (typeof PROJECTS)[0] }) {
   const inView = useInView(ref, { once: true, margin: '-60px' });
 
   return (
-    <motion.div
+    <motion.article
       ref={ref}
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -199,13 +203,13 @@ function FeaturedCard({ p }: { p: (typeof PROJECTS)[0] }) {
           </Link>
           <Link
             href="/contact"
-            className="text-sm font-bold text-[#d4a843] hover:underline transition-all"
+            className="text-sm font-bold text-[#d4a843] hover:underline transition-all flex items-center"
           >
-            Want something like this? <FaArrowRight />
+            Get Mine <FaArrowCircleRight className="ml-2" />
           </Link>
         </div>
       </div>
-    </motion.div>
+    </motion.article>
   );
 }
 
@@ -224,7 +228,7 @@ export default function PortfolioGrid() {
       <div className="max-w-[1280px] mx-auto px-6 flex flex-col gap-14">
         {/* filter tabs */}
         {/* <div ref={headerRef}>
-          <motion.div
+          <motion.article
             initial={{ opacity: 0, y: 16 }}
             animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, ease }}
@@ -243,7 +247,7 @@ export default function PortfolioGrid() {
                 {f}
               </button>
             ))}
-          </motion.div>
+          </motion.article>
         </div> */}
 
         {filtered.length > 0 ? (
@@ -253,7 +257,7 @@ export default function PortfolioGrid() {
             ))}
           </div>
         ) : (
-          <motion.div
+          <motion.article
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="text-center py-20"
@@ -261,7 +265,7 @@ export default function PortfolioGrid() {
             <p className="text-gray-400 text-sm">
               No projects in this category yet — check back soon.
             </p>
-          </motion.div>
+          </motion.article>
         )}
       </div>
     </section>

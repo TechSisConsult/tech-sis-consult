@@ -15,7 +15,7 @@ export default function ServicesCTA() {
     <>
       <section className="py-12 bg-white">
         <div className="max-w-[1280px] mx-auto px-6">
-          <motion.div
+          <motion.article
             ref={ctaRef}
             initial={{ opacity: 0, y: 40, scale: 0.98 }}
             animate={ctaInView ? { opacity: 1, y: 0, scale: 1 } : {}}
@@ -82,7 +82,7 @@ export default function ServicesCTA() {
                 </Link>
               </div>
             </div>
-          </motion.div>
+          </motion.article>
         </div>
       </section>
     </>

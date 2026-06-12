@@ -20,7 +20,7 @@ function Reveal({
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-70px' });
   return (
-    <motion.div
+    <motion.article
       ref={ref}
       initial={{ y: 32, opacity: 0 }}
       animate={inView ? { y: 0, opacity: 1 } : {}}
@@ -28,7 +28,7 @@ function Reveal({
       className={className}
     >
       {children}
-    </motion.div>
+    </motion.article>
   );
 }
 
@@ -123,7 +123,7 @@ export default function OurStory() {
           </div>
 
           <div ref={imgRef} className="relative lg:sticky lg:top-12">
-            <motion.div
+            <motion.article
               initial={{ x: 50, opacity: 0 }}
               animate={imgInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, ease }}
@@ -158,7 +158,7 @@ export default function OurStory() {
                   Founder, TechSisConsult
                 </p>
               </div>
-            </motion.div>
+            </motion.article>
           </div>
         </div>
       </div>

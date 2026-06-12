@@ -2,18 +2,18 @@
 
 import { motion } from 'motion/react';
 import Link from 'next/link';
+import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 import { MdArrowRight } from 'react-icons/md';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 const fadeUp = (delay = 0) => ({
-  initial: { y: 26, opacity: 0 },
+  initial: { y: 22, opacity: 0 },
   animate: { y: 0, opacity: 1, transition: { duration: 0.65, ease, delay } },
 });
 
 export default function ContactHero() {
   return (
     <section className="relative bg-[#003049] pt-[109px] overflow-hidden">
-      {/* dot grid */}
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
@@ -22,7 +22,6 @@ export default function ContactHero() {
           backgroundSize: '36px 36px',
         }}
       />
-      {/* glow */}
       <div
         className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full pointer-events-none"
         style={{
@@ -32,7 +31,7 @@ export default function ContactHero() {
         }}
       />
       <div
-        className="absolute -bottom-20 -left-20 w-[340px] h-[340px] rounded-full pointer-events-none"
+        className="absolute -bottom-20 -left-20 w-[300px] h-[300px] rounded-full pointer-events-none"
         style={{
           background:
             'radial-gradient(circle, rgba(212,168,67,0.07) 0%, transparent 70%)',
@@ -40,8 +39,7 @@ export default function ContactHero() {
         }}
       />
 
-      <div className="relative max-w-[1280px] mx-auto px-6 py-16 lg:py-20 flex flex-col gap-5">
-        {/* breadcrumb */}
+      <main className="relative max-w-[1280px] mx-auto px-6 py-14 lg:py-18 flex flex-col gap-8">
         <motion.nav
           {...fadeUp(0.05)}
           aria-label="Breadcrumb"
@@ -53,36 +51,94 @@ export default function ContactHero() {
           >
             Home
           </Link>
-          <MdArrowRight className="text-white/40 w-4 h-4" />
+          <MdArrowRight className="w-6 h-6 text-[#d4a843]" />
           <span className="text-[#d4a843]">Contact</span>
         </motion.nav>
 
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
-          <div className="flex flex-col gap-4 max-w-2xl">
-            <motion.p
-              {...fadeUp(0.1)}
-              className="text-[#d4a843] text-sm font-bold uppercase tracking-[0.22em]"
-            >
-              Get In Touch
-            </motion.p>
+        <article className="flex flex-col lg:flex-row lg:items-end justify-between gap-10">
+          <div className="flex flex-col gap-5 max-w-xl">
             <motion.h1
               {...fadeUp(0.18)}
-              className="text-4xl sm:text-5xl font-extrabold text-white leading-[1.1] tracking-tight"
+              className="text-4xl sm:text-5xl font-extrabold text-white leading-[1.08] tracking-tight"
             >
-              Need More Customers Online?{' '}
-              <span className="text-[#d4a843]">Let&apos;s Talk.</span>
+              We Look Forward to{' '}
+              <span className="text-[#d4a843]">Hearing From You.</span>
             </motion.h1>
             <motion.p
               {...fadeUp(0.28)}
               className="text-white/50 text-base leading-relaxed"
             >
-              Tell us about your business and goals,and we&apos;ll recommend the
-              best path forward - whether that&apos;s a new website, a redesign,
-              or ongoing support.
+              We are a remote-first digital agency based in Enugu State, Nigeria
+              - working with businesses across Africa and internationally. Every
+              enquiry is reviewed personally. You&apos;ll always hear back from
+              a real person.
             </motion.p>
           </div>
-        </div>
-      </div>
+
+          <motion.article
+            {...fadeUp(0.35)}
+            className="flex flex-col gap-4 flex-shrink-0 lg:min-w-[280px]"
+          >
+            {/* Phone */}
+            <div className="flex flex-col gap-1">
+              <p className="text-white/35 text-[10px] font-bold uppercase tracking-[0.2em]">
+                Give Us a Call
+              </p>
+              <a
+                href="tel:+234YOUR_NUMBER"
+                className="text-[#d4a843] text-xl font-extrabold hover:text-[#e8bc5a] transition-colors duration-200 tracking-tight"
+              >
+                +234 702 676 6769
+              </a>
+            </div>
+
+            <div className="h-px bg-white/8" />
+
+            <div className="flex flex-col gap-2">
+              <p className="text-white/35 text-[10px] font-bold uppercase tracking-[0.2em]">
+                Chat on WhatsApp
+              </p>
+              <a
+                href="https://wa.me/2347026766769?text=Hi%20TechSisConsult!%20I%27d%20like%20to%20discuss%20a%20project."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold text-sm px-5 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-[#25D366]/25 hover:-translate-y-px w-fit"
+              >
+                <FaWhatsapp className="w-4 h-4" />
+                Send a WhatsApp Message
+              </a>
+            </div>
+
+            <div className="flex flex-col gap-2 mt-2">
+              <a
+                href="#strategy-call"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 bg-[#d4a843] hover:bg-[#e6b74a] text-white font-bold text-sm px-5 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-[#25D366]/25 hover:-translate-y-px w-fit"
+              >
+                <FaPhoneAlt className="w-4 h-4" />
+                Book a Free Strategy Call
+              </a>
+              <p className="text-white/35 text-[10px] font-bold uppercase tracking-[0.2em]">
+                Recommended — free & no obligation
+              </p>
+            </div>
+
+            <div className="h-px bg-white/8" />
+
+            <div className="flex flex-col gap-1">
+              <p className="text-white/35 text-[10px] font-bold uppercase tracking-[0.2em]">
+                Send an Email
+              </p>
+              <a
+                href="mailto:hello@techsisconsult.com"
+                className="text-[#d4a843] font-bold text-sm hover:text-[#e8bc5a] hover:underline transition-colors duration-200"
+              >
+                hello@techsisconsult.com
+              </a>
+            </div>
+          </motion.article>
+        </article>
+      </main>
 
       <div className="h-px bg-gradient-to-r from-transparent via-[#d4a843]/30 to-transparent" />
     </section>

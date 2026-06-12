@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
-import { Instrument_Serif } from 'next/font/google';
+import { Raleway } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-const geistInstrumentSerif = Instrument_Serif({
-  variable: '--font-instrument-serif',
+const raleway = Raleway({
+  variable: '--font-raleway',
   subsets: ['latin'],
-  weight: '400',
+  weight: ['400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
@@ -21,13 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistInstrumentSerif.variable} h-full antialiased`}
-    >
-      <body
-        className={`${geistInstrumentSerif.variable} min-h-full flex flex-col`}
-      >
+    <html lang="en" className={`${raleway.variable} h-full antialiased`}>
+      <body className="min-h-full flex flex-col">
         <Header />
         {children}
         <Footer />

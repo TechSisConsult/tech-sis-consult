@@ -34,7 +34,7 @@ export default function FAQsCTA() {
         {/* quick links row */}
         <div ref={linksRef} className="grid sm:grid-cols-3 gap-4 mb-4">
           {QUICK_LINKS.map((l, i) => (
-            <motion.div
+            <motion.article
               key={l.label}
               initial={{ opacity: 0, y: 20 }}
               animate={linksInView ? { opacity: 1, y: 0 } : {}}
@@ -64,12 +64,12 @@ export default function FAQsCTA() {
                   />
                 </svg>
               </Link>
-            </motion.div>
+            </motion.article>
           ))}
         </div>
 
         {/* main CTA banner */}
-        <motion.div
+        <motion.article
           ref={ref}
           initial={{ opacity: 0, y: 36, scale: 0.98 }}
           animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
@@ -120,13 +120,13 @@ export default function FAQsCTA() {
               <FaArrowCircleRight />
             </Link>
             <Link
-              href="mailto:hello@techsisconsult.org"
+              href="mailto:hello@techsisconsult.com"
               className="inline-flex items-center justify-center gap-2 border-2 border-white/20 hover:border-[#d4a843] text-white hover:text-[#d4a843] font-semibold px-8 py-4 rounded-full text-sm transition-all duration-200 whitespace-nowrap"
             >
               Send Us an Email
             </Link>
           </div>
-        </motion.div>
+        </motion.article>
       </div>
     </section>
   );

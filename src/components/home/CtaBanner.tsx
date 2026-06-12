@@ -13,7 +13,7 @@ export default function CTABanner() {
   return (
     <section className="py-24 bg-[#f8f8f6]">
       <div className="max-w-[1280px] mx-auto px-6">
-        <motion.div
+        <motion.article
           ref={ref}
           initial={{ opacity: 0, y: 40, scale: 0.98 }}
           animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
@@ -71,7 +71,7 @@ export default function CTABanner() {
               </motion.p>
             </div>
 
-            <motion.div
+            <motion.article
               initial={{ opacity: 0, x: 24 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.5 }}
@@ -90,9 +90,9 @@ export default function CTABanner() {
               >
                 View Services
               </a>
-            </motion.div>
+            </motion.article>
           </div>
-        </motion.div>
+        </motion.article>
       </div>
     </section>
   );

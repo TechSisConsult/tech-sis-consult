@@ -24,7 +24,7 @@ function AccordionItem({
   const inView = useInView(ref, { once: true, margin: '-40px' });
 
   return (
-    <motion.div
+    <motion.article
       ref={ref}
       initial={{ opacity: 0, y: 16 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
@@ -77,7 +77,7 @@ function AccordionItem({
 
       <AnimatePresence initial={false}>
         {isOpen && (
-          <motion.div
+          <motion.article
             key="answer"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
@@ -93,10 +93,10 @@ function AccordionItem({
                 </p>
               </div>
             </div>
-          </motion.div>
+          </motion.article>
         )}
       </AnimatePresence>
-    </motion.div>
+    </motion.article>
   );
 }
 
@@ -145,7 +145,7 @@ export default function FAQsAccordion() {
           ))}
         </div>
 
-        <motion.div
+        <motion.article
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
@@ -170,7 +170,7 @@ export default function FAQsAccordion() {
             Ask Us Directly
             <FaArrowCircleRight />
           </a>
-        </motion.div>
+        </motion.article>
       </div>
     </section>
   );

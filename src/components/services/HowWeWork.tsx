@@ -26,7 +26,7 @@ function Reveal({
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-60px' });
   return (
-    <motion.div
+    <motion.article
       ref={ref}
       initial={{ y: 28, opacity: 0 }}
       animate={inView ? { y: 0, opacity: 1 } : {}}
@@ -34,7 +34,7 @@ function Reveal({
       className={className}
     >
       {children}
-    </motion.div>
+    </motion.article>
   );
 }
 
