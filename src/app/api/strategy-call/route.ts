@@ -1,14 +1,18 @@
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req: Request) {
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+
+    if (!apiKey) {
+      throw new Error('Resend not configured');
+    }
+    const resend = new Resend(apiKey);
     const body = await req.json();
     const { name, email, phone, company, budget, services, questions } = body;
 
     await resend.emails.send({
-      from: 'TechSisConsult Website <hello@techsisconsult.com>',
+      from: 'TechSisConsult <hello@techsisconsult.com>',
       to: 'hello@techsisconsult.com',
       replyTo: email,
       subject: `New Strategy Call Request — ${name}`,
