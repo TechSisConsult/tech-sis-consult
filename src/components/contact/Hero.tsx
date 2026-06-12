@@ -2,7 +2,7 @@
 
 import { motion } from 'motion/react';
 import Link from 'next/link';
-import { FaWhatsapp } from 'react-icons/fa';
+import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 import { MdArrowRight } from 'react-icons/md';
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -57,12 +57,6 @@ export default function ContactHero() {
 
         <article className="flex flex-col lg:flex-row lg:items-end justify-between gap-10">
           <div className="flex flex-col gap-5 max-w-xl">
-            <motion.p
-              {...fadeUp(0.1)}
-              className="text-[#d4a843] text-[11px] font-bold uppercase tracking-[0.22em]"
-            >
-              Contact TechSisConsult
-            </motion.p>
             <motion.h1
               {...fadeUp(0.18)}
               className="text-4xl sm:text-5xl font-extrabold text-white leading-[1.08] tracking-tight"
@@ -74,8 +68,8 @@ export default function ContactHero() {
               {...fadeUp(0.28)}
               className="text-white/50 text-base leading-relaxed"
             >
-              We are a remote-first digital agency based in Lagos, Nigeria —
-              working with businesses across Africa and internationally. Every
+              We are a remote-first digital agency based in Enugu State, Nigeria
+              - working with businesses across Africa and internationally. Every
               enquiry is reviewed personally. You&apos;ll always hear back from
               a real person.
             </motion.p>
@@ -115,6 +109,20 @@ export default function ContactHero() {
               </a>
             </div>
 
+            <div className="flex flex-col gap-2 mt-2">
+              <a
+                href="#strategy-call"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2.5 bg-[#d4a843] hover:bg-[#e6b74a] text-white font-bold text-sm px-5 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-[#25D366]/25 hover:-translate-y-px w-fit"
+              >
+                <FaPhoneAlt className="w-4 h-4" />
+                Book a Free Strategy Call
+              </a>
+              <p className="text-white/35 text-[10px] font-bold uppercase tracking-[0.2em]">
+                Recommended — free & no obligation
+              </p>
+            </div>
+
             <div className="h-px bg-white/8" />
 
             <div className="flex flex-col gap-1">
@@ -122,10 +130,10 @@ export default function ContactHero() {
                 Send an Email
               </p>
               <a
-                href="mailto:hello@techsisconsult.org"
+                href="mailto:hello@techsisconsult.com"
                 className="text-[#d4a843] font-bold text-sm hover:text-[#e8bc5a] hover:underline transition-colors duration-200"
               >
-                hello@techsisconsult.org
+                hello@techsisconsult.com
               </a>
             </div>
           </motion.article>

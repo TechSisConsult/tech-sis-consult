@@ -182,7 +182,7 @@ export default function Header() {
               <Link
                 href="/contact"
                 onClick={() => setMenuOpen(false)}
-                className="mt-3 flex justify-center items-center bg-[#d4a843] text-[#003049] font-bold py-3 rounded-full text-sm"
+                className="mt-3 flex justify-center items-center text-[#003049] font-bold py-3 rounded-full text-sm bg-linear-to-br from-[#d4a843] to-[#003049]"
               >
                 Book a Free Call
               </Link>

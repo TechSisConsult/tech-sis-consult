@@ -120,7 +120,7 @@ export default function FAQsCTA() {
               <FaArrowCircleRight />
             </Link>
             <Link
-              href="mailto:hello@techsisconsult.org"
+              href="mailto:hello@techsisconsult.com"
               className="inline-flex items-center justify-center gap-2 border-2 border-white/20 hover:border-[#d4a843] text-white hover:text-[#d4a843] font-semibold px-8 py-4 rounded-full text-sm transition-all duration-200 whitespace-nowrap"
             >
               Send Us an Email
