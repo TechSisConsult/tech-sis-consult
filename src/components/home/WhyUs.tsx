@@ -71,7 +71,7 @@ export default function WhyUs() {
           </Reveal>
 
           <Reveal delay={0.12}>
-            <h2 className="text-4xl xl:text-[2.8rem] font-extrabold text-[#003049] leading-[1.1]">
+            <h2 className="text-4xl xl:text-[2.8rem] font-extrabold text-[#021823] leading-[1.1]">
               Reasons Why We are the Best{' '}
               <span className="text-[#d4a843]">Digital Agency</span>
             </h2>
@@ -83,15 +83,15 @@ export default function WhyUs() {
                 <div className="flex gap-4 group">
                   {/* icon + vertical connector */}
                   <div className="flex flex-col items-center flex-shrink-0">
-                    <div className="w-10 h-10 rounded-xl bg-[#003049]/7 group-hover:bg-[#d4a843] text-[#003049] group-hover:text-[#003049] flex items-center justify-center transition-all duration-300 flex-shrink-0">
+                    <div className="w-10 h-10 rounded-xl bg-[#021823]/7 group-hover:bg-[#d4a843] text-[#021823] group-hover:text-[#021823] flex items-center justify-center transition-all duration-300 flex-shrink-0">
                       {r.icon}
                     </div>
                     {i < REASONS.length - 1 && (
-                      <div className="w-px flex-1 mt-2 bg-gradient-to-b from-[#003049]/10 to-transparent min-h-[20px]" />
+                      <div className="w-px flex-1 mt-2 bg-gradient-to-b from-[#021823]/10 to-transparent min-h-[20px]" />
                     )}
                   </div>
                   <div className="pb-2">
-                    <h4 className="text-[#003049] font-extrabold text-sm mb-1.5">
+                    <h4 className="text-[#021823] font-extrabold text-sm mb-1.5">
                       {r.title}
                     </h4>
                     <p className="text-gray-500 text-sm leading-relaxed">
@@ -122,7 +122,7 @@ export default function WhyUs() {
               }}
             />
             <div className="absolute inset-0 flex items-end justify-center pb-0">
-              <div className="w-full h-3/4 bg-gradient-to-t from-[#003049]/80 to-transparent" />
+              <div className="w-full h-3/4 bg-gradient-to-t from-[#021823]/80 to-transparent" />
             </div>
 
             <div className="absolute top-0 right-0 w-24 h-24 bg-[#d4a843]/30 rounded-bl-[4rem]" />
@@ -130,7 +130,7 @@ export default function WhyUs() {
               <MdFlashOn className="w-8 h-8" />
             </div>
 
-            <div className="absolute px-4 py-2 bg-[#003049]/80">
+            <div className="absolute px-4 py-2 bg-[#021823]/80">
               <p className="text-[#d4a843] text-[11px] font-bold uppercase tracking-widest mb-2">
                 Our Approach
               </p>
@@ -144,7 +144,7 @@ export default function WhyUs() {
             initial={{ opacity: 0, scale: 0.85, x: 20 }}
             animate={imgInView ? { opacity: 1, scale: 1, x: 0 } : {}}
             transition={{ duration: 0.65, delay: 0.45, ease }}
-            className="absolute -bottom-4 -left-6 bg-white rounded-2xl shadow-2xl shadow-[#003049]/12 border border-gray-100 p-5 w-60"
+            className="absolute -bottom-4 -left-6 bg-white rounded-2xl shadow-2xl shadow-[#021823]/12 border border-gray-100 p-5 w-60"
           >
             {/* Stars */}
             <div className="flex gap-1 mb-3">
@@ -165,7 +165,7 @@ export default function WhyUs() {
                 className="rounded-full w-8 h-8 object-fill"
               />
               <div>
-                <p className="text-[#003049] text-xs font-extrabold">
+                <p className="text-[#021823] text-xs font-extrabold">
                   Ebele Tai-Nwankwo
                 </p>
                 <p className="text-gray-400 text-[10px]">

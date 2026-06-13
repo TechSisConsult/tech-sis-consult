@@ -38,7 +38,7 @@ const MVV = [
     headline: "What We're Here to Do",
     statement:
       'To equip every ambitious business with the smart digital tools, strategy, and presence they need to grow — removing the barrier between great businesses and the customers who need them.',
-    accent: 'bg-[#003049] text-white',
+    accent: 'bg-[#021823] text-white',
     iconBg: 'bg-[#d4a843]/20 text-[#d4a843]',
     tag: 'Our Mission',
   },
@@ -48,8 +48,8 @@ const MVV = [
     headline: "Where We're Going",
     statement:
       'A future where no business — regardless of size or location — is left behind digitally. Where African businesses in particular have world-class digital infrastructure and compete confidently on a global stage.',
-    accent: 'bg-[#d4a843] text-[#003049]',
-    iconBg: 'bg-[#003049]/15 text-[#003049]',
+    accent: 'bg-[#d4a843] text-[#021823]',
+    iconBg: 'bg-[#021823]/15 text-[#021823]',
     tag: 'Our Vision',
   },
 ];
@@ -194,7 +194,7 @@ export default function MissionVisionValues() {
             initial={{ opacity: 0, y: 22 }}
             animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1, ease }}
-            className="text-4xl xl:text-5xl font-extrabold text-[#003049] leading-tight"
+            className="text-4xl xl:text-5xl font-extrabold text-[#021823] leading-tight"
           >
             Mission, Vision &amp; <span className="text-[#d4a843]">Values</span>
           </motion.h2>
@@ -234,7 +234,7 @@ export default function MissionVisionValues() {
                       className={`text-[10px] font-bold uppercase tracking-[0.22em] px-3 py-1.5 rounded-full ${
                         item.type === 'Mission'
                           ? 'bg-[#d4a843]/15 text-[#d4a843]'
-                          : 'bg-[#003049]/12 text-[#003049]'
+                          : 'bg-[#021823]/12 text-[#021823]'
                       }`}
                     >
                       {item.tag}
@@ -252,7 +252,7 @@ export default function MissionVisionValues() {
                     className={`text-base leading-relaxed flex-1 ${
                       item.type === 'Mission'
                         ? 'text-white/70'
-                        : 'text-[#003049]/75'
+                        : 'text-[#021823]/75'
                     }`}
                   >
                     {item.statement}
@@ -263,7 +263,7 @@ export default function MissionVisionValues() {
                     className={`h-1 w-16 rounded-full ${
                       item.type === 'Mission'
                         ? 'bg-[#d4a843]/40'
-                        : 'bg-[#003049]/25'
+                        : 'bg-[#021823]/25'
                     }`}
                   />
                 </div>
@@ -278,7 +278,7 @@ export default function MissionVisionValues() {
             <p className="text-[#d4a843] text-sm font-bold uppercase tracking-[0.22em] mb-3">
               Our Core Values
             </p>
-            <h2 className="text-3xl xl:text-4xl font-extrabold text-[#003049] leading-tight">
+            <h2 className="text-3xl xl:text-4xl font-extrabold text-[#021823] leading-tight">
               The Standards We Hold Ourselves To
             </h2>
           </Reveal>
@@ -286,13 +286,13 @@ export default function MissionVisionValues() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {VALUES.map((v, i) => (
               <Reveal key={v.title} delay={0.08 + i * 0.08}>
-                <div className="group bg-white rounded-2xl p-7 border border-gray-100 hover:border-[#003049]/12 hover:shadow-xl hover:shadow-[#003049]/5 hover:-translate-y-1.5 transition-all duration-300 cursor-default h-full flex flex-col gap-4">
+                <div className="group bg-white rounded-2xl p-7 border border-gray-100 hover:border-[#021823]/12 hover:shadow-xl hover:shadow-[#021823]/5 hover:-translate-y-1.5 transition-all duration-300 cursor-default h-full flex flex-col gap-4">
                   {/* icon */}
-                  <div className="w-11 h-11 rounded-xl bg-[#003049]/6 group-hover:bg-[#003049] text-[#003049] group-hover:text-[#d4a843] flex items-center justify-center transition-all duration-300 flex-shrink-0">
+                  <div className="w-11 h-11 rounded-xl bg-[#021823]/6 group-hover:bg-[#021823] text-[#021823] group-hover:text-[#d4a843] flex items-center justify-center transition-all duration-300 flex-shrink-0">
                     {v.icon}
                   </div>
                   <div>
-                    <h4 className="text-[#003049] font-extrabold text-base mb-2">
+                    <h4 className="text-[#021823] font-extrabold text-base mb-2">
                       {v.title}
                     </h4>
                     <p className="text-gray-500 text-sm leading-relaxed">

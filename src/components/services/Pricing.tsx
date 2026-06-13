@@ -248,7 +248,7 @@ export default function Pricing() {
             initial={{ opacity: 0, y: 22 }}
             animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1, ease }}
-            className="text-4xl xl:text-5xl font-extrabold text-[#003049] leading-tight mb-4"
+            className="text-4xl xl:text-5xl font-extrabold text-[#021823] leading-tight mb-4"
           >
             Simple Pricing,{' '}
             <span className="text-[#d4a843]">Zero Hidden Fees</span>
@@ -277,8 +277,8 @@ export default function Pricing() {
                 onClick={() => setCurrency(c)}
                 className={`px-5 py-2 rounded-full text-sm font-bold transition-all duration-200 ${
                   currency === c
-                    ? 'bg-[#003049] text-white shadow-md'
-                    : 'text-gray-500 hover:text-[#003049]'
+                    ? 'bg-[#021823] text-white shadow-md'
+                    : 'text-gray-500 hover:text-[#021823]'
                 }`}
               >
                 {c === 'ngn' ? '₦ NGN' : '$ USD'}
@@ -294,14 +294,14 @@ export default function Pricing() {
               <div
                 className={`relative rounded-3xl border-2 overflow-hidden transition-all duration-300 ${
                   tier.highlight
-                    ? 'bg-[#003049] border-[#003049] shadow-2xl shadow-[#003049]/20 lg:-translate-y-4'
-                    : 'bg-white border-gray-100 hover:border-[#003049]/15 hover:shadow-xl hover:shadow-[#003049]/6'
+                    ? 'bg-[#021823] border-[#021823] shadow-2xl shadow-[#021823]/20 lg:-translate-y-4'
+                    : 'bg-white border-gray-100 hover:border-[#021823]/15 hover:shadow-xl hover:shadow-[#021823]/6'
                 }`}
               >
                 {/* popular badge */}
                 {tier.badge && (
                   <div className="absolute top-0 left-0 right-0 flex justify-center">
-                    <span className="bg-[#d4a843] text-[#003049] text-[10px] font-extrabold uppercase tracking-widest px-5 py-1.5 rounded-b-xl">
+                    <span className="bg-[#d4a843] text-[#021823] text-[10px] font-extrabold uppercase tracking-widest px-5 py-1.5 rounded-b-xl">
                       {tier.badge}
                     </span>
                   </div>
@@ -321,7 +321,7 @@ export default function Pricing() {
                     </p>
                     <h3
                       className={`text-2xl font-extrabold mb-2 ${
-                        tier.highlight ? 'text-white' : 'text-[#003049]'
+                        tier.highlight ? 'text-white' : 'text-[#021823]'
                       }`}
                     >
                       {tier.name}
@@ -351,7 +351,7 @@ export default function Pricing() {
                     <div className="flex items-end gap-1">
                       <span
                         className={`text-4xl font-extrabold leading-none ${
-                          tier.highlight ? 'text-[#d4a843]' : 'text-[#003049]'
+                          tier.highlight ? 'text-[#d4a843]' : 'text-[#021823]'
                         }`}
                       >
                         {currency === 'ngn'
@@ -454,8 +454,8 @@ export default function Pricing() {
                     href={tier.ctaHref}
                     className={`inline-flex items-center justify-center gap-2 font-bold text-sm px-6 py-3.5 rounded-full transition-all duration-200 hover:-translate-y-0.5 ${
                       tier.highlight
-                        ? 'bg-[#d4a843] text-[#003049] hover:bg-[#bf9630] hover:shadow-xl hover:shadow-[#d4a843]/30'
-                        : 'bg-[#003049] text-white hover:bg-[#003049]/90 hover:shadow-lg'
+                        ? 'bg-[#d4a843] text-[#021823] hover:bg-[#bf9630] hover:shadow-xl hover:shadow-[#d4a843]/30'
+                        : 'bg-[#021823] text-white hover:bg-[#021823]/90 hover:shadow-lg'
                     }`}
                   >
                     {tier.cta}
@@ -483,7 +483,7 @@ export default function Pricing() {
                 d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            <p className="text-[#003049] text-sm">
+            <p className="text-[#021823] text-sm">
               <span className="font-bold">
                 Not sure which plan is right for you?
               </span>{' '}

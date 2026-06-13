@@ -54,7 +54,7 @@ const SOCIALS = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#003049] text-white relative overflow-hidden">
+    <footer className="bg-[#021823] text-white relative overflow-hidden">
       {/* gold top accent */}
       <div className="h-px bg-gradient-to-r from-transparent via-[#d4a843] to-transparent" />
 

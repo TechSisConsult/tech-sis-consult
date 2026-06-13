@@ -13,7 +13,7 @@ const fadeUp = (delay = 0) => ({
 
 export default function ContactHero() {
   return (
-    <section className="relative bg-[#003049] pt-[109px] overflow-hidden">
+    <section className="relative bg-gradient-to-t from-[#021823] to-[#d4a843]/80 pt-[70px] overflow-hidden">
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
@@ -39,7 +39,7 @@ export default function ContactHero() {
         }}
       />
 
-      <main className="relative max-w-[1280px] mx-auto px-6 py-14 lg:py-18 flex flex-col gap-8">
+      <main className="relative max-w-[1280px] mx-auto px-6 py-10 lg:py-15 flex flex-col gap-8">
         <motion.nav
           {...fadeUp(0.05)}
           aria-label="Breadcrumb"
@@ -59,7 +59,7 @@ export default function ContactHero() {
           <div className="flex flex-col gap-5 max-w-xl">
             <motion.h1
               {...fadeUp(0.18)}
-              className="text-4xl sm:text-5xl font-extrabold text-white leading-[1.08] tracking-tight"
+              className="text-3xl sm:text-5xl font-extrabold text-white leading-[1.08] tracking-tight"
             >
               We Look Forward to{' '}
               <span className="text-[#d4a843]">Hearing From You.</span>
@@ -85,7 +85,7 @@ export default function ContactHero() {
                 Give Us a Call
               </p>
               <a
-                href="tel:+234YOUR_NUMBER"
+                href="tel:+2347026766769"
                 className="text-[#d4a843] text-xl font-extrabold hover:text-[#e8bc5a] transition-colors duration-200 tracking-tight"
               >
                 +234 702 676 6769

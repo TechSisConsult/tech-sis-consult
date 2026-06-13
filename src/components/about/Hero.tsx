@@ -20,7 +20,7 @@ const TRUST_PILLS = [
 
 export default function AboutHero() {
   return (
-    <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden pt-[109px]">
+    <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden pt-[70px]">
       <Image
         src="/bg-5.png"
         alt=""
@@ -29,7 +29,7 @@ export default function AboutHero() {
         className="object-cover object-center"
       />
 
-      <div className="absolute inset-0 bg-[#003049]/65 pointer-events-none" />
+      <div className="absolute inset-0 bg-[#021823]/65 pointer-events-none" />
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
@@ -154,7 +154,7 @@ export default function AboutHero() {
         >
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#003049] font-bold text-sm px-8 py-3.5 rounded-full transition-all duration-200 hover:shadow-xl hover:shadow-[#d4a843]/30 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] font-bold text-sm px-8 py-3.5 rounded-full transition-all duration-200 hover:shadow-xl hover:shadow-[#d4a843]/30 hover:-translate-y-0.5"
           >
             Work With Us
             <svg

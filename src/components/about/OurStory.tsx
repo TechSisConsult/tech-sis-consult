@@ -56,7 +56,7 @@ export default function OurStory() {
             </Reveal>
 
             <Reveal delay={0.13}>
-              <h2 className="text-4xl xl:text-[2.8rem] font-extrabold text-[#003049] leading-[1.1]">
+              <h2 className="text-4xl xl:text-[2.8rem] font-extrabold text-[#021823] leading-[1.1]">
                 I Noticed Something Most Businesses Overlook{' '}
                 <span className="text-[#d4a843]">
                   About Their Online Presence.
@@ -107,7 +107,7 @@ export default function OurStory() {
             {/* what we believe pills */}
             <Reveal delay={0.48}>
               <div className="flex flex-col gap-3 mt-1">
-                <p className="text-[#003049] text-xs font-bold uppercase tracking-widest">
+                <p className="text-[#021823] text-xs font-bold uppercase tracking-widest">
                   We believe that:
                 </p>
                 {WHAT_WE_BELIEVE.map((b, i) => (
@@ -127,7 +127,7 @@ export default function OurStory() {
               initial={{ x: 50, opacity: 0 }}
               animate={imgInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, ease }}
-              className="relative rounded-3xl overflow-hidden bg-[#003049] aspect-[4/4] max-w-[420px] ml-auto"
+              className="relative rounded-3xl overflow-hidden bg-[#021823] aspect-[4/4] max-w-[420px] ml-auto"
             >
               <Image
                 src={FounderImage}
@@ -150,7 +150,7 @@ export default function OurStory() {
               </div>
 
               {/* Bottom label */}
-              <div className="absolute bottom-0 left-0 right-0 p-7 bg-gradient-to-t from-[#003049] via-[#003049]/80 to-transparent">
+              <div className="absolute bottom-0 left-0 right-0 p-7 bg-gradient-to-t from-[#021823] via-[#021823]/80 to-transparent">
                 <p className="text-white text-lg font-extrabold leading-snug">
                   Fatima Oyiza Jimoh
                 </p>
