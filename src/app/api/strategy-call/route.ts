@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     const { name, email, phone, company, budget, services, questions } = body;
 
     await resend.emails.send({
-      from: 'TechSisConsult <hello@techsisconsult.com>',
+      from: 'TechSisConsult <hello@mail.techsisconsult.com>',
       to: 'hello@techsisconsult.com',
       replyTo: email,
       subject: `New Strategy Call Request — ${name}`,
@@ -73,7 +73,7 @@ export async function POST(req: Request) {
               </div>
 
               <div class="footer">
-                Sent from the TechSisConsult strategy call form · techsisconsult.com
+                Sent from the TechSisConsult strategy call form · https://techsisconsult.com
               </div>
             </section>
           </body>
@@ -83,7 +83,7 @@ export async function POST(req: Request) {
 
     // Also send a confirmation email to the client
     await resend.emails.send({
-      from: 'TechSisConsult <hello@techsisconsult.com>',
+      from: 'TechSisConsult <hello@mail.techsisconsult.com>',
       to: email,
       subject: `We've received your strategy call request, ${name.split(' ')[0]}!`,
       html: `
@@ -146,7 +146,7 @@ export async function POST(req: Request) {
               </p>
 
               <div class="footer">
-                TechSisConsult · hello@techsisconsult.com · Lagos, Nigeria<br />
+                TechSisConsult · https://techsisconsult.com · Enugu State, Nigeria<br />
                 You're receiving this because you submitted a strategy call request on our website.
               </div>
             </section>
