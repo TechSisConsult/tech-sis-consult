@@ -3,52 +3,43 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { FaFacebook, FaTiktok } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa6';
+import { FaXTwitter } from 'react-icons/fa6';
 import { MdCall, MdOutlineEmail } from 'react-icons/md';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
+import WebsiteLogo from '../../public//website-logo.png';
 
 const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
   { label: 'Portfolio', href: '/portfolio' },
-  { label: 'Contact', href: '/contact' },
   { label: 'FAQs', href: '/faqs' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 const socials = [
   {
     label: 'Facebook',
     href: '#',
-    svg: <FaFacebook />,
+    icon: <FaFacebook className="w-3.5 h-3.5" />,
   },
   {
-    label: 'Twitter',
+    label: 'Twitter/X',
     href: '#',
-    svg: (
-      <Image
-        src={'/twitter-x-gray.png'}
-        alt="twitter-logo"
-        width={20}
-        height={20}
-      />
-    ),
+    icon: <FaXTwitter className="w-3.5 h-3.5" />,
   },
   {
     label: 'Instagram',
     href: '#',
-    svg: <FaInstagram />,
+    icon: <FaInstagram className="w-3.5 h-3.5" />,
   },
-  {
-    label: 'TikTok',
-    href: '#',
-    svg: <FaTiktok />,
-  },
+  { label: 'TikTok', href: '#', icon: <FaTiktok className="w-3.5 h-3.5" /> },
 ];
 
-export default function Header() {
+export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -61,50 +52,57 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      <section className="w-full bg-[#003049]">
-        <div className="max-w-[1280px] mx-auto px-6 h-9 flex items-center justify-between py-6">
+      {/* ── TOP BAR ── */}
+      <div className="w-full bg-[#021823]">
+        <div className="max-w-[1280px] mx-auto px-6 h-9 flex items-center justify-between">
+          {/* email */}
           <Link
             href="mailto:hello@techsisconsult.com"
-            className="flex items-center gap-2 text-white/65 hover:text-[#d4a843] text-sm transition-colors duration-200"
+            className="flex items-center gap-1.5 text-white/60 hover:text-[#d4a843] text-xs font-medium transition-colors duration-200"
           >
-            <MdOutlineEmail className="w-4 h-4" />
+            <MdOutlineEmail className="w-3.5 h-3.5 flex-shrink-0" />
             hello@techsisconsult.com
           </Link>
+
+          {/* socials */}
           <div className="flex items-center gap-3.5">
             {socials.map((s) => (
               <Link
                 key={s.label}
                 href={s.href}
                 aria-label={s.label}
-                className="text-white/55 hover:text-[#d4a843] transition-colors duration-200"
+                className="text-white/50 hover:text-[#d4a843] transition-colors duration-200"
               >
-                {s.svg}
+                {s.icon}
               </Link>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      <section
+      {/* ── MAIN NAV ── */}
+      <div
         className={`w-full bg-white transition-shadow duration-300 ${
           scrolled
             ? 'shadow-[0_4px_20px_rgba(0,48,73,0.10)]'
-            : 'shadow-none border-b border-gray-100'
+            : 'border-b border-gray-100'
         }`}
       >
         <div className="max-w-[1280px] mx-auto px-6 h-[68px] flex items-center justify-between gap-6">
+          {/* Logo */}
           <Link href="/" className="flex-shrink-0">
             <Image
-              src="/website-logo.png"
+              src={WebsiteLogo}
               alt="TechSisConsult"
-              width={180}
-              height={52}
-              className="h-28 w-auto object-contain"
+              width={160}
+              height={44}
+              className="h-24 w-auto object-contain"
               priority
             />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-10">
+          {/* Desktop links */}
+          <nav className="hidden lg:flex items-center gap-7">
             {navLinks.map((link) => {
               const isActive =
                 link.href === '/'
@@ -114,20 +112,30 @@ export default function Header() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className={`relative ${isActive ? 'text-[#d4a843] scale-125' : 'text-[#003049] hover:text-[#d4a843]'} text-lg font-semibold tracking-wide transition-colors duration-200 py-1 group`}
+                  className={`relative text-sm font-semibold tracking-wide transition-colors duration-200 py-1 group ${
+                    isActive
+                      ? 'text-[#d4a843]'
+                      : 'text-[#021823] hover:text-[#d4a843]'
+                  }`}
                 >
                   {link.label}
+                  <span
+                    className={`absolute -bottom-0.5 left-0 h-[2px] bg-[#d4a843] rounded-full transition-all duration-300 ${
+                      isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}
+                  />
                 </Link>
               );
             })}
           </nav>
 
+          {/* CTA */}
           <Link
-            href="/contact"
-            className="hidden lg:inline-flex items-center gap-2 border border-[#bf9630] hover:bg-[#bf9630] text-[#003049] text-sm font-bold px-5 py-2.5 rounded-xs transition-all duration-200 hover:shadow-lg hover:shadow-[#d4a843]/30 hover:-translate-y-px flex-shrink-0"
+            href="/contact#strategy-call"
+            className="hidden lg:inline-flex items-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] text-sm font-bold px-5 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-[#d4a843]/30 hover:-translate-y-px flex-shrink-0"
           >
+            <MdCall className="w-4 h-4" />
             Book a Free Call
-            <MdCall />
           </Link>
 
           {/* Mobile burger */}
@@ -138,24 +146,24 @@ export default function Header() {
           >
             <motion.span
               animate={menuOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
-              className="block w-6 h-[2px] bg-[#003049] rounded-full origin-center transition-colors"
+              className="block w-6 h-[2px] bg-[#021823] rounded-full origin-center"
             />
             <motion.span
               animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
-              className="block w-6 h-[2px] bg-[#003049] rounded-full"
+              className="block w-6 h-[2px] bg-[#021823] rounded-full"
             />
             <motion.span
               animate={menuOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
-              className="block w-6 h-[2px] bg-[#003049] rounded-full origin-center"
+              className="block w-6 h-[2px] bg-[#021823] rounded-full origin-center"
             />
           </button>
         </div>
-      </section>
+      </div>
 
       {/* Mobile drawer */}
       <AnimatePresence>
         {menuOpen && (
-          <motion.article
+          <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -173,21 +181,26 @@ export default function Header() {
                     key={link.label}
                     href={link.href}
                     onClick={() => setMenuOpen(false)}
-                    className={`${isActive ? 'text-[#d4a843] scale-100 lg:scale-75' : 'text-[#003049] hover:text-[#d4a843]'} font-semibold text-sm py-2.5 border-b border-gray-50 last:border-0 transition-colors`}
+                    className={`font-semibold text-sm py-2.5 border-b border-gray-50 last:border-0 transition-colors ${
+                      isActive
+                        ? 'text-[#d4a843]'
+                        : 'text-[#021823] hover:text-[#d4a843]'
+                    }`}
                   >
                     {link.label}
                   </Link>
                 );
               })}
               <Link
-                href="/contact"
+                href="/contact#strategy-call"
                 onClick={() => setMenuOpen(false)}
-                className="mt-3 flex justify-center items-center text-[#003049] font-bold py-3 rounded-full text-sm bg-linear-to-br from-[#d4a843] to-[#003049]"
+                className="mt-3 flex justify-center items-center gap-2 bg-[#d4a843] text-[#021823] font-bold py-3 rounded-full text-sm"
               >
+                <MdCall className="w-4 h-4" />
                 Book a Free Call
               </Link>
             </nav>
-          </motion.article>
+          </motion.div>
         )}
       </AnimatePresence>
     </header>

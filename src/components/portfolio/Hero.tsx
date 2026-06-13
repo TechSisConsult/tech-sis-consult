@@ -6,7 +6,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function PortfolioHero() {
   return (
-    <section className="relative bg-[#003049] pt-[109px] overflow-hidden">
+    <section className="relative bg-gradient-to-r from-[#021823] to-[#d4a843] pt-[70px] overflow-hidden">
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
@@ -26,7 +26,7 @@ export default function PortfolioHero() {
       />
 
       <div className="relative max-w-[1280px] mx-auto px-6 py-16 lg:py-20 flex flex-col gap-5">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+        <div className="flex flex-col lg:items-center justify-between gap-6">
           <div className="flex flex-col gap-4 max-w-xl">
             <motion.h1
               initial={{ opacity: 0, y: 22 }}
@@ -34,7 +34,8 @@ export default function PortfolioHero() {
               transition={{ duration: 0.65, delay: 0.18, ease }}
               className="text-4xl sm:text-5xl font-extrabold text-white leading-[1.1] tracking-tight"
             >
-              Work We&apos;re <span className="text-[#d4a843]">Proud Of</span>
+              Build a Website that{' '}
+              <span className="text-[#d4a843]">Wins More Customers</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
@@ -48,7 +49,7 @@ export default function PortfolioHero() {
             </motion.p>
           </div>
 
-          <motion.article
+          {/* <motion.article
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.55, delay: 0.35, ease }}
@@ -75,7 +76,7 @@ export default function PortfolioHero() {
                 Coming
               </p>
             </div>
-          </motion.article>
+          </motion.article> */}
         </div>
       </div>
       <div className="h-px bg-gradient-to-r from-transparent via-[#d4a843]/30 to-transparent" />

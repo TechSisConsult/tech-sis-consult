@@ -59,9 +59,12 @@ export default function AboutSnippet() {
   const boxInView = useInView(boxRef, { once: true, margin: '-80px' });
 
   return (
-    <section id="about" className="py-24 bg-white relative overflow-hidden">
+    <section
+      id="about"
+      className="py-20 bg-[#ffffff]/20 relative overflow-hidden"
+    >
       {/* faint blobs */}
-      <div className="pointer-events-none absolute top-0 right-0 w-96 h-96 rounded-full bg-[#003049]/[0.022] translate-x-1/2 -translate-y-1/2" />
+      <div className="pointer-events-none absolute top-0 right-0 w-96 h-96 rounded-full bg-[#021823]/[0.022] translate-x-1/2 -translate-y-1/2" />
       <div className="pointer-events-none absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#d4a843]/[0.05] -translate-x-1/3 translate-y-1/3" />
 
       <div className="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
@@ -85,7 +88,7 @@ export default function AboutSnippet() {
             <div className="absolute top-0 left-0 w-1.5 h-full bg-[#d4a843]" />
 
             {/* interior copy */}
-            <div className="absolute inset-0 flex flex-col justify-end p-8 bg-[#003049]/60 max-h-[300px] items-start mt-[150px] md:mt-[320px]">
+            <div className="absolute inset-0 flex flex-col justify-end p-8 bg-[#021823]/60 max-h-[300px] items-start mt-[150px] md:mt-[320px]">
               <p className="text-[#d4a843] text-[11px] font-bold uppercase tracking-[0.2em] mb-3">
                 Who We Are
               </p>
@@ -107,8 +110,8 @@ export default function AboutSnippet() {
             transition={{ duration: 0.6, delay: 0.45, ease }}
             className="absolute -bottom-5 -right-3 bg-[#d4a843] rounded-2xl px-6 py-5 shadow-xl shadow-[#d4a843]/25"
           >
-            <p className="text-[#003049] text-3xl font-extrabold">98%</p>
-            <p className="text-[#003049]/70 text-xs font-semibold mt-0.5">
+            <p className="text-[#021823] text-3xl font-extrabold">98%</p>
+            <p className="text-[#021823]/70 text-xs font-semibold mt-0.5">
               Client Retention Rate
             </p>
           </motion.article> */}
@@ -123,7 +126,7 @@ export default function AboutSnippet() {
           </Reveal>
 
           <Reveal delay={0.16}>
-            <h2 className="text-4xl xl:text-5xl font-extrabold text-[#003049] leading-tight">
+            <h2 className="text-4xl xl:text-5xl font-extrabold text-[#021823] leading-tight">
               Your business deserves a powerful digital presence
             </h2>
           </Reveal>
@@ -142,11 +145,11 @@ export default function AboutSnippet() {
             {PILLARS.map((p, i) => (
               <Reveal key={p.title} delay={0.3 + i * 0.1}>
                 <div className="flex gap-4 group">
-                  <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-[#003049]/6 group-hover:bg-[#003049] text-[#003049] group-hover:text-[#d4a843] flex items-center justify-center transition-all duration-300">
+                  <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-[#021823]/6 group-hover:bg-[#021823] text-[#021823] group-hover:text-[#d4a843] flex items-center justify-center transition-all duration-300">
                     {p.icon}
                   </div>
                   <div>
-                    <h4 className="text-[#003049] font-bold text-sm mb-1">
+                    <h4 className="text-[#021823] font-bold text-sm mb-1">
                       {p.title}
                     </h4>
                     <p className="text-gray-500 text-sm leading-relaxed">
@@ -161,7 +164,7 @@ export default function AboutSnippet() {
           <Reveal delay={0.62}>
             <Link
               href="/services#services-grid"
-              className="inline-flex items-center gap-2 bg-[#003049] hover:bg-[#003049]/90 text-white font-bold text-sm px-7 py-3.5 rounded-full transition-all duration-200 hover:shadow-lg hover:-translate-y-px w-fit mt-2"
+              className="inline-flex items-center gap-2 bg-[#021823] hover:bg-[#021823]/90 text-white font-bold text-sm px-7 py-3.5 rounded-full transition-all duration-200 hover:shadow-lg hover:-translate-y-px w-fit mt-2"
             >
               Explore Our Services
               <FaArrowCircleRight />

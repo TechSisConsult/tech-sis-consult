@@ -42,12 +42,12 @@ export default function FAQsCTA() {
             >
               <Link
                 href={l.href}
-                className="flex items-center gap-3 bg-white border border-gray-100 hover:border-[#003049]/15 hover:shadow-lg hover:shadow-[#003049]/5 rounded-2xl px-5 py-4 group transition-all duration-200 hover:-translate-y-0.5"
+                className="flex items-center gap-3 bg-white border border-gray-100 hover:border-[#021823]/15 hover:shadow-lg hover:shadow-[#021823]/5 rounded-2xl px-5 py-4 group transition-all duration-200 hover:-translate-y-0.5"
               >
-                <div className="w-9 h-9 rounded-xl bg-[#003049]/6 group-hover:bg-[#003049] text-[#003049] group-hover:text-[#d4a843] flex items-center justify-center transition-all duration-300 flex-shrink-0">
+                <div className="w-9 h-9 rounded-xl bg-[#021823]/6 group-hover:bg-[#021823] text-[#021823] group-hover:text-[#d4a843] flex items-center justify-center transition-all duration-300 flex-shrink-0">
                   {l.icon}
                 </div>
-                <span className="text-[#003049] font-bold text-sm group-hover:text-[#d4a843] transition-colors duration-200">
+                <span className="text-[#021823] font-bold text-sm group-hover:text-[#d4a843] transition-colors duration-200">
                   {l.label}
                 </span>
                 <svg
@@ -74,7 +74,7 @@ export default function FAQsCTA() {
           initial={{ opacity: 0, y: 36, scale: 0.98 }}
           animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
           transition={{ duration: 0.7, ease }}
-          className="relative bg-[#003049] rounded-[2.5rem] overflow-hidden px-10 py-14 lg:py-16 lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-10"
+          className="relative bg-[#021823] rounded-[2.5rem] overflow-hidden px-10 py-14 lg:py-16 lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-10"
         >
           {/* bg decor */}
           <div
@@ -114,7 +114,7 @@ export default function FAQsCTA() {
           <div className="relative z-10 flex flex-col gap-3 flex-shrink-0">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#003049] font-bold px-8 py-4 rounded-full text-sm transition-all duration-200 hover:shadow-2xl hover:shadow-[#d4a843]/30 hover:-translate-y-0.5 whitespace-nowrap"
+              className="inline-flex items-center justify-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] font-bold px-8 py-4 rounded-full text-sm transition-all duration-200 hover:shadow-2xl hover:shadow-[#d4a843]/30 hover:-translate-y-0.5 whitespace-nowrap"
             >
               Book a Free Call
               <FaArrowCircleRight />

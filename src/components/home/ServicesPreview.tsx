@@ -110,13 +110,13 @@ function Card({ s, i }: { s: (typeof SERVICES)[0]; i: number }) {
       className={`group relative flex flex-col gap-5 items-center rounded-3xl p-7 border transition-all duration-400 hover:-translate-y-2 cursor-default ${
         s.highlight
           ? 'bg-[#d4a843] border-[#d4a843] shadow-xl shadow-[#d4a843]/25'
-          : 'bg-white border-gray-100 hover:border-[#003049]/10 hover:shadow-2xl hover:shadow-[#003049]/6'
+          : 'bg-white border-gray-100 hover:border-[#021823]/10 hover:shadow-2xl hover:shadow-[#021823]/6'
       }`}
     >
       {/* faint number */}
       <span
         className={`absolute top-6 right-7 text-5xl font-black leading-none select-none ${
-          s.highlight ? 'text-[#003049]/10' : 'text-[#003049]/6'
+          s.highlight ? 'text-[#021823]/10' : 'text-[#021823]/6'
         }`}
       >
         {s.id}
@@ -126,8 +126,8 @@ function Card({ s, i }: { s: (typeof SERVICES)[0]; i: number }) {
       <div
         className={`w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
           s.highlight
-            ? 'bg-[#003049]/20 text-[#003049]'
-            : 'bg-[#003049]/6 text-[#003049] group-hover:bg-[#003049] group-hover:text-[#d4a843]'
+            ? 'bg-[#021823]/20 text-[#021823]'
+            : 'bg-[#021823]/6 text-[#021823] group-hover:bg-[#021823] group-hover:text-[#d4a843]'
         }`}
       >
         {s.icon}
@@ -137,14 +137,14 @@ function Card({ s, i }: { s: (typeof SERVICES)[0]; i: number }) {
       <div className="flex flex-col items-center">
         <h3
           className={`text-lg font-extrabold mb-2 ${
-            s.highlight ? 'text-[#003049]' : 'text-[#003049]'
+            s.highlight ? 'text-[#021823]' : 'text-[#021823]'
           }`}
         >
           {s.title}
         </h3>
         <p
           className={`text-sm leading-relaxed ${
-            s.highlight ? 'text-[#003049]/72' : 'text-gray-500'
+            s.highlight ? 'text-[#021823]/72' : 'text-gray-500'
           }`}
         >
           {s.desc}
@@ -158,8 +158,8 @@ function Card({ s, i }: { s: (typeof SERVICES)[0]; i: number }) {
             key={t}
             className={`text-[11px] font-semibold px-3 py-1 rounded-full ${
               s.highlight
-                ? 'bg-[#003049]/15 text-[#003049]'
-                : 'bg-[#003049]/6 text-[#003049]'
+                ? 'bg-[#021823]/15 text-[#021823]'
+                : 'bg-[#021823]/6 text-[#021823]'
             }`}
           >
             {t}
@@ -172,8 +172,8 @@ function Card({ s, i }: { s: (typeof SERVICES)[0]; i: number }) {
         href="#contact"
         className={`inline-flex items-center gap-1.5 text-sm font-bold group/link transition-colors ${
           s.highlight
-            ? 'text-[#003049] hover:text-[#003049]/70'
-            : 'text-[#003049] hover:text-[#d4a843]'
+            ? 'text-[#021823] hover:text-[#021823]/70'
+            : 'text-[#021823] hover:text-[#d4a843]'
         }`}
       >
         Book a Free Consultation
@@ -214,7 +214,7 @@ export default function ServicesPreview() {
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl xl:text-5xl font-extrabold text-[#003049] leading-tight"
+              className="text-4xl xl:text-5xl font-extrabold text-[#021823] leading-tight"
             >
               Services Built for{' '}
               <span className="text-[#d4a843]">Modern Businesses</span>

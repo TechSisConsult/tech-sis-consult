@@ -8,7 +8,7 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function FAQsHero() {
   return (
-    <section className="relative bg-[#003049] pt-[109px] overflow-hidden">
+    <section className="relative bg-gradient-to-t from-[#021823] to-[#d4a843] pt-[70px] overflow-hidden">
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
@@ -35,7 +35,7 @@ export default function FAQsHero() {
         }}
       />
 
-      <div className="relative max-w-[1280px] mx-auto px-6 py-16 lg:py-20">
+      <section className="relative max-w-[1280px] mx-auto px-6 py-10 lg:py-15">
         {/* breadcrumb */}
         <motion.nav
           initial={{ opacity: 0, y: 10 }}
@@ -54,9 +54,9 @@ export default function FAQsHero() {
           <span className="text-[#d4a843]">FAQs</span>
         </motion.nav>
 
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
+        <section className="flex flex-col items-center">
           {/* left — headline */}
-          <div className="flex flex-col gap-4 max-w-2xl">
+          <article className="flex flex-col items-center gap-4 max-w-2xl">
             <motion.p
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
@@ -89,9 +89,9 @@ export default function FAQsHero() {
                 Just ask us directly.
               </Link>
             </motion.p>
-          </div>
-        </div>
-      </div>
+          </article>
+        </section>
+      </section>
       <div className="h-px bg-gradient-to-r from-transparent via-[#d4a843]/30 to-transparent" />
     </section>
   );

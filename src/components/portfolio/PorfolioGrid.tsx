@@ -17,14 +17,14 @@ const PROJECTS = [
   {
     id: 1,
     tag: 'Healthcare Website',
-    tagColor: 'bg-[#003049] text-white',
+    tagColor: 'bg-[#021823] text-white',
     client: 'Akulue Memorial Hospital',
     title:
       'A Modern Digital Presence Designed to Build Trust and Improve Patient Access',
     desc: 'Akulue Memorial Hospital needed a professional online presence that reflected the quality of care they provide. We designed and developed a fast, mobile-friendly website that makes it easy for patients to learn about services, access important information, and connect with the hospital from anywhere. The result is a modern healthcare website that strengthens credibility, improves accessibility, and supports patient engagement.',
     imgMain: '/client-sites/hospital-site.jpg',
     imgDetail: '/client-site.png',
-    mainBg: 'bg-gradient-to-br from-[#003049] to-[#004a6e]',
+    mainBg: 'bg-gradient-to-br from-[#021823] to-[#004a6e]',
     detailBg: 'bg-[#d4a843]/10',
     results: [
       { metric: '100%', label: 'Mobile Responsive' },
@@ -60,7 +60,7 @@ function FeaturedCard({ p }: { p: (typeof PROJECTS)[0] }) {
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7, ease }}
-      className="grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-gray-100 shadow-xl shadow-[#003049]/6 group"
+      className="grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-gray-100 shadow-xl shadow-[#021823]/6 group"
     >
       <div
         className={`relative aspect-[4/3] lg:aspect-auto ${p.mainBg} overflow-hidden`}
@@ -106,7 +106,7 @@ function FeaturedCard({ p }: { p: (typeof PROJECTS)[0] }) {
         </div>
 
         {p.featured && (
-          <div className="absolute top-5 right-5 z-10 bg-[#d4a843] text-[#003049] text-[10px] font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-full">
+          <div className="absolute top-5 right-5 z-10 bg-[#d4a843] text-[#021823] text-[10px] font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-full">
             Featured
           </div>
         )}
@@ -123,7 +123,7 @@ function FeaturedCard({ p }: { p: (typeof PROJECTS)[0] }) {
               {p.services.map((s) => (
                 <span
                   key={s}
-                  className="text-[10px] font-semibold text-[#003049]/60 bg-[#003049]/6 px-2.5 py-0.5 rounded-full"
+                  className="text-[10px] font-semibold text-[#021823]/60 bg-[#021823]/6 px-2.5 py-0.5 rounded-full"
                 >
                   {s}
                 </span>
@@ -132,7 +132,7 @@ function FeaturedCard({ p }: { p: (typeof PROJECTS)[0] }) {
           </div>
 
           {/* title */}
-          <h2 className="text-2xl xl:text-[1.65rem] font-extrabold text-[#003049] leading-snug">
+          <h2 className="text-2xl xl:text-[1.65rem] font-extrabold text-[#021823] leading-snug">
             {p.title}
           </h2>
 
@@ -155,12 +155,12 @@ function FeaturedCard({ p }: { p: (typeof PROJECTS)[0] }) {
                   {[1, 2, 3].map((i) => (
                     <div
                       key={i}
-                      className="bg-[#003049]/8 rounded-xl border border-[#003049]/10 flex flex-col gap-1.5 p-2"
+                      className="bg-[#021823]/8 rounded-xl border border-[#021823]/10 flex flex-col gap-1.5 p-2"
                       style={{ width: 60, height: 90 - i * 8 }}
                     >
-                      <div className="h-1.5 bg-[#003049]/20 rounded-full w-full" />
+                      <div className="h-1.5 bg-[#021823]/20 rounded-full w-full" />
                       <div className="h-1.5 bg-[#d4a843]/30 rounded-full w-3/4" />
-                      <div className="h-1.5 bg-[#003049]/15 rounded-full w-5/6" />
+                      <div className="h-1.5 bg-[#021823]/15 rounded-full w-5/6" />
                     </div>
                   ))}
                 </div>
@@ -180,7 +180,7 @@ function FeaturedCard({ p }: { p: (typeof PROJECTS)[0] }) {
                 key={r.label}
                 className="bg-gray-50 rounded-xl p-3 text-center border border-gray-100"
               >
-                <p className="text-[#003049] text-xl font-extrabold leading-none">
+                <p className="text-[#021823] text-xl font-extrabold leading-none">
                   {r.metric}
                 </p>
                 <p className="text-gray-400 text-[10px] mt-1 leading-snug font-semibold">
@@ -196,7 +196,7 @@ function FeaturedCard({ p }: { p: (typeof PROJECTS)[0] }) {
             href={p.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#003049] hover:bg-[#003049]/90 text-white font-bold text-sm px-6 py-3 rounded-full transition-all duration-200 hover:shadow-lg hover:-translate-y-px"
+            className="inline-flex items-center gap-2 bg-[#021823] hover:bg-[#021823]/90 text-white font-bold text-sm px-6 py-3 rounded-full transition-all duration-200 hover:shadow-lg hover:-translate-y-px"
           >
             View Project
             <FaExternalLinkAlt />
@@ -240,8 +240,8 @@ export default function PortfolioGrid() {
                 onClick={() => setActiveFilter(f)}
                 className={`text-xs font-bold px-5 py-2.5 rounded-full border-2 transition-all duration-200 ${
                   activeFilter === f
-                    ? 'bg-[#003049] text-white border-[#003049] shadow-md'
-                    : 'bg-white text-[#003049] border-gray-200 hover:border-[#003049]/30'
+                    ? 'bg-[#021823] text-white border-[#021823] shadow-md'
+                    : 'bg-white text-[#021823] border-gray-200 hover:border-[#021823]/30'
                 }`}
               >
                 {f}

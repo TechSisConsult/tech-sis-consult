@@ -17,7 +17,7 @@ const SERVICES = [
     shortDesc:
       'We design and build professional websites that do more than look good — they establish credibility, communicate your value clearly, and help convert visitors into real business enquiries.',
     icon: <MdMonitor className="w-6 h-6" />,
-    color: 'bg-[#003049]',
+    color: 'bg-[#021823]',
     highlight: false,
     pricingModel: 'Tailored to business needs after consultation',
     deliverables: [
@@ -85,7 +85,7 @@ const SERVICES = [
         />
       </svg>
     ),
-    color: 'bg-[#003049]',
+    color: 'bg-[#021823]',
     highlight: false,
     pricingModel: 'Tailored to business needs after consultation',
     deliverables: [
@@ -113,7 +113,7 @@ const SERVICES = [
     shortDesc:
       'We help you remove daily repetitive tasks from your business by setting up simple systems that handle follow-ups, bookings, payments, and customer communication automatically.',
     icon: <FaBolt className="w-6 h-6" />,
-    color: 'bg-[#003049]',
+    color: 'bg-[#021823]',
     highlight: false,
     pricingModel: 'Tailored to business needs after consultation',
 
@@ -140,7 +140,7 @@ const SERVICES = [
     shortDesc:
       'We provide ongoing technical care to ensure your website remains secure, updated, and performing optimally at all times.',
     icon: <FaClock className="w-6 h-6" />,
-    color: 'bg-[#003049]',
+    color: 'bg-[#021823]',
     highlight: false,
     pricingModel: 'Monthly maintenance plan after consultation',
     deliverables: [
@@ -200,7 +200,7 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
       className={`group relative rounded-3xl border-2 transition-all duration-500 overflow-hidden ${
         s.highlight
           ? 'bg-[#d4a843] border-[#d4a843] shadow-2xl shadow-[#d4a843]/25'
-          : 'bg-white border-gray-100 hover:border-[#003049]/12 hover:shadow-2xl hover:shadow-[#003049]/6'
+          : 'bg-white border-gray-100 hover:border-[#021823]/12 hover:shadow-2xl hover:shadow-[#021823]/6'
       }`}
     >
       {/* ── card top ── */}
@@ -210,15 +210,15 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
           <div
             className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300 ${
               s.highlight
-                ? 'bg-[#003049]/20 text-[#003049]'
-                : 'bg-[#003049]/7 text-[#003049] group-hover:bg-[#003049] group-hover:text-[#d4a843]'
+                ? 'bg-[#021823]/20 text-[#021823]'
+                : 'bg-[#021823]/7 text-[#021823] group-hover:bg-[#021823] group-hover:text-[#d4a843]'
             }`}
           >
             {s.icon}
           </div>
           <span
             className={`text-5xl font-black leading-none select-none ${
-              s.highlight ? 'text-[#003049]/10' : 'text-[#003049]/6'
+              s.highlight ? 'text-[#021823]/10' : 'text-[#021823]/6'
             }`}
           >
             {s.number}
@@ -229,18 +229,18 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
         <div>
           <p
             className={`text-[11px] font-bold uppercase tracking-[0.18em] mb-1.5 ${
-              s.highlight ? 'text-[#003049]/60' : 'text-[#d4a843]'
+              s.highlight ? 'text-[#021823]/60' : 'text-[#d4a843]'
             }`}
           >
             {s.tagline}
           </p>
           <h3
-            className={`text-xl font-extrabold mb-3 ${s.highlight ? 'text-[#003049]' : 'text-[#003049]'}`}
+            className={`text-xl font-extrabold mb-3 ${s.highlight ? 'text-[#021823]' : 'text-[#021823]'}`}
           >
             {s.title}
           </h3>
           <p
-            className={`text-sm leading-relaxed ${s.highlight ? 'text-[#003049]/72' : 'text-gray-500'}`}
+            className={`text-sm leading-relaxed ${s.highlight ? 'text-[#021823]/72' : 'text-gray-500'}`}
           >
             {s.shortDesc}
           </p>
@@ -251,8 +251,8 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
           <span
             className={`inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1 rounded-full ${
               s.highlight
-                ? 'bg-[#003049]/12 text-[#003049]'
-                : 'bg-[#003049]/6 text-[#003049]'
+                ? 'bg-[#021823]/12 text-[#021823]'
+                : 'bg-[#021823]/6 text-[#021823]'
             }`}
           >
             <svg
@@ -277,8 +277,8 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
           onClick={() => setExpanded((v) => !v)}
           className={`inline-flex items-center gap-2 text-sm font-bold transition-all duration-200 w-fit group/btn ${
             s.highlight
-              ? 'text-[#003049] hover:text-[#003049]/70'
-              : 'text-[#003049] hover:text-[#d4a843]'
+              ? 'text-[#021823] hover:text-[#021823]/70'
+              : 'text-[#021823] hover:text-[#d4a843]'
           }`}
         >
           {expanded ? 'Show Less' : "See What's Included"}
@@ -313,13 +313,13 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
           >
             <div
               className={`px-7 pb-7 border-t flex flex-col gap-6 ${
-                s.highlight ? 'border-[#003049]/15' : 'border-gray-100'
+                s.highlight ? 'border-[#021823]/15' : 'border-gray-100'
               }`}
             >
               <div className="pt-5">
                 <p
                   className={`text-[11px] font-bold uppercase tracking-widest mb-4 ${
-                    s.highlight ? 'text-[#003049]/50' : 'text-[#d4a843]'
+                    s.highlight ? 'text-[#021823]/50' : 'text-[#d4a843]'
                   }`}
                 >
                   What&apos;s included
@@ -329,11 +329,11 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
                     <li key={d} className="flex items-start gap-3">
                       <div
                         className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5 ${
-                          s.highlight ? 'bg-[#003049]/15' : 'bg-[#d4a843]/12'
+                          s.highlight ? 'bg-[#021823]/15' : 'bg-[#d4a843]/12'
                         }`}
                       >
                         <svg
-                          className={`w-3 h-3 ${s.highlight ? 'text-[#003049]' : 'text-[#d4a843]'}`}
+                          className={`w-3 h-3 ${s.highlight ? 'text-[#021823]' : 'text-[#d4a843]'}`}
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -348,7 +348,7 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
                       </div>
                       <span
                         className={`text-sm leading-relaxed ${
-                          s.highlight ? 'text-[#003049]/75' : 'text-gray-600'
+                          s.highlight ? 'text-[#021823]/75' : 'text-gray-600'
                         }`}
                       >
                         {d}
@@ -360,17 +360,17 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
 
               {/* ideal for */}
               <div
-                className={`rounded-xl p-4 ${s.highlight ? 'bg-[#003049]/12' : 'bg-gray-50'}`}
+                className={`rounded-xl p-4 ${s.highlight ? 'bg-[#021823]/12' : 'bg-gray-50'}`}
               >
                 <p
                   className={`text-[11px] font-bold uppercase tracking-widest mb-2 ${
-                    s.highlight ? 'text-[#003049]/50' : 'text-[#d4a843]'
+                    s.highlight ? 'text-[#021823]/50' : 'text-[#d4a843]'
                   }`}
                 >
                   Ideal for
                 </p>
                 <p
-                  className={`text-sm leading-relaxed ${s.highlight ? 'text-[#003049]/70' : 'text-gray-500'}`}
+                  className={`text-sm leading-relaxed ${s.highlight ? 'text-[#021823]/70' : 'text-gray-500'}`}
                 >
                   {s.ideal}
                 </p>
@@ -381,8 +381,8 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
                 href="/contact"
                 className={`inline-flex items-center gap-2 font-bold text-sm px-6 py-3 rounded-full transition-all duration-200 hover:-translate-y-0.5 w-fit ${
                   s.highlight
-                    ? 'bg-[#003049] text-white hover:bg-[#003049]/90 hover:shadow-lg'
-                    : 'bg-[#d4a843] text-[#003049] hover:bg-[#bf9630] hover:shadow-lg hover:shadow-[#d4a843]/25'
+                    ? 'bg-[#021823] text-white hover:bg-[#021823]/90 hover:shadow-lg'
+                    : 'bg-[#d4a843] text-[#021823] hover:bg-[#bf9630] hover:shadow-lg hover:shadow-[#d4a843]/25'
                 }`}
               >
                 {s.cta}
@@ -428,7 +428,7 @@ export default function ServicesGrid() {
             initial={{ opacity: 0, y: 22 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1, ease }}
-            className="text-4xl xl:text-5xl font-extrabold text-[#003049] leading-tight mb-4"
+            className="text-4xl xl:text-5xl font-extrabold text-[#021823] leading-tight mb-4"
           >
             Everything Your Business Needs{' '}
             <span className="text-[#d4a843]">to Win Online</span>

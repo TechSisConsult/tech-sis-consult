@@ -97,10 +97,10 @@ export default function StrategyCall() {
   };
 
   const inputClass =
-    'w-full bg-white border border-gray-200 text-[#003049] text-sm font-medium rounded-xl px-4 py-3.5 placeholder-gray-400 focus:outline-none focus:border-[#d4a843] focus:ring-2 focus:ring-[#d4a843]/15 transition-all duration-200';
+    'w-full bg-white border border-gray-200 text-[#021823] text-sm font-medium rounded-xl px-4 py-3.5 placeholder-gray-400 focus:outline-none focus:border-[#d4a843] focus:ring-2 focus:ring-[#d4a843]/15 transition-all duration-200';
 
   const labelClass =
-    'block text-[#003049] text-xs font-bold uppercase tracking-widest mb-2';
+    'block text-[#021823] text-xs font-bold uppercase tracking-widest mb-2';
 
   return (
     <section
@@ -129,7 +129,7 @@ export default function StrategyCall() {
               transition={{ duration: 0.6, delay: 0.1, ease }}
               className="flex flex-col gap-3"
             >
-              <h2 className="text-4xl xl:text-[2.8rem] font-extrabold text-[#003049] leading-[1.1]">
+              <h2 className="text-4xl xl:text-[2.8rem] font-extrabold text-[#021823] leading-[1.1]">
                 30-Minute <span className="text-[#d4a843]">Free</span> Strategy
                 Session
               </h2>
@@ -147,7 +147,7 @@ export default function StrategyCall() {
               transition={{ duration: 0.6, delay: 0.25, ease }}
               className="flex flex-col gap-5"
             >
-              <p className="text-[#003049] text-xs font-extrabold uppercase tracking-widest">
+              <p className="text-[#021823] text-xs font-extrabold uppercase tracking-widest">
                 Here&apos;s What to Expect
               </p>
               {WHAT_TO_EXPECT.map((item, i) => (
@@ -159,7 +159,7 @@ export default function StrategyCall() {
                   className="flex items-start gap-4"
                 >
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#d4a843]/30 flex items-center justify-center shadow-md shadow-[#d4a843]/20">
-                    <span className="text-[#003049] text-[10px] font-extrabold">
+                    <span className="text-[#021823] text-[10px] font-extrabold">
                       {item.step}
                     </span>
                   </div>
@@ -176,7 +176,7 @@ export default function StrategyCall() {
               transition={{ duration: 0.6, delay: 0.55, ease }}
               className="bg-white rounded-2xl border border-gray-100 p-5 flex flex-col gap-3"
             >
-              <p className="text-[#003049] text-xs font-extrabold uppercase tracking-widest">
+              <p className="text-[#021823] text-xs font-extrabold uppercase tracking-widest">
                 After you submit
               </p>
               <div className="flex items-start gap-3">
@@ -233,7 +233,7 @@ export default function StrategyCall() {
                     </svg>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <h3 className="text-2xl font-extrabold text-[#003049]">
+                    <h3 className="text-2xl font-extrabold text-[#021823]">
                       You&apos;re on the List!
                     </h3>
                     <p className="text-gray-500 text-base leading-relaxed max-w-sm">
@@ -242,14 +242,14 @@ export default function StrategyCall() {
                       Meet link — tailored around your availability.
                     </p>
                   </div>
-                  <div className="bg-[#d4a843]/8 border border-[#d4a843]/20 rounded-2xl px-5 py-4 text-sm text-[#003049] font-medium leading-relaxed max-w-sm">
+                  <div className="bg-[#d4a843]/8 border border-[#d4a843]/20 rounded-2xl px-5 py-4 text-sm text-[#021823] font-medium leading-relaxed max-w-sm">
                     While you wait — check your inbox and add{' '}
                     <span className="font-bold">hello@techsisconsult.com</span>{' '}
                     to your contacts so our reply doesn&apos;t go to spam.
                   </div>
                   <button
                     onClick={() => setFormState('idle')}
-                    className="text-sm font-bold text-[#003049]/40 hover:text-[#d4a843] transition-colors mt-1"
+                    className="text-sm font-bold text-[#021823]/40 hover:text-[#d4a843] transition-colors mt-1"
                   >
                     Submit another request →
                   </button>
@@ -264,7 +264,7 @@ export default function StrategyCall() {
                   className="bg-white rounded-3xl border border-gray-100 shadow-sm p-8 lg:p-10 flex flex-col gap-6"
                 >
                   <div className="flex flex-col gap-1">
-                    <h3 className="text-xl font-extrabold text-[#003049]">
+                    <h3 className="text-xl font-extrabold text-[#021823]">
                       Request Your Free Call
                     </h3>
                     <p className="text-gray-400 text-sm">
@@ -339,7 +339,7 @@ export default function StrategyCall() {
                             onClick={() => toggleService(s.id)}
                             className={`flex items-center gap-2.5 px-4 py-3 rounded-xl border-2 text-sm font-semibold text-left transition-all duration-200 ${
                               checked
-                                ? 'border-[#d4a843] bg-[#d4a843]/8 text-[#003049]'
+                                ? 'border-[#d4a843] bg-[#d4a843]/8 text-[#021823]'
                                 : 'border-gray-200 bg-white text-gray-500 hover:border-gray-300'
                             }`}
                           >
@@ -352,7 +352,7 @@ export default function StrategyCall() {
                             >
                               {checked && (
                                 <svg
-                                  className="w-2.5 h-2.5 text-[#003049]"
+                                  className="w-2.5 h-2.5 text-[#021823]"
                                   fill="none"
                                   viewBox="0 0 24 24"
                                   stroke="currentColor"
@@ -442,7 +442,7 @@ export default function StrategyCall() {
                   <button
                     type="submit"
                     disabled={formState === 'submitting'}
-                    className="inline-flex items-center justify-center gap-2 bg-[#003049] hover:bg-[#003049]/90 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold text-sm px-8 py-4 rounded-full transition-all duration-200 hover:shadow-xl hover:-translate-y-px"
+                    className="inline-flex items-center justify-center gap-2 bg-[#021823] hover:bg-[#021823]/90 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold text-sm px-8 py-4 rounded-full transition-all duration-200 hover:shadow-xl hover:-translate-y-px"
                   >
                     {formState === 'submitting' ? (
                       <>

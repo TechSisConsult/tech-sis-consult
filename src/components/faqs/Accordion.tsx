@@ -53,8 +53,8 @@ function AccordionItem({
           <span
             className={`text-sm font-bold leading-snug transition-colors duration-200 ${
               isOpen
-                ? 'text-[#003049]'
-                : 'text-[#003049]/80 group-hover:text-[#003049]'
+                ? 'text-[#021823]'
+                : 'text-[#021823]/80 group-hover:text-[#021823]'
             }`}
           >
             {item.question}
@@ -64,8 +64,8 @@ function AccordionItem({
         <div
           className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
             isOpen
-              ? 'bg-[#d4a843] text-[#003049]'
-              : 'bg-gray-100 text-gray-400 group-hover:bg-[#003049]/8 group-hover:text-[#003049]'
+              ? 'bg-[#d4a843] text-[#021823]'
+              : 'bg-gray-100 text-gray-400 group-hover:bg-[#021823]/8 group-hover:text-[#021823]'
           }`}
         >
           <MotionPlus
@@ -125,7 +125,7 @@ export default function FAQsAccordion() {
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.1, ease }}
-            className="text-3xl xl:text-4xl font-extrabold text-[#003049] leading-tight mb-3"
+            className="text-3xl xl:text-4xl font-extrabold text-[#021823] leading-tight mb-3"
           >
             Everything You Need to Know{' '}
             <span className="text-[#d4a843]">Before We Start</span>
@@ -150,7 +150,7 @@ export default function FAQsAccordion() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.6, ease }}
-          className="mt-10 bg-[#003049] rounded-2xl px-7 py-6 flex flex-col sm:flex-row items-center justify-between gap-5"
+          className="mt-10 bg-[#021823] rounded-2xl px-7 py-6 flex flex-col sm:flex-row items-center justify-between gap-5"
         >
           <div className="flex items-center gap-4">
             <div className="w-10 h-10 rounded-full bg-[#d4a843]/15 flex items-center justify-center flex-shrink-0">
@@ -165,7 +165,7 @@ export default function FAQsAccordion() {
           </div>
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#003049] font-bold text-sm px-6 py-3 rounded-full transition-all duration-200 hover:shadow-lg flex-shrink-0 whitespace-nowrap"
+            className="inline-flex items-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] font-bold text-sm px-6 py-3 rounded-full transition-all duration-200 hover:shadow-lg flex-shrink-0 whitespace-nowrap"
           >
             Ask Us Directly
             <FaArrowCircleRight />

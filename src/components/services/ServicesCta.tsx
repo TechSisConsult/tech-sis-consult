@@ -20,7 +20,7 @@ export default function ServicesCTA() {
             initial={{ opacity: 0, y: 40, scale: 0.98 }}
             animate={ctaInView ? { opacity: 1, y: 0, scale: 1 } : {}}
             transition={{ duration: 0.7, ease }}
-            className="relative bg-[#003049] rounded-[2.5rem] overflow-hidden px-10 py-16 lg:py-20 lg:px-20"
+            className="relative bg-[#021823] rounded-[2.5rem] overflow-hidden px-10 py-16 lg:py-20 lg:px-20"
           >
             {/* bg decor */}
             <div
@@ -69,7 +69,7 @@ export default function ServicesCTA() {
               <div className="flex flex-col gap-3 flex-shrink-0">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#003049] font-bold px-8 py-4 rounded-full text-sm transition-all duration-200 hover:shadow-2xl hover:shadow-[#d4a843]/30 hover:-translate-y-0.5 whitespace-nowrap"
+                  className="inline-flex items-center justify-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] font-bold px-8 py-4 rounded-full text-sm transition-all duration-200 hover:shadow-2xl hover:shadow-[#d4a843]/30 hover:-translate-y-0.5 whitespace-nowrap"
                 >
                   Request a Free Quote
                   <FaArrowCircleRight />
