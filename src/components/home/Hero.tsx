@@ -75,7 +75,7 @@ export default function Hero() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, ease, delay: 0.2 }}
-          className="hidden lg:grid grid-cols-2 gap-4 h-[400px]"
+          className="grid grid-cols-2 gap-4 h-[220px] lg:h-[400px]"
         >
           <article className="relative overflow-hidden row-span-2">
             <Image src={Image1} alt="office" className="object-cover" fill />
@@ -88,26 +88,6 @@ export default function Hero() {
           <article className="relative overflow-hidden bg-[#021823]/80 border border-white/8">
             <Image src={Image3} alt="office" className="w-full" fill />
           </article>
-        </motion.section>
-
-        <motion.section
-          {...fadeUp(0.5)}
-          className="lg:hidden relative rounded-2xl overflow-hidden bg-[#021823]/50 border border-white/10 p-6 flex items-center justify-between"
-        >
-          <div>
-            <p className="text-[#d4a843] text-3xl font-extrabold">98%</p>
-            <p className="text-white/50 text-xs mt-1">Client Retention</p>
-          </div>
-          <div className="h-10 w-px bg-white/10" />
-          <div>
-            <p className="text-[#d4a843] text-3xl font-extrabold">50+</p>
-            <p className="text-white/50 text-xs mt-1">Projects Done</p>
-          </div>
-          <div className="h-10 w-px bg-white/10" />
-          <div>
-            <p className="text-[#d4a843] text-3xl font-extrabold">5+</p>
-            <p className="text-white/50 text-xs mt-1">Years Active</p>
-          </div>
         </motion.section>
       </section>
 

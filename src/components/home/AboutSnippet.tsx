@@ -59,7 +59,10 @@ export default function AboutSnippet() {
   const boxInView = useInView(boxRef, { once: true, margin: '-80px' });
 
   return (
-    <section id="about" className="py-24 bg-white relative overflow-hidden">
+    <section
+      id="about"
+      className="py-20 bg-[#ffffff]/20 relative overflow-hidden"
+    >
       {/* faint blobs */}
       <div className="pointer-events-none absolute top-0 right-0 w-96 h-96 rounded-full bg-[#021823]/[0.022] translate-x-1/2 -translate-y-1/2" />
       <div className="pointer-events-none absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#d4a843]/[0.05] -translate-x-1/3 translate-y-1/3" />
