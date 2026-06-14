@@ -150,14 +150,14 @@ export default function ServicesHero() {
         >
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] font-bold text-sm px-8 py-3.5 rounded-full transition-all duration-200 hover:shadow-xl hover:shadow-[#d4a843]/30 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] font-bold text-sm px-8 py-3.5 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-xl hover:shadow-[#d4a843]/30 hover:-translate-y-0.5"
           >
             Schedule a Free Call
             <FaArrowCircleRight />
           </Link>
           <Link
             href="#services-grid"
-            className="inline-flex items-center gap-2 border-2 border-white/22 hover:border-[#d4a843] text-white hover:text-[#d4a843] font-semibold text-sm px-8 py-3.5 rounded-full transition-all duration-200"
+            className="inline-flex items-center gap-2 border-2 border-white/22 hover:border-[#d4a843] text-white hover:text-[#d4a843] font-semibold text-sm px-8 py-3.5 rounded-t-xl rounded-r-xl transition-all duration-200"
           >
             Explore Services
           </Link>

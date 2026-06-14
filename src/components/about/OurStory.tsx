@@ -3,8 +3,9 @@
 import { motion, useInView } from 'motion/react';
 import Image from 'next/image';
 import { useRef } from 'react';
-import FounderImage from '../../../public/founder.png';
 import { FaCheck } from 'react-icons/fa6';
+import Image1 from '../../../public/client-sites/hospital-site2.png';
+import Image3 from '../../../public/bg-10.jpeg';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -41,56 +42,40 @@ const WHAT_WE_BELIEVE = [
 
 export default function OurStory() {
   const imgRef = useRef(null);
-  const imgInView = useInView(imgRef, { once: true, margin: '-80px' });
+  // const imgInView = useInView(imgRef, { once: true, margin: '-80px' });
 
   return (
-    <section className="py-12 bg-white overflow-hidden">
+    <section className="pt-15 mt-[70px] bg-gradient-to-r from-white to-[#d4a843] overflow-hidden rounded-r-[25%]">
       <div className="max-w-[1280px] mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
           {/* Left — copy */}
           <div className="flex flex-col gap-7">
-            <Reveal delay={0.05}>
-              <p className="text-[#d4a843] text-sm font-bold uppercase tracking-[0.22em]">
-                How It Started
-              </p>
-            </Reveal>
-
             <Reveal delay={0.13}>
               <h2 className="text-4xl xl:text-[2.8rem] font-extrabold text-[#021823] leading-[1.1]">
-                I Noticed Something Most Businesses Overlook{' '}
+                We Help Businesses Grow Through{' '}
                 <span className="text-[#d4a843]">
-                  About Their Online Presence.
+                  Smart Digital Solutions
                 </span>{' '}
-                So I Did Something About It.
               </h2>
-            </Reveal>
-
-            <Reveal delay={0.2}>
-              <p className="text-gray-500 text-base leading-relaxed">
-                I kept meeting hardworking business owners with strong products
-                and real results — people already doing business, already
-                serving customers, and even active on social media. But
-                something was still missing: structure, clarity, and a central
-                place where everything about their business truly lived.
-              </p>
             </Reveal>
 
             <Reveal delay={0.27}>
               <p className="text-gray-500 text-base leading-relaxed">
-                Social media helped them get attention, but it didn’t fully
-                represent their brand. Important details were scattered,
-                credibility wasn’t always clear at first glance, and potential
-                customers often had no single place to understand who they were,
-                what they offered, and why they should be trusted.
+                Social media can help you get attention, but it doesn&apos;t
+                fully represent your brand. Important details can be scattered,
+                credibility isn&apos;t always clear at first glance, and
+                potential customers often have no single place to understand who
+                you are, what you offer, and why you should be trusted.
               </p>
             </Reveal>
 
             <Reveal delay={0.34}>
               <p className="text-gray-500 text-base leading-relaxed">
-                That’s where a well-built website changes everything. It brings
-                structure to your business online. It organizes your services,
-                communicates your value clearly, and builds trust instantly —
-                without needing constant explanation or back-and-forth.
+                That&apos;s where a well-built website changes everything. It
+                brings structure to your business online. It organizes your
+                services, communicates your value clearly, and builds trust
+                instantly — without needing constant explanation or
+                back-and-forth.
               </p>
             </Reveal>
 
@@ -123,7 +108,7 @@ export default function OurStory() {
           </div>
 
           <div ref={imgRef} className="relative lg:sticky lg:top-12">
-            <motion.article
+            {/* <motion.article
               initial={{ x: 50, opacity: 0 }}
               animate={imgInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, ease }}
@@ -149,7 +134,6 @@ export default function OurStory() {
                 &ldquo;
               </div>
 
-              {/* Bottom label */}
               <div className="absolute bottom-0 left-0 right-0 p-7 bg-gradient-to-t from-[#021823] via-[#021823]/80 to-transparent">
                 <p className="text-white text-lg font-extrabold leading-snug">
                   Fatima Oyiza Jimoh
@@ -158,7 +142,40 @@ export default function OurStory() {
                   Founder, TechSisConsult
                 </p>
               </div>
-            </motion.article>
+            {/* </motion.article>  */}
+
+            <motion.section
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.9, ease, delay: 0.2 }}
+              className="grid grid-cols-2 gap-4 h-[220px] lg:h-[400px]"
+            >
+              <article className="relative overflow-hidden row-span-2">
+                <Image
+                  src={Image3}
+                  alt="office"
+                  className="object-cover"
+                  fill
+                />
+              </article>
+
+              <figure>
+                <div className="absolute bottom-5 left-5 right-5" />
+              </figure>
+
+              <article className="relative overflow-hidden row-span-2">
+                <Image
+                  src={Image1}
+                  alt="office"
+                  className="object-cover"
+                  fill
+                />
+              </article>
+
+              {/* <article className="relative overflow-hidden bg-[#021823]/80 border border-white/8">
+                <Image src={Image2} alt="office" className="w-full" fill />
+              </article> */}
+            </motion.section>
           </div>
         </div>
       </div>

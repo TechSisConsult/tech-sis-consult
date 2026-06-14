@@ -3,6 +3,7 @@
 import { motion, useInView, AnimatePresence } from 'motion/react';
 import { useRef, useState } from 'react';
 import { FaPhone } from 'react-icons/fa';
+import { FaSpinner } from 'react-icons/fa6';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -442,29 +443,11 @@ export default function StrategyCall() {
                   <button
                     type="submit"
                     disabled={formState === 'submitting'}
-                    className="inline-flex items-center justify-center gap-2 bg-[#021823] hover:bg-[#021823]/90 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold text-sm px-8 py-4 rounded-full transition-all duration-200 hover:shadow-xl hover:-translate-y-px"
+                    className="inline-flex items-center justify-center gap-2 bg-[#021823] hover:bg-[#021823]/90 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold text-sm px-8 py-4 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-xl hover:-translate-y-px"
                   >
                     {formState === 'submitting' ? (
                       <>
-                        <svg
-                          className="w-4 h-4 animate-spin"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                        >
-                          <circle
-                            className="opacity-25"
-                            cx="12"
-                            cy="12"
-                            r="10"
-                            stroke="currentColor"
-                            strokeWidth="4"
-                          />
-                          <path
-                            className="opacity-75"
-                            fill="currentColor"
-                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"
-                          />
-                        </svg>
+                        <FaSpinner />
                         Sending your request…
                       </>
                     ) : (
