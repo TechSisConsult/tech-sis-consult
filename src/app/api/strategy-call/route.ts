@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     const { name, email, phone, company, budget, services, questions } = body;
 
     await resend.emails.send({
-      from: 'TechSisConsult <hello@mail.techsisconsult.com>',
+      from: 'TechSisConsult <hello@techsisconsult.com>',
       to: 'hello@techsisconsult.com',
       replyTo: email,
       subject: `New Strategy Call Request — ${name}`,
@@ -83,7 +83,7 @@ export async function POST(req: Request) {
 
     // Also send a confirmation email to the client
     await resend.emails.send({
-      from: 'TechSisConsult <hello@mail.techsisconsult.com>',
+      from: 'TechSisConsult <hello@techsisconsult.com>',
       to: email,
       subject: `We've received your strategy call request, ${name.split(' ')[0]}!`,
       html: `

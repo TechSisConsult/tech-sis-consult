@@ -2,7 +2,6 @@ import AboutCTA from '@/components/about/Cta';
 import Hero from '@/components/about/Hero';
 import MissionVisionValues from '@/components/about/Mission';
 import OurStory from '@/components/about/OurStory';
-import React from 'react';
 
 export const metadata = {
   title: 'About Us — TechSisConsult',
