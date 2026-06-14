@@ -12,7 +12,14 @@ const raleway = Raleway({
 
 export const metadata: Metadata = {
   title: 'Tech Sis Consult',
-  description: 'Smart Tech for Modern Business',
+  description:
+    'Tech Sis Consult helps businesses grow through websites, e-commerce stores, SEO, branding, and business automation.',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
+  },
+  metadataBase: new URL('https://techsisconsult.com'),
 };
 
 export default function RootLayout({

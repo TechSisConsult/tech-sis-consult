@@ -73,7 +73,7 @@ export async function POST(req: Request) {
               </div>
 
               <div class="footer">
-                Sent from the TechSisConsult strategy call form · techsisconsult.com
+                Sent from the TechSisConsult strategy call form · https://techsisconsult.com
               </div>
             </section>
           </body>
@@ -146,7 +146,7 @@ export async function POST(req: Request) {
               </p>
 
               <div class="footer">
-                TechSisConsult · hello@techsisconsult.com · Lagos, Nigeria<br />
+                TechSisConsult · https://techsisconsult.com · Enugu State, Nigeria<br />
                 You're receiving this because you submitted a strategy call request on our website.
               </div>
             </section>

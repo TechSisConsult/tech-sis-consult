@@ -81,8 +81,8 @@ export default function Navbar() {
       </div>
 
       {/* ── MAIN NAV ── */}
-      <div
-        className={`w-full bg-white transition-shadow duration-300 ${
+      <main
+        className={`w-full bg-white/85 transition-shadow duration-300 ${
           scrolled
             ? 'shadow-[0_4px_20px_rgba(0,48,73,0.10)]'
             : 'border-b border-gray-100'
@@ -158,7 +158,7 @@ export default function Navbar() {
             />
           </button>
         </div>
-      </div>
+      </main>
 
       {/* Mobile drawer */}
       <AnimatePresence>
