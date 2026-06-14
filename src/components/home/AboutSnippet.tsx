@@ -161,7 +161,7 @@ export default function AboutSnippet() {
           <Reveal delay={0.62}>
             <Link
               href="/services#services-grid"
-              className="inline-flex items-center gap-2 bg-[#021823] hover:bg-[#021823]/90 text-white font-bold text-sm px-7 py-3.5 rounded-full transition-all duration-200 hover:shadow-lg hover:-translate-y-px w-fit mt-2"
+              className="inline-flex items-center gap-2 bg-[#021823] hover:bg-[#021823]/90 text-white font-bold text-sm px-7 py-3.5 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-lg hover:-translate-y-px w-fit mt-2"
             >
               Explore Our Services
               <FaArrowCircleRight />

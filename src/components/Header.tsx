@@ -120,7 +120,7 @@ export default function Navbar() {
                 >
                   {link.label}
                   <span
-                    className={`absolute -bottom-0.5 left-0 h-[2px] bg-[#d4a843] rounded-full transition-all duration-300 ${
+                    className={`absolute -bottom-0.5 left-0 h-[2px] bg-gradient-to-l from-[#021823] via-white/10 to-[#d4a843] rounded-full transition-all duration-300 ${
                       isActive ? 'w-full' : 'w-0 group-hover:w-full'
                     }`}
                   />
@@ -132,7 +132,7 @@ export default function Navbar() {
           {/* CTA */}
           <Link
             href="/contact#strategy-call"
-            className="hidden lg:inline-flex items-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] text-sm font-bold px-5 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-[#d4a843]/30 hover:-translate-y-px flex-shrink-0"
+            className="hidden lg:inline-flex items-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] text-sm font-bold px-5 py-2.5 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-lg hover:shadow-[#d4a843]/30 hover:-translate-y-px flex-shrink-0"
           >
             <MdCall className="w-4 h-4" />
             Book a Free Call
@@ -194,7 +194,7 @@ export default function Navbar() {
               <Link
                 href="/contact#strategy-call"
                 onClick={() => setMenuOpen(false)}
-                className="mt-3 flex justify-center items-center gap-2 bg-[#d4a843] text-[#021823] font-bold py-3 rounded-full text-sm"
+                className="mt-3 flex justify-center items-center gap-2 bg-[#d4a843] text-[#021823] font-bold py-3 rounded-t-xl rounded-r-xl text-sm"
               >
                 <MdCall className="w-4 h-4" />
                 Book a Free Call

@@ -23,7 +23,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen bg-[#021823] overflow-hidden flex items-center"
+      className="relative min-h-screen bg-gradient-to-r from-[#021823] to-[#d4a843]/50 overflow-hidden flex items-center"
       style={{ paddingTop: '70px' }}
     >
       <section className="relative w-full max-w-[1280px] mx-auto px-6 py-10 lg:py-15 grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-center">
@@ -57,14 +57,14 @@ export default function Hero() {
           <motion.section {...fadeUp(0.35)} className="flex flex-wrap gap-4">
             <Link
               href="/contact#strategy-call"
-              className="inline-flex items-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] font-bold text-sm px-7 py-3.5 rounded-full transition-all duration-200 hover:shadow-xl hover:shadow-[#d4a843]/30 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] font-bold text-sm px-7 py-3.5 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-xl hover:shadow-[#d4a843]/30 hover:-translate-y-0.5"
             >
               Schedule a Call
               <FaArrowCircleRight />
             </Link>
             <Link
               href="/services"
-              className="inline-flex items-center gap-2 border-2 border-white/25 hover:border-[#d4a843] text-white hover:text-[#d4a843] font-semibold text-sm px-7 py-3.5 rounded-full transition-all duration-200"
+              className="inline-flex items-center gap-2 border-2 border-white/25 hover:border-[#d4a843] text-white hover:text-[#d4a843] font-semibold text-sm px-7 py-3.5 rounded-t-xl rounded-r-xl transition-all duration-200"
             >
               Explore Services
             </Link>

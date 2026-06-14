@@ -69,14 +69,14 @@ export default function ServicesCTA() {
               <div className="flex flex-col gap-3 flex-shrink-0">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] font-bold px-8 py-4 rounded-full text-sm transition-all duration-200 hover:shadow-2xl hover:shadow-[#d4a843]/30 hover:-translate-y-0.5 whitespace-nowrap"
+                  className="inline-flex items-center justify-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] font-bold px-8 py-4 rounded-t-xl rounded-r-xl text-sm transition-all duration-200 hover:shadow-2xl hover:shadow-[#d4a843]/30 hover:-translate-y-0.5 whitespace-nowrap"
                 >
                   Request a Free Quote
                   <FaArrowCircleRight />
                 </Link>
                 <Link
                   href="/about"
-                  className="inline-flex items-center justify-center border-2 border-white/20 hover:border-[#d4a843] text-white hover:text-[#d4a843] font-semibold px-8 py-4 rounded-full text-sm transition-all duration-200 whitespace-nowrap"
+                  className="inline-flex items-center justify-center border-2 border-white/20 hover:border-[#d4a843] text-white hover:text-[#d4a843] font-semibold px-8 py-4 rounded-t-xl rounded-r-xl text-sm transition-all duration-200 whitespace-nowrap"
                 >
                   Learn About Us First
                 </Link>

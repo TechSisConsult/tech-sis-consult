@@ -196,7 +196,7 @@ function FeaturedCard({ p }: { p: (typeof PROJECTS)[0] }) {
             href={p.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#021823] hover:bg-[#021823]/90 text-white font-bold text-sm px-6 py-3 rounded-full transition-all duration-200 hover:shadow-lg hover:-translate-y-px"
+            className="inline-flex items-center gap-2 bg-[#021823] hover:bg-[#021823]/90 text-white font-bold text-sm px-6 py-3 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-lg hover:-translate-y-px"
           >
             View Project
             <FaExternalLinkAlt />

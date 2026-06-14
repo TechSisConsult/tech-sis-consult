@@ -165,7 +165,7 @@ export default function FAQsAccordion() {
           </div>
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] font-bold text-sm px-6 py-3 rounded-full transition-all duration-200 hover:shadow-lg flex-shrink-0 whitespace-nowrap"
+            className="inline-flex items-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] font-bold text-sm px-6 py-3 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-lg flex-shrink-0 whitespace-nowrap"
           >
             Ask Us Directly
             <FaArrowCircleRight />

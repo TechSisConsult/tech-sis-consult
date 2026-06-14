@@ -102,7 +102,7 @@ export default function ContactHero() {
                 href="https://wa.me/2347026766769?text=Hi%20TechSisConsult!%20I%27d%20like%20to%20discuss%20a%20project."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold text-sm px-5 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-[#25D366]/25 hover:-translate-y-px w-fit"
+                className="inline-flex items-center gap-2.5 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold text-sm px-5 py-2.5 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-lg hover:shadow-[#25D366]/25 hover:-translate-y-px w-fit"
               >
                 <FaWhatsapp className="w-4 h-4" />
                 Send a WhatsApp Message
@@ -113,7 +113,7 @@ export default function ContactHero() {
               <a
                 href="#strategy-call"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 bg-[#d4a843] hover:bg-[#e6b74a] text-white font-bold text-sm px-5 py-2.5 rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-[#25D366]/25 hover:-translate-y-px w-fit"
+                className="inline-flex items-center gap-2.5 bg-[#d4a843] hover:bg-[#e6b74a] text-white font-bold text-sm px-5 py-2.5 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-lg hover:shadow-[#25D366]/25 hover:-translate-y-px w-fit"
               >
                 <FaPhoneAlt className="w-4 h-4" />
                 Book a Free Strategy Call
