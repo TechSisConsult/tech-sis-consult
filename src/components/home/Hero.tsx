@@ -3,9 +3,14 @@
 import { motion } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaArrowCircleDown, FaArrowCircleRight } from 'react-icons/fa';
+import {
+  FaArrowCircleDown,
+  FaArrowCircleRight,
+  FaStar,
+  FaGlobeAmericas,
+} from 'react-icons/fa';
 import Image1 from '../../../public/bg-1.png';
-import Image2 from '../../../public/bg-2.png';
+import Image2 from '../../../public/bg-4.png';
 import Image3 from '../../../public/bg-3.png';
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -35,22 +40,31 @@ export default function Hero() {
           </motion.section>
 
           {/* headline */}
+          <motion.div {...fadeUp(0.05)}>
+            <span className="text-[#d4a843] font-semibold tracking-wide">
+              TECHSIS CONSULT
+            </span>
+          </motion.div>
           <motion.h1
             {...fadeUp(0.15)}
-            className="text-3xl lg:text-5xl font-extrabold text-white leading-[1.08] tracking-tight"
+            className="text-4xl lg:text-5xl font-extrabold text-white leading-[1.05] tracking-tight"
           >
-            Turn Your Business Into a{' '}
-            <span className="text-[#d4a843]">24/7 Revenue Machine.</span>
+            Get More Customers,
+            <br />
+            Build More Trust,
+            <br />
+            <span className="text-[#d4a843]">Grow Around the Clock.</span>
           </motion.h1>
 
           {/* sub */}
           <motion.p
             {...fadeUp(0.25)}
-            className="text-white/60 text-lg leading-relaxed max-w-lg"
+            className="text-white/70 text-lg leading-relaxed max-w-xl"
           >
-            We build professional websites, ecommerce stores, and automation
-            systems that help modern businesses attract customers, build trust,
-            and grow online — around the clock.
+            We help businesses establish a powerful online presence through
+            professional websites, ecommerce solutions, and smart automation
+            systems designed to attract customers, build credibility, and
+            generate opportunities 24/7.
           </motion.p>
 
           {/* CTAs */}
@@ -75,19 +89,111 @@ export default function Hero() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, ease, delay: 0.2 }}
-          className="grid grid-cols-2 gap-4 h-[220px] lg:h-[400px]"
+          className="relative"
         >
-          <article className="relative overflow-hidden row-span-2">
-            <Image src={Image1} alt="office" className="object-cover" fill />
-          </article>
+          <div className="grid grid-cols-2 gap-4 h-[280px] lg:h-[500px]">
+            <article className="relative overflow-hidden rounded-3xl row-span-2 shadow-2xl group">
+              <Image
+                src={Image1}
+                alt="office"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                fill
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#021823]/45 via-transparent to-transparent" />
+            </article>
 
-          <article className="relative overflow-hidden">
-            <Image src={Image2} alt="office" className="w-full" fill />
-          </article>
+            <article className="relative overflow-hidden rounded-3xl shadow-xl group">
+              <Image
+                src={Image2}
+                alt="office"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                fill
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#021823]/45 via-transparent to-transparent" />
+            </article>
 
-          <article className="relative overflow-hidden bg-[#021823]/80 border border-white/8">
-            <Image src={Image3} alt="office" className="w-full" fill />
-          </article>
+            <article className="relative overflow-hidden rounded-3xl shadow-xl group">
+              <Image
+                src={Image3}
+                alt="office"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                fill
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#021823]/45 via-transparent to-transparent" />
+            </article>
+          </div>
+
+          {/* Client Satisfaction Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            whileHover={{ y: -4 }}
+            transition={{ delay: 0.8 }}
+            className="absolute sm:bottom-6 bottom-1 left-6 bg-white rounded-2xl p-5 shadow-2xl shadow-black/20 max-w-[230px] border border-[#d4a843]/15"
+          >
+            <div className="flex items-center gap-3">
+              <div className="relative w-14 h-14 flex-shrink-0">
+                <svg className="w-14 h-14 -rotate-90" viewBox="0 0 56 56">
+                  <circle
+                    cx="28"
+                    cy="28"
+                    r="24"
+                    fill="none"
+                    stroke="#f0ece2"
+                    strokeWidth="5"
+                  />
+                  <circle
+                    cx="28"
+                    cy="28"
+                    r="24"
+                    fill="none"
+                    stroke="#d4a843"
+                    strokeWidth="5"
+                    strokeDasharray={`${0.98 * 2 * Math.PI * 24} ${2 * Math.PI * 24}`}
+                    strokeLinecap="round"
+                  />
+                </svg>
+                <span className="absolute inset-0 flex items-center justify-center text-sm font-bold text-[#021823]">
+                  98%
+                </span>
+              </div>
+
+              <p className="text-gray-700 text-sm font-semibold leading-tight">
+                Client Satisfaction Rate
+              </p>
+            </div>
+
+            <div className="h-px bg-gray-200 my-3" />
+
+            <p className="flex items-center gap-1.5 text-xs font-medium text-[#d4a843]">
+              <FaStar className="text-[10px]" />
+              Trusted by growing businesses
+            </p>
+          </motion.div>
+
+          {/* TechSis Card */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            whileHover={{ y: -4 }}
+            transition={{ delay: 1 }}
+            className="absolute top-6 right-6 bg-[#021823]/90 backdrop-blur-md border border-[#d4a843]/30 rounded-2xl p-5 shadow-xl shadow-black/30"
+          >
+            <div className="flex items-center gap-2">
+              <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#d4a843]/15 text-[#d4a843]">
+                <FaGlobeAmericas className="text-[11px]" />
+              </span>
+              <p className="text-[#d4a843] text-xs tracking-[0.2em] uppercase">
+                TechSis Consult
+              </p>
+            </div>
+
+            <h4 className="text-white font-bold mt-2">Websites That Work</h4>
+
+            <p className="text-white/60 text-xs mt-2">
+              Web Design • Ecommerce • Automation
+            </p>
+          </motion.div>
         </motion.section>
       </section>
 

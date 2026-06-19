@@ -82,7 +82,7 @@ export default function Navbar() {
 
       {/* ── MAIN NAV ── */}
       <main
-        className={`w-full bg-white/85 transition-shadow duration-300 ${
+        className={`w-full bg-white transition-shadow duration-300 ${
           scrolled
             ? 'shadow-[0_4px_20px_rgba(0,48,73,0.10)]'
             : 'border-b border-gray-100'

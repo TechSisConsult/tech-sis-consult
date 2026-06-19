@@ -74,7 +74,7 @@ export default function AboutSnippet() {
             className="relative rounded-3xl overflow-hidden max-w-[420px] aspect-[4/5]"
           >
             <div
-              className="absolute inset-0 opacity-[0.7]"
+              className="absolute inset-0"
               style={{
                 backgroundImage: "url('bg-2.png')",
                 backgroundSize: '420px 600px',
