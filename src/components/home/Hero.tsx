@@ -129,7 +129,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             whileHover={{ y: -4 }}
             transition={{ delay: 0.8 }}
-            className="absolute bottom-6 left-6 bg-white rounded-2xl p-5 shadow-2xl shadow-black/20 max-w-[230px] border border-[#d4a843]/15"
+            className="absolute sm:bottom-6 bottom-1 left-6 bg-white rounded-2xl p-5 shadow-2xl shadow-black/20 max-w-[230px] border border-[#d4a843]/15"
           >
             <div className="flex items-center gap-3">
               <div className="relative w-14 h-14 flex-shrink-0">

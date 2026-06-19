@@ -1,10 +1,11 @@
 import ContactHero from '@/components/contact/Hero';
 import StrategyCall from '@/components/contact/StrategyCall';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Contact Us — TechSisConsult',
+export const metadata: Metadata = {
+  title: 'Contact',
   description:
-    'Book a free 30-minute strategy call or chat with us on WhatsApp. We help businesses grow online.',
+    'Get in touch with TechSis Consult for professional web design, website development, SEO, branding, business automation, and digital growth solutions. Contact our team today to discuss your project, request a consultation, and discover how we can help your business build a stronger online presence and attract more customers.',
 };
 
 const ContactPage = () => {

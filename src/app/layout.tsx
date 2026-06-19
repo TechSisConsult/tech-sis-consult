@@ -4,6 +4,7 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Script from 'next/script';
+import { description, title } from '@/lib/constants';
 
 const raleway = Raleway({
   variable: '--font-raleway',
@@ -12,15 +13,41 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: 'Tech Sis Consult',
-  description:
-    'Tech Sis Consult helps businesses grow through websites, e-commerce stores, SEO, branding, and business automation.',
+  title: {
+    default: title,
+    template: `%s | ${title}`,
+  },
+  description: description,
+  keywords: [
+    'Web Design Company Nigeria',
+    'Website Development Services Enugu, Nigeria',
+    'Business Website Design Nigeria',
+    'SEO Services Nigeria',
+    'Digital Solutions Company Nigeria',
+  ],
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',
     apple: '/favicon.ico',
   },
-  metadataBase: new URL('https://techsisconsult.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL!),
+  openGraph: {
+    title: title,
+    description: description,
+    url: process.env.NEXT_PUBLIC_BASE_URL,
+    siteName: 'TechSis Consult',
+    locale: 'en_US',
+    type: 'website',
+    images: [
+      {
+        url: '/website-logo.png',
+        width: 1200,
+        height: 630,
+        alt: title,
+        type: 'image/png',
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
