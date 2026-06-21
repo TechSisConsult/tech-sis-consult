@@ -30,7 +30,7 @@ const SOCIALS = [
   // },
   {
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/company/techsis-consult/?viewAsMember=true',
+    href: 'https://www.linkedin.com/company/techsis-consult/',
     svg: <FaLinkedin />,
   },
   {
@@ -92,6 +92,7 @@ export default function Footer() {
                 <a
                   key={s.label}
                   href={s.href}
+                  target="_blank"
                   aria-label={s.label}
                   className="w-9 h-9 rounded-full border border-white/12 hover:border-[#d4a843] hover:bg-[#d4a843]/10 text-white/45 hover:text-[#d4a843] flex items-center justify-center transition-all duration-200"
                 >

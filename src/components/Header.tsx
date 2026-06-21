@@ -28,7 +28,7 @@ const socials = [
   // },
   {
     label: 'LinkedIn',
-    href: 'https://www.linkedin.com/company/techsis-consult/?viewAsMember=true',
+    href: 'https://www.linkedin.com/company/techsis-consult/',
     icon: <FaLinkedin className="w-3.5 h-3.5" />,
   },
   {
@@ -79,6 +79,7 @@ export default function Navbar() {
               <Link
                 key={s.label}
                 href={s.href}
+                target="_blank"
                 aria-label={s.label}
                 className="text-white/50 hover:text-[#d4a843] transition-colors duration-200"
               >
