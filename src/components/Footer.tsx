@@ -1,8 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa';
-import { FaLocationDot, FaPhone } from 'react-icons/fa6';
+import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from 'react-icons/fa';
+import { FaLocationDot, FaPhone, FaXTwitter } from 'react-icons/fa6';
 import { MdOutlineEmail } from 'react-icons/md';
 
 const LINKS = {
@@ -23,33 +23,31 @@ const LINKS = {
 };
 
 const SOCIALS = [
+  // {
+  //   label: 'Facebook',
+  //   href: '#',
+  //   svg: <FaFacebook />,
+  // },
   {
-    label: 'Facebook',
-    href: '#',
-    svg: <FaFacebook />,
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/techsis-consult/?viewAsMember=true',
+    svg: <FaLinkedin />,
+  },
+  {
+    label: 'TikTok',
+    href: 'https://www.tiktok.com/@techsisconsult',
+    svg: <FaTiktok />,
   },
   {
     label: 'Twitter',
     href: '#',
-    svg: (
-      <Image
-        src={'/twitter-x-gray.png'}
-        alt="twitter-logo"
-        width={20}
-        height={20}
-      />
-    ),
+    svg: <FaXTwitter />,
   },
-  {
-    label: 'Instagram',
-    href: '#',
-    svg: <FaInstagram />,
-  },
-  {
-    label: 'TikTok',
-    href: '#',
-    svg: <FaTiktok />,
-  },
+  // {
+  //   label: 'Instagram',
+  //   href: '#',
+  //   svg: <FaInstagram />,
+  // },
 ];
 
 export default function Footer() {

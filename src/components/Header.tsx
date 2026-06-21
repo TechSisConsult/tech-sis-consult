@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FaFacebook, FaTiktok } from 'react-icons/fa';
+import { FaFacebook, FaLinkedin, FaTiktok } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa6';
 import { FaXTwitter } from 'react-icons/fa6';
 import { MdCall, MdOutlineEmail } from 'react-icons/md';
@@ -21,22 +21,31 @@ const navLinks = [
 ];
 
 const socials = [
+  // {
+  //   label: 'Facebook',
+  //   href: '#',
+  //   icon: <FaFacebook className="w-3.5 h-3.5" />,
+  // },
   {
-    label: 'Facebook',
-    href: '#',
-    icon: <FaFacebook className="w-3.5 h-3.5" />,
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/techsis-consult/?viewAsMember=true',
+    icon: <FaLinkedin className="w-3.5 h-3.5" />,
+  },
+  {
+    label: 'TikTok',
+    href: 'https://www.tiktok.com/@techsisconsult',
+    icon: <FaTiktok className="w-3.5 h-3.5" />,
   },
   {
     label: 'Twitter/X',
     href: '#',
     icon: <FaXTwitter className="w-3.5 h-3.5" />,
   },
-  {
-    label: 'Instagram',
-    href: '#',
-    icon: <FaInstagram className="w-3.5 h-3.5" />,
-  },
-  { label: 'TikTok', href: '#', icon: <FaTiktok className="w-3.5 h-3.5" /> },
+  // {
+  //   label: 'Instagram',
+  //   href: '#',
+  //   icon: <FaInstagram className="w-3.5 h-3.5" />,
+  // },
 ];
 
 export default function Navbar() {
