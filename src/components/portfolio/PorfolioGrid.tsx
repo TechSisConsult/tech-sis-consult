@@ -4,12 +4,7 @@ import { motion, useInView } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRef, useState } from 'react';
-import {
-  FaArrowCircleRight,
-  FaArrowCircleUp,
-  FaExternalLinkAlt,
-} from 'react-icons/fa';
-import { FaArrowRight } from 'react-icons/fa6';
+import { FaArrowCircleRight, FaExternalLinkAlt } from 'react-icons/fa';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -22,9 +17,7 @@ const PROJECTS = [
     title:
       'A Modern Digital Presence Designed to Build Trust and Improve Patient Access',
     desc: 'Akulue Memorial Hospital needed a professional online presence that reflected the quality of care they provide. We designed and developed a fast, mobile-friendly website that makes it easy for patients to learn about services, access important information, and connect with the hospital from anywhere. The result is a modern healthcare website that strengthens credibility, improves accessibility, and supports patient engagement.',
-    imgMain: '/client-sites/hospital-site.jpg',
     imgDetail: '/client-site.png',
-    mainBg: 'bg-gradient-to-br from-[#021823] to-[#004a6e]',
     detailBg: 'bg-[#d4a843]/10',
     results: [
       { metric: '100%', label: 'Mobile Responsive' },
@@ -40,6 +33,30 @@ const PROJECTS = [
     url: 'https://akuluehospital.org.ng/',
     featured: true,
   },
+  {
+    id: 2,
+    tag: 'Solar Energy Website',
+    tagColor: 'bg-[#390405] text-[#f4ce79]',
+    client: 'Jimoh Solar',
+    title:
+      'A Lead-Driven Solar Website Built Around an Interactive Load Calculator',
+    desc: 'Jimoh Solar is a Concept Project — of a comapany that needed a tool that could qualify and convert visitors before a single phone call. We designed and built a seven-page solar energy platform centered on a multi-step Smart Load Estimator, letting prospective customers select their appliances and power situation to receive an instant, personalised system recommendation. The site also includes a full services breakdown, a browsable component store, and a contact flow that hands off straight to WhatsApp or email. The result is a fast, fully responsive site that does real selling work before the sales team ever gets involved.',
+    imgDetail: '/client-sites/jimoh-solar-site.png',
+    detailBg: 'bg-[#f4ce79]/10',
+    results: [
+      { metric: '5-Step', label: 'Interactive Load Calculator' },
+      { metric: '100%', label: 'Mobile Responsive' },
+      { metric: '7', label: 'Custom-Designed Pages' },
+    ],
+    services: [
+      'Solar Industry Web Design',
+      'Custom Interactive Calculator',
+      'Responsive Development',
+      'Lead Capture & WhatsApp Integration',
+    ],
+    url: '',
+    featured: true,
+  },
 ];
 
 // const FILTERS = [
@@ -50,7 +67,7 @@ const PROJECTS = [
 //   'Automation',
 // ];
 
-function FeaturedCard({ p }: { p: (typeof PROJECTS)[0] }) {
+function ProjectCard({ p }: { p: (typeof PROJECTS)[0] }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-60px' });
 
@@ -60,154 +77,115 @@ function FeaturedCard({ p }: { p: (typeof PROJECTS)[0] }) {
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7, ease }}
-      className="grid lg:grid-cols-2 gap-0 rounded-3xl overflow-hidden border border-gray-100 shadow-xl shadow-[#021823]/6 group"
+      className="flex flex-col bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-xl shadow-[#021823]/6 p-8 lg:p-10 gap-7 h-full"
     >
-      <div
-        className={`relative aspect-[4/3] lg:aspect-auto ${p.mainBg} overflow-hidden`}
-      >
-        {p.imgMain ? (
-          <Image src={p.imgMain} alt={p.title} fill className="object-fill" />
-        ) : (
-          <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 p-8">
-            <div
-              className="absolute inset-0 opacity-[0.05]"
-              style={{
-                backgroundImage:
-                  'radial-gradient(circle, #d4a843 1px, transparent 1px)',
-                backgroundSize: '20px 20px',
-              }}
-            />
-            <div className="relative w-full max-w-[320px] bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden border border-white/15">
-              <div className="flex items-center gap-1.5 px-3 py-2 bg-white/5 border-b border-white/10">
-                <div className="w-2 h-2 rounded-full bg-red-400/60" />
-                <div className="w-2 h-2 rounded-full bg-yellow-400/60" />
-                <div className="w-2 h-2 rounded-full bg-green-400/60" />
-                <div className="flex-1 h-4 bg-white/8 rounded-full ml-2" />
-              </div>
-              <div className="p-4 flex flex-col gap-2">
-                <div className="h-3 bg-white/20 rounded-full w-3/4" />
-                <div className="h-2 bg-white/10 rounded-full w-full" />
-                <div className="h-2 bg-white/10 rounded-full w-5/6" />
-                <div className="mt-2 h-8 bg-[#d4a843]/30 rounded-lg w-1/3" />
-              </div>
-            </div>
-            <p className="text-white/30 text-xs font-semibold text-center">
-              Add screenshot: /images/project-{p.id}-main.jpg
-            </p>
-          </div>
-        )}
-
-        <div className="absolute top-5 left-5 z-10">
+      <div className="flex flex-col gap-5">
+        {/* top row: tag + featured badge */}
+        <div className="flex items-center justify-between">
           <span
             className={`text-[10px] font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-full ${p.tagColor}`}
           >
             {p.tag}
           </span>
+          {p.featured && (
+            <span className="bg-[#d4a843] text-[#021823] text-[10px] font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-full">
+              Featured
+            </span>
+          )}
         </div>
 
-        {p.featured && (
-          <div className="absolute top-5 right-5 z-10 bg-[#d4a843] text-[#021823] text-[10px] font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-full">
-            Featured
-          </div>
-        )}
-      </div>
-
-      <div className="bg-white flex flex-col justify-between p-8 lg:p-10 gap-7">
-        <div className="flex flex-col gap-5">
-          {/* client + service tags */}
-          <div className="flex flex-col gap-1">
-            <p className="text-[#d4a843] text-[11px] font-bold uppercase tracking-[0.2em]">
-              {p.client}
-            </p>
-            <div className="flex flex-wrap gap-1.5 mt-1">
-              {p.services.map((s) => (
-                <span
-                  key={s}
-                  className="text-[10px] font-semibold text-[#021823]/60 bg-[#021823]/6 px-2.5 py-0.5 rounded-full"
-                >
-                  {s}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* title */}
-          <h2 className="text-2xl xl:text-[1.65rem] font-extrabold text-[#021823] leading-snug">
-            {p.title}
-          </h2>
-
-          <p className="text-gray-500 text-sm leading-relaxed">{p.desc}</p>
-
-          <div
-            className={`relative rounded-2xl overflow-hidden aspect-[16/7] ${p.detailBg} border border-gray-100`}
-          >
-            {p.imgDetail ? (
-              <Image
-                src={p.imgDetail}
-                alt={`${p.title} detail`}
-                fill
-                className="object-cover"
-              />
-            ) : (
-              <div className="absolute inset-0 flex items-center justify-center">
-                {/* simulated mobile screens */}
-                <div className="flex gap-3 items-end px-6">
-                  {[1, 2, 3].map((i) => (
-                    <div
-                      key={i}
-                      className="bg-[#021823]/8 rounded-xl border border-[#021823]/10 flex flex-col gap-1.5 p-2"
-                      style={{ width: 60, height: 90 - i * 8 }}
-                    >
-                      <div className="h-1.5 bg-[#021823]/20 rounded-full w-full" />
-                      <div className="h-1.5 bg-[#d4a843]/30 rounded-full w-3/4" />
-                      <div className="h-1.5 bg-[#021823]/15 rounded-full w-5/6" />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
-
-        {/* results metrics */}
-        <div className="flex flex-col gap-4">
-          <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400">
-            Results
+        {/* client + service tags */}
+        <div className="flex flex-col gap-1">
+          <p className="text-[#d4a843] text-[11px] font-bold uppercase tracking-[0.2em]">
+            {p.client}
           </p>
-          <div className="grid grid-cols-3 gap-3">
-            {p.results.map((r) => (
-              <div
-                key={r.label}
-                className="bg-gray-50 rounded-xl p-3 text-center border border-gray-100"
+          <div className="flex flex-wrap gap-1.5 mt-1">
+            {p.services.map((s) => (
+              <span
+                key={s}
+                className="text-[10px] font-semibold text-[#021823]/60 bg-[#021823]/6 px-2.5 py-0.5 rounded-full"
               >
-                <p className="text-[#021823] text-xl font-extrabold leading-none">
-                  {r.metric}
-                </p>
-                <p className="text-gray-400 text-[10px] mt-1 leading-snug font-semibold">
-                  {r.label}
-                </p>
-              </div>
+                {s}
+              </span>
             ))}
           </div>
         </div>
 
-        <div className="flex items-center gap-4">
-          <Link
-            href={p.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#021823] hover:bg-[#021823]/90 text-white font-bold text-sm px-6 py-3 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-lg hover:-translate-y-px"
-          >
-            View Project
-            <FaExternalLinkAlt />
-          </Link>
-          <Link
-            href="/contact"
-            className="text-sm font-bold text-[#d4a843] hover:underline transition-all flex items-center"
-          >
-            Get Mine <FaArrowCircleRight className="ml-2" />
-          </Link>
+        {/* title */}
+        <h2 className="text-2xl xl:text-[1.65rem] font-extrabold text-[#021823] leading-snug">
+          {p.title}
+        </h2>
+
+        <p className="text-gray-500 text-sm leading-relaxed">{p.desc}</p>
+
+        <div
+          className={`relative rounded-2xl overflow-hidden aspect-[16/9] ${p.detailBg} border border-gray-100`}
+        >
+          {p.imgDetail ? (
+            <Image
+              src={p.imgDetail}
+              alt={`${p.title} detail`}
+              fill
+              className="object-cover"
+            />
+          ) : (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="flex gap-3 items-end px-6">
+                {[1, 2, 3].map((i) => (
+                  <div
+                    key={i}
+                    className="bg-[#021823]/8 rounded-xl border border-[#021823]/10 flex flex-col gap-1.5 p-2"
+                    style={{ width: 60, height: 90 - i * 8 }}
+                  >
+                    <div className="h-1.5 bg-[#021823]/20 rounded-full w-full" />
+                    <div className="h-1.5 bg-[#d4a843]/30 rounded-full w-3/4" />
+                    <div className="h-1.5 bg-[#021823]/15 rounded-full w-5/6" />
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
+      </div>
+
+      {/* results metrics */}
+      <div className="flex flex-col gap-4 mt-auto">
+        <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400">
+          Results
+        </p>
+        <div className="grid grid-cols-3 gap-3">
+          {p.results.map((r) => (
+            <div
+              key={r.label}
+              className="bg-gray-50 rounded-xl p-3 text-center border border-gray-100"
+            >
+              <p className="text-[#021823] text-xl font-extrabold leading-none">
+                {r.metric}
+              </p>
+              <p className="text-gray-400 text-[10px] mt-1 leading-snug font-semibold">
+                {r.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="flex items-center gap-4">
+        <Link
+          href={p.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-[#021823] hover:bg-[#021823]/90 text-white font-bold text-sm px-6 py-3 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-lg hover:-translate-y-px"
+        >
+          View Project
+          <FaExternalLinkAlt />
+        </Link>
+        <Link
+          href="/contact"
+          className="text-sm font-bold text-[#d4a843] hover:underline transition-all flex items-center"
+        >
+          Get Mine <FaArrowCircleRight className="ml-2" />
+        </Link>
       </div>
     </motion.article>
   );
@@ -215,8 +193,6 @@ function FeaturedCard({ p }: { p: (typeof PROJECTS)[0] }) {
 
 export default function PortfolioGrid() {
   const [activeFilter, setActiveFilter] = useState('All');
-  // const headerRef = useRef(null);
-  // const headerInView = useInView(headerRef, { once: true, margin: '-60px' });
 
   const filtered =
     activeFilter === 'All'
@@ -226,34 +202,10 @@ export default function PortfolioGrid() {
   return (
     <section className="py-20 bg-white" id="services-grid">
       <div className="max-w-[1280px] mx-auto px-6 flex flex-col gap-14">
-        {/* filter tabs */}
-        {/* <div ref={headerRef}>
-          <motion.article
-            initial={{ opacity: 0, y: 16 }}
-            animate={headerInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, ease }}
-            className="flex flex-wrap gap-2"
-          >
-            {FILTERS.map((f) => (
-              <button
-                key={f}
-                onClick={() => setActiveFilter(f)}
-                className={`text-xs font-bold px-5 py-2.5 rounded-full border-2 transition-all duration-200 ${
-                  activeFilter === f
-                    ? 'bg-[#021823] text-white border-[#021823] shadow-md'
-                    : 'bg-white text-[#021823] border-gray-200 hover:border-[#021823]/30'
-                }`}
-              >
-                {f}
-              </button>
-            ))}
-          </motion.article>
-        </div> */}
-
         {filtered.length > 0 ? (
-          <div className="flex flex-col gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {filtered.map((p) => (
-              <FeaturedCard key={p.id} p={p} />
+              <ProjectCard key={p.id} p={p} />
             ))}
           </div>
         ) : (
