@@ -40,7 +40,7 @@ const PROJECTS = [
     client: 'Jimoh Solar',
     title:
       'A Lead-Driven Solar Website Built Around an Interactive Load Calculator',
-    desc: 'Jimoh Solar is a Concept Project — of a comapany that needed a tool that could qualify and convert visitors before a single phone call. We designed and built a seven-page solar energy platform centered on a multi-step Smart Load Estimator, letting prospective customers select their appliances and power situation to receive an instant, personalised system recommendation. The site also includes a full services breakdown, a browsable component store, and a contact flow that hands off straight to WhatsApp or email. The result is a fast, fully responsive site that does real selling work before the sales team ever gets involved.',
+    desc: 'Jimoh Solar is a Concept Project — of a company that needed a tool that could qualify and convert visitors before a single phone call. We designed and built a seven-page solar energy platform centered on a multi-step Smart Load Estimator, letting prospective customers select their appliances and power situation to receive an instant, personalised system recommendation. The site also includes a full services breakdown, a browsable component store, and a contact flow that hands off straight to WhatsApp or email. The result is a fast, fully responsive site that does real selling work before the sales team ever gets involved.',
     imgDetail: '/client-sites/jimoh-solar-site.png',
     detailBg: 'bg-[#f4ce79]/10',
     results: [
@@ -54,7 +54,7 @@ const PROJECTS = [
       'Responsive Development',
       'Lead Capture & WhatsApp Integration',
     ],
-    url: '',
+    url: 'https://techsisconsult25.github.io/demo-solar-site/',
     featured: true,
   },
 ];
