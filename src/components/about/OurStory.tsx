@@ -4,8 +4,7 @@ import { motion, useInView } from 'motion/react';
 import Image from 'next/image';
 import { useRef } from 'react';
 import { FaCheck } from 'react-icons/fa6';
-import Image1 from '../../../public/client-sites/hospital-site2.png';
-import Image3 from '../../../public/bg-10.jpeg';
+import FounderImage from '../../../public/founder.jpeg';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -42,7 +41,7 @@ const WHAT_WE_BELIEVE = [
 
 export default function OurStory() {
   const imgRef = useRef(null);
-  // const imgInView = useInView(imgRef, { once: true, margin: '-80px' });
+  const imgInView = useInView(imgRef, { once: true, margin: '-80px' });
 
   return (
     <section className="pt-15 mt-[70px] bg-gradient-to-r from-white to-[#d4a843] overflow-hidden rounded-r-[25%]">
@@ -108,7 +107,7 @@ export default function OurStory() {
           </div>
 
           <div ref={imgRef} className="relative lg:sticky lg:top-12">
-            {/* <motion.article
+            <motion.article
               initial={{ x: 50, opacity: 0 }}
               animate={imgInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 0.8, ease }}
@@ -139,43 +138,10 @@ export default function OurStory() {
                   Fatima Oyiza Jimoh
                 </p>
                 <p className="text-[#d4a843] text-[10px] font-bold uppercase tracking-widest mb-1.5">
-                  Founder, TechSisConsult
+                  Team Lead
                 </p>
               </div>
-            {/* </motion.article>  */}
-
-            <motion.section
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.9, ease, delay: 0.2 }}
-              className="grid grid-cols-2 gap-4 h-[220px] lg:h-[400px]"
-            >
-              <article className="relative overflow-hidden row-span-2">
-                <Image
-                  src={Image3}
-                  alt="office"
-                  className="object-cover"
-                  fill
-                />
-              </article>
-
-              <figure>
-                <div className="absolute bottom-5 left-5 right-5" />
-              </figure>
-
-              <article className="relative overflow-hidden row-span-2">
-                <Image
-                  src={Image1}
-                  alt="office"
-                  className="object-cover"
-                  fill
-                />
-              </article>
-
-              {/* <article className="relative overflow-hidden bg-[#021823]/80 border border-white/8">
-                <Image src={Image2} alt="office" className="w-full" fill />
-              </article> */}
-            </motion.section>
+            </motion.article>
           </div>
         </div>
       </div>
