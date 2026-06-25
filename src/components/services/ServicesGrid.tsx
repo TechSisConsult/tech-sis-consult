@@ -25,6 +25,7 @@ const SERVICES = [
       'Fully mobile-responsive design',
       'WhatsApp or direct contact integration',
       'Professional contact forms',
+      'Live Chat Integration with AI Your Personal Assistant',
       'Basic analytics setup for performance tracking',
       'Fast-loading, optimized performance',
       'Easy-to-manage content structure',
@@ -56,6 +57,7 @@ const SERVICES = [
       'Shipping and delivery configuration',
       'Inventory management setup',
       'Sales tracking and analytics',
+      'Live Chat Integration with AI Your Personal Assistant',
     ],
     ideal:
       'Product-based businesses, fashion brands, beauty brands, food vendors, and retail stores.',
