@@ -57,6 +57,29 @@ const PROJECTS = [
     url: 'https://techsisconsult25.github.io/demo-solar-site/',
     featured: true,
   },
+{
+  id: 3,
+  tag: 'Developer Portfolio',
+  tagColor: 'bg-[#1E3A8A] text-white',
+  client: 'Personal Brand',
+  title: 'A Professional Full-Stack Developer Portfolio Built to Showcase Skills and Win Opportunities',
+  desc: 'A modern portfolio website designed to present technical skills, featured projects, and professional experience in a clean and engaging way. Built with performance, responsiveness, and user experience in mind, the website helps recruiters, clients, and collaborators quickly understand the developer’s capabilities and easily get in touch. This project demonstrates that we also create high-quality portfolio websites for professionals looking to stand out online.',
+  imgDetail: '/developer-portfolio.png',
+  detailBg: 'bg-[#1E3A8A]/10',
+  results: [
+    { metric: '100%', label: 'Mobile Responsive' },
+    { metric: 'Fast', label: 'Performance Optimized' },
+    { metric: 'Professional', label: 'Personal Branding' },
+  ],
+  services: [
+    'Portfolio Website Design',
+    'Full-Stack Development',
+    'Responsive Development',
+    'SEO Foundation',
+  ],
+  url: 'https://portfolio-alpha-tan-w839rb33ci.vercel.app',
+  featured: false,
+},
 ];
 
 // const FILTERS = [
