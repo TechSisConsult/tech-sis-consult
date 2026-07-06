@@ -133,13 +133,13 @@ export default function ServicesHero() {
           className="flex flex-wrap justify-center gap-3"
         >
           {SERVICES_QUICK.map((s) => (
-            <a
+            <Link
               key={s.label}
               href={s.href}
               className="flex items-center gap-2 bg-white/6 backdrop-blur-sm border border-white/12 hover:border-[#d4a843]/50 hover:bg-[#d4a843]/10 hover:text-[#d4a843] text-white/75 text-xs font-semibold rounded-full px-4 py-2 transition-all duration-200"
             >
               {s.label}
-            </a>
+            </Link>
           ))}
         </motion.article>
 

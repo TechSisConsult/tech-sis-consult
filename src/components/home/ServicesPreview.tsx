@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, useInView } from 'motion/react';
+import Link from 'next/link';
 import { useRef } from 'react';
 import { FaArrowCircleRight } from 'react-icons/fa';
 
@@ -168,8 +169,8 @@ function Card({ s, i }: { s: (typeof SERVICES)[0]; i: number }) {
       </div>
 
       {/* arrow link */}
-      <a
-        href="#contact"
+      <Link
+        href="/contact"
         className={`inline-flex items-center gap-1.5 text-sm font-bold group/link transition-colors ${
           s.highlight
             ? 'text-[#021823] hover:text-[#021823]/70'
@@ -178,7 +179,7 @@ function Card({ s, i }: { s: (typeof SERVICES)[0]; i: number }) {
       >
         Book a Free Consultation
         <FaArrowCircleRight />
-      </a>
+      </Link>
     </motion.article>
   );
 }

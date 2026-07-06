@@ -1,7 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from 'react-icons/fa';
+import Link from 'next/link';
+import { FaLinkedin, FaTiktok } from 'react-icons/fa';
 import { FaLocationDot, FaPhone, FaXTwitter } from 'react-icons/fa6';
 import { MdOutlineEmail } from 'react-icons/md';
 
@@ -89,7 +90,7 @@ export default function Footer() {
             {/* Socials */}
             <div className="flex gap-3">
               {SOCIALS.map((s) => (
-                <a
+                <Link
                   key={s.label}
                   href={s.href}
                   target="_blank"
@@ -97,7 +98,7 @@ export default function Footer() {
                   className="w-9 h-9 rounded-full border border-white/12 hover:border-[#d4a843] hover:bg-[#d4a843]/10 text-white/45 hover:text-[#d4a843] flex items-center justify-center transition-all duration-200"
                 >
                   {s.svg}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

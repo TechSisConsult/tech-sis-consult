@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, useInView, AnimatePresence } from 'motion/react';
+import Link from 'next/link';
 import { useRef, useState } from 'react';
 import { FaBolt, FaClock } from 'react-icons/fa';
 import { FaBagShopping } from 'react-icons/fa6';
@@ -379,7 +380,7 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
               </div>
 
               {/* CTA */}
-              <a
+              <Link
                 href="/contact"
                 className={`inline-flex items-center gap-2 font-bold text-sm px-6 py-3 rounded-full transition-all duration-200 hover:-translate-y-0.5 w-fit ${
                   s.highlight
@@ -401,7 +402,7 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
                     d="M17 8l4 4m0 0l-4 4m4-4H3"
                   />
                 </svg>
-              </a>
+              </Link>
             </div>
           </motion.article>
         )}

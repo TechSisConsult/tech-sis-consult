@@ -28,7 +28,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen bg-gradient-to-r from-[#021823] to-[#d4a843]/50 overflow-hidden flex items-center"
+      className="relative min-h-screen bg-gradient-to-b from-[#021823] to-[#d4a843] md:bg-gradient-to-r md:from-[#021823] md:to-[#d4a843]/50 overflow-hidden flex items-center"
       style={{ paddingTop: '70px' }}
     >
       <section className="relative w-full max-w-[1280px] mx-auto px-6 py-10 lg:py-15 grid lg:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-center">

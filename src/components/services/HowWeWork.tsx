@@ -1,6 +1,7 @@
 'use client';
 
 import { motion, useInView } from 'motion/react';
+import Link from 'next/link';
 import { useRef } from 'react';
 import {
   FaArrowCircleRight,
@@ -184,13 +185,13 @@ export default function HowWeWork() {
                 </span>
               </p>
             </div>
-            <a
+            <Link
               href="/contact"
               className="inline-flex items-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] font-bold text-sm px-6 py-3 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-lg flex-shrink-0 whitespace-nowrap"
             >
               Hop on a free call
               <FaArrowCircleRight />
-            </a>
+            </Link>
           </div>
         </Reveal>
       </div>
