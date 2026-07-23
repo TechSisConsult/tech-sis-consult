@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaLinkedin, FaTiktok } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from 'react-icons/fa';
 import { FaLocationDot, FaPhone, FaXTwitter } from 'react-icons/fa6';
 import { MdOutlineEmail } from 'react-icons/md';
 
@@ -24,31 +24,31 @@ const LINKS = {
 };
 
 const SOCIALS = [
-  // {
-  //   label: 'Facebook',
-  //   href: '#',
-  //   svg: <FaFacebook />,
-  // },
+  {
+    label: 'Facebook',
+    href: 'https://www.facebook.com/profile.php?id=61566864326021',
+    svg: <FaFacebook className="w-3.5 h-3.5" />,
+  },
   {
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/company/techsis-consult/',
-    svg: <FaLinkedin />,
+    svg: <FaLinkedin className="w-3.5 h-3.5" />,
   },
   {
     label: 'TikTok',
     href: 'https://www.tiktok.com/@techsisconsult',
-    svg: <FaTiktok />,
+    svg: <FaTiktok className="w-3.5 h-3.5" />,
   },
   {
-    label: 'Twitter',
-    href: '#',
-    svg: <FaXTwitter />,
+    label: 'Twitter/X',
+    href: 'https://x.com/techsisconsult1',
+    svg: <FaXTwitter className="w-3.5 h-3.5" />,
   },
-  // {
-  //   label: 'Instagram',
-  //   href: '#',
-  //   svg: <FaInstagram />,
-  // },
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/techsisconsult_/',
+    svg: <FaInstagram className="w-3.5 h-3.5" />,
+  },
 ];
 
 export default function Footer() {

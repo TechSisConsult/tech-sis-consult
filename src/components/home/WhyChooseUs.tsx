@@ -40,7 +40,10 @@ export default function WhyChooseUs() {
   });
 
   return (
-    <section id="about" className="relative overflow-hidden bg-white py-16">
+    <section
+      id="about"
+      className="relative overflow-hidden bg-white py-12 sm:py-16"
+    >
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -left-40 top-20 h-[500px] w-[500px] rounded-full bg-[#f7bb3b]/5 blur-[130px]" />
 
@@ -58,8 +61,8 @@ export default function WhyChooseUs() {
         />
       </div>
 
-      <div className="relative max-w-[1280px] mx-auto px-6">
-        <div className="grid lg:grid-cols-[1.15fr_.85fr] gap-20 items-center">
+      <div className="relative max-w-[1280px] mx-auto px-4 sm:px-6">
+        <div className="grid lg:grid-cols-[1.15fr_.85fr] gap-10 sm:gap-14 lg:gap-20 items-center">
           <div ref={boxRef} className="relative">
             <motion.div
               initial={{
@@ -78,7 +81,7 @@ export default function WhyChooseUs() {
                 duration: 0.9,
                 ease,
               }}
-              className="relative overflow-hidden rounded-[36px] shadow-[0_40px_90px_rgba(2,24,35,.18)]"
+              className="relative overflow-hidden rounded-[22px] sm:rounded-[36px] shadow-[0_40px_90px_rgba(2,24,35,.18)]"
             >
               {/* Website Preview */}
 
@@ -100,11 +103,11 @@ export default function WhyChooseUs() {
 
                 {/* Featured Label */}
 
-                <div className="absolute left-8 top-8">
-                  <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 backdrop-blur-xl px-5 py-2">
-                    <span className="h-2 w-2 rounded-full bg-[#f7bb3b]" />
+                <div className="absolute left-4 top-4 sm:left-8 sm:top-8">
+                  <div className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full border border-white/15 bg-white/10 backdrop-blur-xl px-3 py-1.5 sm:px-5 sm:py-2">
+                    <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-[#f7bb3b]" />
 
-                    <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white">
+                    <span className="text-[9px] sm:text-[11px] font-semibold uppercase tracking-[0.16em] sm:tracking-[0.22em] text-white">
                       Featured Project
                     </span>
                   </div>
@@ -112,19 +115,19 @@ export default function WhyChooseUs() {
 
                 {/* Bottom Text */}
 
-                <div className="absolute bottom-0 inset-x-0 p-10">
+                <div className="absolute bottom-0 inset-x-0 p-5 sm:p-10">
                   <div className="max-w-lg">
-                    <p className="text-[#f7bb3b] text-xs uppercase tracking-[0.22em] font-bold">
+                    <p className="text-[#f7bb3b] text-[10px] sm:text-xs uppercase tracking-[0.16em] sm:tracking-[0.22em] font-bold">
                       Renewable Energy Website
                     </p>
 
-                    <h3 className="mt-3 text-4xl font-black leading-tight text-white">
+                    <h3 className="mt-2 sm:mt-3 text-xl sm:text-2xl md:text-4xl font-black leading-tight text-white">
                       Helping Solar Companies
                       <br />
                       Generate More Leads
                     </h3>
 
-                    <p className="mt-5 text-[15px] leading-8 text-white/75">
+                    <p className="mt-3 sm:mt-5 text-[13px] leading-6 sm:text-[15px] sm:leading-8 text-white/75">
                       A premium digital experience designed to build trust,
                       increase enquiries and position Davelaw Technologies as a
                       leader in renewable energy.
@@ -188,29 +191,29 @@ export default function WhyChooseUs() {
 
           <div className="flex flex-col">
             <Reveal delay={0.05}>
-              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-[#f7bb3b]/20 bg-[#f7bb3b]/8 px-5 py-2">
+              <span className="inline-flex w-fit items-center gap-2 rounded-full border border-[#f7bb3b]/20 bg-[#f7bb3b]/8 px-4 py-1.5 sm:px-5 sm:py-2">
                 <span className="h-2 w-2 rounded-full bg-[#f7bb3b]" />
 
-                <span className="text-[12px] font-bold uppercase tracking-[0.22em] text-[#8d6c1f]">
+                <span className="text-[10px] sm:text-[12px] font-bold uppercase tracking-[0.18em] sm:tracking-[0.22em] text-[#8d6c1f]">
                   Why TechSis Consult
                 </span>
               </span>
             </Reveal>
 
             <Reveal delay={0.12}>
-              <h2 className="mt-8 text-[42px] leading-[1.05] lg:text-[56px] font-black tracking-[-0.04em] text-[#021823]">
+              <h2 className="mt-6 sm:mt-8 text-[28px] leading-[1.1] sm:text-[42px] sm:leading-[1.05] lg:text-[56px] font-black tracking-[-0.03em] sm:tracking-[-0.04em] text-[#021823]">
                 We Build Websites
                 <br />
                 That Actually
-                <span className="relative ml-3 inline-block text-[#f7bb3b]">
+                <span className="relative ml-2 sm:ml-3 inline-block text-[#f7bb3b]">
                   Grow Businesses
-                  <span className="absolute bottom-2 left-0 h-3 w-full rounded-full bg-[#f7bb3b]/20 -z-10" />
+                  <span className="absolute bottom-1 sm:bottom-2 left-0 h-2 sm:h-3 w-full rounded-full bg-[#f7bb3b]/20 -z-10" />
                 </span>
               </h2>
             </Reveal>
 
             <Reveal delay={0.2}>
-              <p className="mt-8 max-w-xl text-[15px] leading-8 text-slate-600">
+              <p className="mt-5 sm:mt-8 max-w-xl text-[14px] leading-7 sm:text-[15px] sm:leading-8 text-slate-600">
                 We combine business strategy, premium design and modern
                 technology to create websites that generate enquiries, build
                 credibility and help ambitious businesses grow around the clock.
@@ -218,14 +221,14 @@ export default function WhyChooseUs() {
             </Reveal>
 
             <Reveal delay={0.28}>
-              <div className="mt-8 h-px w-full bg-gradient-to-r from-[#021823]/10 via-[#021823]/5 to-transparent" />
+              <div className="mt-6 sm:mt-8 h-px w-full bg-gradient-to-r from-[#021823]/10 via-[#021823]/5 to-transparent" />
             </Reveal>
 
             <Reveal delay={0.7}>
-              <div className="mt-8 flex flex-wrap gap-5">
+              <div className="mt-6 sm:mt-8 flex flex-wrap gap-3 sm:gap-5">
                 <Link
                   href="/portfolio"
-                  className="inline-flex items-center gap-3 rounded-2xl bg-[#021823] px-8 py-4 font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                  className="inline-flex items-center gap-2 sm:gap-3 rounded-2xl bg-[#021823] px-6 py-3.5 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
                 >
                   View Our Work
                   <FaArrowCircleRight className="text-[#f7bb3b]" />
@@ -233,7 +236,7 @@ export default function WhyChooseUs() {
 
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-3 rounded-2xl border border-slate-200 px-8 py-4 font-semibold text-[#021823] transition-all duration-300 hover:border-[#021823]"
+                  className="inline-flex items-center gap-2 sm:gap-3 rounded-2xl border border-slate-200 px-6 py-3.5 sm:px-8 sm:py-4 text-sm sm:text-base font-semibold text-[#021823] transition-all duration-300 hover:border-[#021823]"
                 >
                   Book Strategy Call
                 </Link>
