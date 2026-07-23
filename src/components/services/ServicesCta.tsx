@@ -27,7 +27,7 @@ export default function ServicesCTA() {
               className="absolute inset-0 opacity-[0.035] pointer-events-none"
               style={{
                 backgroundImage:
-                  'radial-gradient(circle, #d4a843 1px, transparent 1px)',
+                  'radial-gradient(circle, #f7bb3b 1px, transparent 1px)',
                 backgroundSize: '28px 28px',
               }}
             />
@@ -50,12 +50,12 @@ export default function ServicesCTA() {
 
             <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10">
               <div className="max-w-xl text-center lg:text-left">
-                <p className="text-[#d4a843] text-[11px] font-bold uppercase tracking-[0.22em] mb-3">
+                <p className="text-[#f7bb3b] text-[11px] font-bold uppercase tracking-[0.22em] mb-3">
                   Ready to Start?
                 </p>
                 <h2 className="text-3xl lg:text-4xl xl:text-[2.8rem] font-extrabold text-white leading-tight mb-4">
                   Let&apos;s Build Something{' '}
-                  <span className="text-[#d4a843]">
+                  <span className="text-[#f7bb3b]">
                     Your Business is Proud Of
                   </span>
                 </h2>
@@ -69,14 +69,14 @@ export default function ServicesCTA() {
               <div className="flex flex-col gap-3 flex-shrink-0">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] font-bold px-8 py-4 rounded-t-xl rounded-r-xl text-sm transition-all duration-200 hover:shadow-2xl hover:shadow-[#d4a843]/30 hover:-translate-y-0.5 whitespace-nowrap"
+                  className="inline-flex items-center justify-center gap-2 bg-[#f7bb3b] hover:bg-[#bf9630] text-[#021823] font-bold px-8 py-4 rounded-t-xl rounded-r-xl text-sm transition-all duration-200 hover:shadow-2xl hover:shadow-[#f7bb3b]/30 hover:-translate-y-0.5 whitespace-nowrap"
                 >
                   Request a Free Quote
                   <FaArrowCircleRight />
                 </Link>
                 <Link
                   href="/about"
-                  className="inline-flex items-center justify-center border-2 border-white/20 hover:border-[#d4a843] text-white hover:text-[#d4a843] font-semibold px-8 py-4 rounded-t-xl rounded-r-xl text-sm transition-all duration-200 whitespace-nowrap"
+                  className="inline-flex items-center justify-center border-2 border-white/20 hover:border-[#f7bb3b] text-white hover:text-[#f7bb3b] font-semibold px-8 py-4 rounded-t-xl rounded-r-xl text-sm transition-all duration-200 whitespace-nowrap"
                 >
                   Learn About Us First
                 </Link>

@@ -31,7 +31,7 @@ function AccordionItem({
       transition={{ duration: 0.5, ease, delay: (index % 10) * 0.04 }}
       className={`border rounded-2xl overflow-hidden transition-all duration-300 ${
         isOpen
-          ? 'border-[#d4a843]/40 shadow-md shadow-[#d4a843]/8'
+          ? 'border-[#f7bb3b]/40 shadow-md shadow-[#f7bb3b]/8'
           : 'border-gray-100 hover:border-gray-200'
       }`}
     >
@@ -44,8 +44,8 @@ function AccordionItem({
           <span
             className={`flex-shrink-0 text-sm font-extrabold tabular-nums transition-colors duration-200 ${
               isOpen
-                ? 'text-[#d4a843]'
-                : 'text-gray-300 group-hover:text-[#d4a843]'
+                ? 'text-[#f7bb3b]'
+                : 'text-gray-300 group-hover:text-[#f7bb3b]'
             }`}
           >
             {String(index + 1).padStart(2, '0')}
@@ -64,7 +64,7 @@ function AccordionItem({
         <div
           className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
             isOpen
-              ? 'bg-[#d4a843] text-[#021823]'
+              ? 'bg-[#f7bb3b] text-[#021823]'
               : 'bg-gray-100 text-gray-400 group-hover:bg-[#021823]/8 group-hover:text-[#021823]'
           }`}
         >
@@ -87,7 +87,7 @@ function AccordionItem({
           >
             <div className="px-6 pb-6 pt-0">
               <div className="ml-9">
-                <div className="h-px bg-gradient-to-r from-[#d4a843]/40 to-transparent mb-4" />
+                <div className="h-px bg-gradient-to-r from-[#f7bb3b]/40 to-transparent mb-4" />
                 <p className="text-gray-500 text-md leading-relaxed">
                   {item.answer}
                 </p>
@@ -117,7 +117,7 @@ export default function FAQsAccordion() {
             initial={{ opacity: 0, y: 14 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, ease }}
-            className="text-[#d4a843] text-sm font-bold uppercase tracking-[0.22em] mb-3"
+            className="text-[#f7bb3b] text-sm font-bold uppercase tracking-[0.22em] mb-3"
           >
             Frequently Asked Questions
           </motion.p>
@@ -128,7 +128,7 @@ export default function FAQsAccordion() {
             className="text-3xl xl:text-4xl font-extrabold text-[#021823] leading-tight mb-3"
           >
             Everything You Need to Know{' '}
-            <span className="text-[#d4a843]">Before We Start</span>
+            <span className="text-[#f7bb3b]">Before We Start</span>
           </motion.h2>
         </div>
 
@@ -153,8 +153,8 @@ export default function FAQsAccordion() {
           className="mt-10 bg-[#021823] rounded-2xl px-7 py-6 flex flex-col sm:flex-row items-center justify-between gap-5"
         >
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-[#d4a843]/15 flex items-center justify-center flex-shrink-0">
-              <MdChatBubbleOutline className="w-5 h-5 text-[#d4a843]" />
+            <div className="w-10 h-10 rounded-full bg-[#f7bb3b]/15 flex items-center justify-center flex-shrink-0">
+              <MdChatBubbleOutline className="w-5 h-5 text-[#f7bb3b]" />
             </div>
             <p className="text-white font-semibold text-sm">
               Still have a question?{' '}
@@ -165,7 +165,7 @@ export default function FAQsAccordion() {
           </div>
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] font-bold text-sm px-6 py-3 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-lg flex-shrink-0 whitespace-nowrap"
+            className="inline-flex items-center gap-2 bg-[#f7bb3b] hover:bg-[#bf9630] text-[#021823] font-bold text-sm px-6 py-3 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-lg flex-shrink-0 whitespace-nowrap"
           >
             Ask Us Directly
             <FaArrowCircleRight />

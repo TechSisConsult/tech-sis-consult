@@ -21,11 +21,11 @@ const navLinks = [
 ];
 
 const socials = [
-  // {
-  //   label: 'Facebook',
-  //   href: '#',
-  //   icon: <FaFacebook className="w-3.5 h-3.5" />,
-  // },
+  {
+    label: 'Facebook',
+    href: 'https://www.facebook.com/profile.php?id=61566864326021',
+    icon: <FaFacebook className="w-3.5 h-3.5" />,
+  },
   {
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/company/techsis-consult/',
@@ -38,14 +38,14 @@ const socials = [
   },
   {
     label: 'Twitter/X',
-    href: '#',
+    href: 'https://x.com/techsisconsult1',
     icon: <FaXTwitter className="w-3.5 h-3.5" />,
   },
-  // {
-  //   label: 'Instagram',
-  //   href: '#',
-  //   icon: <FaInstagram className="w-3.5 h-3.5" />,
-  // },
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/techsisconsult_/',
+    icon: <FaInstagram className="w-3.5 h-3.5" />,
+  },
 ];
 
 export default function Navbar() {
@@ -67,7 +67,7 @@ export default function Navbar() {
           {/* email */}
           <Link
             href="mailto:hello@techsisconsult.com"
-            className="flex items-center gap-1.5 text-white/60 hover:text-[#d4a843] text-xs font-medium transition-colors duration-200"
+            className="flex items-center gap-1.5 text-white/60 hover:text-[#f7bb3b] text-xs font-medium transition-colors duration-200"
           >
             <MdOutlineEmail className="w-3.5 h-3.5 flex-shrink-0" />
             hello@techsisconsult.com
@@ -81,7 +81,7 @@ export default function Navbar() {
                 href={s.href}
                 target="_blank"
                 aria-label={s.label}
-                className="text-white/50 hover:text-[#d4a843] transition-colors duration-200"
+                className="text-white/50 hover:text-[#f7bb3b] transition-colors duration-200"
               >
                 {s.icon}
               </Link>
@@ -124,14 +124,16 @@ export default function Navbar() {
                   href={link.href}
                   className={`relative text-sm font-semibold tracking-wide transition-colors duration-200 py-1 group ${
                     isActive
-                      ? 'text-[#d4a843]'
-                      : 'text-[#021823] hover:text-[#d4a843]'
+                      ? 'text-[#f7bb3b]'
+                      : 'text-[#021823] hover:text-[#f7bb3b]'
                   }`}
                 >
                   {link.label}
                   <span
-                    className={`absolute -bottom-0.5 left-0 h-[2px] bg-gradient-to-l from-[#021823] via-white/10 to-[#d4a843] rounded-full transition-all duration-300 ${
-                      isActive ? 'w-full' : 'w-0 group-hover:w-full'
+                    className={`absolute -bottom-1 left-1/2 -translate-x-1/2 h-2 w-2 rounded-full bg-gradient-to-l from-[#021823] via-white/10 to-[#f7bb3b] transition-all duration-300 ${
+                      isActive
+                        ? 'opacity-100 scale-100'
+                        : 'opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-100'
                     }`}
                   />
                 </Link>
@@ -142,7 +144,7 @@ export default function Navbar() {
           {/* CTA */}
           <Link
             href="/contact#strategy-call"
-            className="hidden lg:inline-flex items-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] text-sm font-bold px-5 py-2.5 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-lg hover:shadow-[#d4a843]/30 hover:-translate-y-px flex-shrink-0"
+            className="hidden lg:inline-flex items-center gap-2 bg-[#f7bb3b] hover:bg-[#bf9630] text-[#021823] text-sm font-bold px-5 py-2.5 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-lg hover:shadow-[#f7bb3b]/30 hover:-translate-y-px flex-shrink-0"
           >
             <MdCall className="w-4 h-4" />
             Book a Free Call
@@ -193,8 +195,8 @@ export default function Navbar() {
                     onClick={() => setMenuOpen(false)}
                     className={`font-semibold text-sm py-2.5 border-b border-gray-50 last:border-0 transition-colors ${
                       isActive
-                        ? 'text-[#d4a843]'
-                        : 'text-[#021823] hover:text-[#d4a843]'
+                        ? 'text-[#f7bb3b]'
+                        : 'text-[#021823] hover:text-[#f7bb3b]'
                     }`}
                   >
                     {link.label}
@@ -204,7 +206,7 @@ export default function Navbar() {
               <Link
                 href="/contact#strategy-call"
                 onClick={() => setMenuOpen(false)}
-                className="mt-3 flex justify-center items-center gap-2 bg-[#d4a843] text-[#021823] font-bold py-3 rounded-t-xl rounded-r-xl text-sm"
+                className="mt-3 flex justify-center items-center gap-2 bg-[#f7bb3b] text-[#021823] font-bold py-3 rounded-t-xl rounded-r-xl text-sm"
               >
                 <MdCall className="w-4 h-4" />
                 Book a Free Call

@@ -1,180 +1,145 @@
 'use client';
 
-import { motion, useInView } from 'motion/react';
+import { motion, useInView, Variants } from 'motion/react';
 import Image from 'next/image';
 import { useRef } from 'react';
-import { FaBookOpen, FaCheckCircle, FaHeart, FaStar } from 'react-icons/fa';
-import { MdFlashOn, MdMonitor } from 'react-icons/md';
+import { Quote } from 'lucide-react';
 
-const ease = [0.22, 1, 0.36, 1] as const;
+const fadeInUp: Variants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] as const },
+  },
+};
 
-function Reveal({
-  children,
-  delay = 0,
-  className = '',
-}: {
-  children: React.ReactNode;
-  delay?: number;
-  className?: string;
-}) {
+const fadeIn: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { duration: 0.8, ease: 'easeOut' },
+  },
+};
+
+const scaleIn: Variants = {
+  hidden: { opacity: 0, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
+  },
+};
+
+export default function ResultsSection() {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-70px' });
-  return (
-    <motion.article
-      ref={ref}
-      initial={{ y: 30, opacity: 0 }}
-      animate={inView ? { y: 0, opacity: 1 } : {}}
-      transition={{ duration: 0.65, ease, delay }}
-      className={className}
-    >
-      {children}
-    </motion.article>
-  );
-}
-
-const REASONS = [
-  {
-    icon: <FaCheckCircle />,
-    title: 'Process Excellence',
-    desc: 'Every project follows a proven delivery framework — discovery, design, build, launch, and support. No surprises, no missed deadlines.',
-  },
-  {
-    icon: <FaBookOpen />,
-    title: 'Strategic Planning',
-    desc: "We don't just execute — we think. Your project starts with a strategy session so every decision ties back to your business goals.",
-  },
-  {
-    icon: <FaHeart />,
-    title: 'Experience Design',
-    desc: 'Beautiful is baseline. We design experiences that guide visitors intuitively toward the action you want them to take.',
-  },
-  {
-    icon: <MdMonitor />,
-    title: 'Smart Technology',
-    desc: 'We leverage the latest tools — AI, automation, modern frameworks — so your digital presence is future-proof from day one.',
-  },
-];
-
-export default function WhyUs() {
-  const imgRef = useRef(null);
-  const imgInView = useInView(imgRef, { once: true, margin: '-80px' });
+  const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="py-24 bg-white overflow-hidden">
-      <div className="max-w-[1280px] mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-        {/* LEFT — text + reasons list */}
-        <div className="flex flex-col gap-8">
-          <Reveal delay={0.05}>
-            <p className="text-[#d4a843] text-sm font-bold uppercase tracking-[0.22em]">
-              Why Choose Us
-            </p>
-          </Reveal>
-
-          <Reveal delay={0.12}>
-            <h2 className="text-4xl xl:text-[2.8rem] font-extrabold text-[#021823] leading-[1.1]">
-              Reasons Why We are the Best{' '}
-              <span className="text-[#d4a843]">Digital Agency</span>
-            </h2>
-          </Reveal>
-
-          <div className="flex flex-col gap-5">
-            {REASONS.map((r, i) => (
-              <Reveal key={r.title} delay={0.18 + i * 0.1}>
-                <div className="flex gap-4 group">
-                  {/* icon + vertical connector */}
-                  <div className="flex flex-col items-center flex-shrink-0">
-                    <div className="w-10 h-10 rounded-xl bg-[#021823]/7 group-hover:bg-[#d4a843] text-[#021823] group-hover:text-[#021823] flex items-center justify-center transition-all duration-300 flex-shrink-0">
-                      {r.icon}
-                    </div>
-                    {i < REASONS.length - 1 && (
-                      <div className="w-px flex-1 mt-2 bg-gradient-to-b from-[#021823]/10 to-transparent min-h-[20px]" />
-                    )}
-                  </div>
-                  <div className="pb-2">
-                    <h4 className="text-[#021823] font-extrabold text-sm mb-1.5">
-                      {r.title}
-                    </h4>
-                    <p className="text-gray-500 text-sm leading-relaxed">
-                      {r.desc}
-                    </p>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
+    <section className="py-20 px-4 md:px-8 lg:px-16 bg-[#021823]/10">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={isInView ? 'visible' : 'hidden'}
+          variants={fadeInUp}
+          className="relative overflow-hidden rounded-[2.5rem] bg-[#052a3d] shadow-2xl"
+        >
+          {/* Background image behind the subject */}
+          <div className="absolute inset-0">
+            <Image
+              src="/client-sites/hospital-site.png"
+              alt="Background texture"
+              fill
+              className="object-cover opacity-40"
+            />
           </div>
-        </div>
 
-        {/* RIGHT — image with overlapping stat card */}
-        <div ref={imgRef} className="relative">
-          {/* Main image placeholder */}
-          <motion.article
-            initial={{ x: 50, opacity: 0 }}
-            animate={imgInView ? { x: 0, opacity: 1 } : {}}
-            transition={{ duration: 0.8, ease }}
-            className="relative rounded-3xl overflow-hidden bg-gradient-to-br aspect-square max-w-[480px] ml-auto"
+          <motion.div
+            variants={scaleIn}
+            className="relative z-10 flex flex-col lg:flex-row items-center justify-between p-8 md:p-12 lg:p-16 gap-10"
+          >
+            <div className="flex-1 text-white max-w-xl">
+              <motion.h2
+                variants={fadeInUp}
+                className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6"
+              >
+                Profiting websites.
+                <br />
+                <span className="text-[#c9a227]">Happy clients.</span>
+              </motion.h2>
+
+              <motion.p
+                variants={fadeInUp}
+                className="text-slate-300 text-base md:text-lg"
+              >
+                We build digital experiences that convert visitors into revenue
+                and leave your customers smiling.
+              </motion.p>
+            </div>
+          </motion.div>
+
+          {/* Floating testimonial card */}
+          <motion.div
+            variants={fadeIn}
+            className="
+    absolute
+    right-4
+    bottom-4
+    md:right-10
+    md:bottom-10
+    z-20
+    w-[250px]
+    lg:w-[360px]
+  "
           >
             <div
-              className="absolute inset-0 opacity-[0.8]"
-              style={{
-                backgroundImage: "url('client-sites/hospital-site.jpg')",
-                backgroundSize: '480px 600px',
-                backgroundRepeat: 'no-repeat',
-              }}
-            />
-            <div className="absolute inset-0 flex items-end justify-center pb-0">
-              <div className="w-full h-3/4 bg-gradient-to-t from-[#021823]/80 to-transparent" />
-            </div>
+              className="
+      rounded-2xl
+      border border-white/10
+      bg-[#021823]/45
+      backdrop-blur-xl
+      p-2 md:p-4
+      shadow-[0_25px_60px_rgba(0,0,0,.35)]
+    "
+            >
+              <Quote className="mb-3 h-3 w-3 text-[#d4a843]" />
 
-            <div className="absolute top-0 right-0 w-24 h-24 bg-[#d4a843]/30 rounded-bl-[4rem]" />
-            <div className="absolute top-4 right-4 text-[#d4a843]">
-              <MdFlashOn className="w-8 h-8" />
-            </div>
-
-            <div className="absolute px-4 py-2 bg-[#021823]/80">
-              <p className="text-[#d4a843] text-[11px] font-bold uppercase tracking-widest mb-2">
-                Our Approach
+              <p className="text-[10px] md:text-sm leading-7 text-white/90">
+                &quot;They created a modern website that significantly improved
+                our hospital&apos;s visibility and credibility online.&quot;
               </p>
-              <p className="text-white text-xl font-extrabold leading-snug">
-                Where strategy meets beautiful execution
-              </p>
-            </div>
-          </motion.article>
 
-          <motion.article
-            initial={{ opacity: 0, scale: 0.85, x: 20 }}
-            animate={imgInView ? { opacity: 1, scale: 1, x: 0 } : {}}
-            transition={{ duration: 0.65, delay: 0.45, ease }}
-            className="absolute -bottom-4 -left-6 bg-white rounded-2xl shadow-2xl shadow-[#021823]/12 border border-gray-100 p-5 w-60"
-          >
-            {/* Stars */}
-            <div className="flex gap-1 mb-3">
-              {[...Array(5)].map((_, i) => (
-                <FaStar key={i} className="w-4 h-4 text-[#d4a843]" />
-              ))}
-            </div>
-            <p className="text-gray-600 text-xs leading-relaxed mb-3 italic">
-              &ldquo;They created a modern website that has enhanced our
-              hospital&apos;s visibility and credibility.&rdquo;
-            </p>
-            <div className="flex items-center gap-2.5">
-              <Image
-                src={'/client.jpg'}
-                alt="client1"
-                width={20}
-                height={20}
-                className="rounded-full w-8 h-8 object-fill"
-              />
-              <div>
-                <p className="text-[#021823] text-xs font-extrabold">
-                  Ebele Tai-Nwankwo
-                </p>
-                <p className="text-gray-400 text-[10px]">
-                  Director, Akulue Memorial Hospital
-                </p>
+              <div className="mt-5 flex items-center gap-3">
+                <Image
+                  src="/client-sites/akulue-client.jpg"
+                  alt="Director"
+                  width={56}
+                  height={56}
+                  className="rounded-full border border-[#d4a843] object-cover"
+                />
+
+                <div>
+                  <p className="text-[10px] text-sm font-bold text-white">
+                    Ebele Tai-Nwankwo
+                  </p>
+
+                  <p className="text-[10px] md:text-xs text-[#d4a843]">
+                    Director, Akulue Memorial Hospital
+                  </p>
+
+                  <div className="mt-1 flex">
+                    {[1, 2, 3, 4, 5].map((i) => (
+                      <span key={i} className="text-[#d4a843] text-xs">
+                        ★
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
-          </motion.article>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
   );

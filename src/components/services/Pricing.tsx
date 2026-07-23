@@ -240,7 +240,7 @@ export default function Pricing() {
             initial={{ opacity: 0, y: 14 }}
             animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, ease }}
-            className="text-[#d4a843] text-sm font-bold uppercase tracking-[0.22em] mb-3"
+            className="text-[#f7bb3b] text-sm font-bold uppercase tracking-[0.22em] mb-3"
           >
             Transparent Pricing
           </motion.p>
@@ -251,7 +251,7 @@ export default function Pricing() {
             className="text-4xl xl:text-5xl font-extrabold text-[#021823] leading-tight mb-4"
           >
             Simple Pricing,{' '}
-            <span className="text-[#d4a843]">Zero Hidden Fees</span>
+            <span className="text-[#f7bb3b]">Zero Hidden Fees</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 14 }}
@@ -301,7 +301,7 @@ export default function Pricing() {
                 {/* popular badge */}
                 {tier.badge && (
                   <div className="absolute top-0 left-0 right-0 flex justify-center">
-                    <span className="bg-[#d4a843] text-[#021823] text-[10px] font-extrabold uppercase tracking-widest px-5 py-1.5 rounded-b-xl">
+                    <span className="bg-[#f7bb3b] text-[#021823] text-[10px] font-extrabold uppercase tracking-widest px-5 py-1.5 rounded-b-xl">
                       {tier.badge}
                     </span>
                   </div>
@@ -314,7 +314,7 @@ export default function Pricing() {
                   <div>
                     <p
                       className={`text-[11px] font-bold uppercase tracking-[0.18em] mb-1.5 ${
-                        tier.highlight ? 'text-[#d4a843]/70' : 'text-[#d4a843]'
+                        tier.highlight ? 'text-[#f7bb3b]/70' : 'text-[#f7bb3b]'
                       }`}
                     >
                       {tier.tag}
@@ -351,7 +351,7 @@ export default function Pricing() {
                     <div className="flex items-end gap-1">
                       <span
                         className={`text-4xl font-extrabold leading-none ${
-                          tier.highlight ? 'text-[#d4a843]' : 'text-[#021823]'
+                          tier.highlight ? 'text-[#f7bb3b]' : 'text-[#021823]'
                         }`}
                       >
                         {currency === 'ngn'
@@ -382,12 +382,12 @@ export default function Pricing() {
                         <div
                           className={`flex-shrink-0 w-4 h-4 rounded-full flex items-center justify-center mt-0.5 ${
                             tier.highlight
-                              ? 'bg-[#d4a843]/20'
-                              : 'bg-[#d4a843]/12'
+                              ? 'bg-[#f7bb3b]/20'
+                              : 'bg-[#f7bb3b]/12'
                           }`}
                         >
                           <svg
-                            className="w-2.5 h-2.5 text-[#d4a843]"
+                            className="w-2.5 h-2.5 text-[#f7bb3b]"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -454,7 +454,7 @@ export default function Pricing() {
                     href={tier.ctaHref}
                     className={`inline-flex items-center justify-center gap-2 font-bold text-sm px-6 py-3.5 rounded-full transition-all duration-200 hover:-translate-y-0.5 ${
                       tier.highlight
-                        ? 'bg-[#d4a843] text-[#021823] hover:bg-[#bf9630] hover:shadow-xl hover:shadow-[#d4a843]/30'
+                        ? 'bg-[#f7bb3b] text-[#021823] hover:bg-[#bf9630] hover:shadow-xl hover:shadow-[#f7bb3b]/30'
                         : 'bg-[#021823] text-white hover:bg-[#021823]/90 hover:shadow-lg'
                     }`}
                   >
@@ -469,9 +469,9 @@ export default function Pricing() {
 
         {/* bottom note */}
         <Reveal delay={0.1} className="mt-10 text-center">
-          <div className="inline-flex items-center gap-3 bg-[#d4a843]/8 border border-[#d4a843]/20 rounded-2xl px-6 py-4">
+          <div className="inline-flex items-center gap-3 bg-[#f7bb3b]/8 border border-[#f7bb3b]/20 rounded-2xl px-6 py-4">
             <svg
-              className="w-5 h-5 text-[#d4a843] flex-shrink-0"
+              className="w-5 h-5 text-[#f7bb3b] flex-shrink-0"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -489,7 +489,7 @@ export default function Pricing() {
               </span>{' '}
               <a
                 href="/contact"
-                className="text-[#d4a843] font-bold hover:underline"
+                className="text-[#f7bb3b] font-bold hover:underline"
               >
                 Book a free 30-min consultation
               </a>{' '}

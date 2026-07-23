@@ -90,7 +90,7 @@ export default function HowWeWork() {
 
   return (
     <section className="py-24 bg-gray-50 overflow-hidden relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4a843]/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f7bb3b]/30 to-transparent" />
 
       <div className="max-w-[1280px] mx-auto px-6">
         {/* header */}
@@ -103,7 +103,7 @@ export default function HowWeWork() {
               initial={{ opacity: 0, y: 14 }}
               animate={headerInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, ease }}
-              className="text-[#d4a843] text-sm font-bold uppercase tracking-[0.22em] mb-3"
+              className="text-[#f7bb3b] text-sm font-bold uppercase tracking-[0.22em] mb-3"
             >
               How We Work
             </motion.p>
@@ -114,7 +114,7 @@ export default function HowWeWork() {
               className="text-4xl xl:text-5xl font-extrabold text-[#021823] leading-tight"
             >
               Our Process —{' '}
-              <span className="text-[#d4a843]">No Surprises,</span> Ever
+              <span className="text-[#f7bb3b]">No Surprises,</span> Ever
             </motion.h2>
           </div>
           <motion.p
@@ -141,7 +141,7 @@ export default function HowWeWork() {
 
                 {/* icon + duration row */}
                 <div className="flex items-start justify-between">
-                  <div className="w-12 h-12 rounded-xl bg-[#021823]/6 group-hover:bg-[#021823] text-[#021823] group-hover:text-[#d4a843] flex items-center justify-center transition-all duration-300 flex-shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-[#021823]/6 group-hover:bg-[#021823] text-[#021823] group-hover:text-[#f7bb3b] flex items-center justify-center transition-all duration-300 flex-shrink-0">
                     {step.icon}
                   </div>
                   <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest bg-gray-50 px-2.5 py-1 rounded-full border border-gray-100">
@@ -152,7 +152,7 @@ export default function HowWeWork() {
                 {/* text */}
                 <div className="flex flex-col gap-2 flex-1">
                   <div className="flex items-center gap-2">
-                    <span className="text-[#d4a843] text-[11px] font-extrabold">
+                    <span className="text-[#f7bb3b] text-[11px] font-extrabold">
                       Step {step.number}
                     </span>
                   </div>
@@ -165,7 +165,7 @@ export default function HowWeWork() {
                 </div>
 
                 {/* hover bottom bar */}
-                <div className="h-0.5 w-0 group-hover:w-10 bg-[#d4a843] rounded-full transition-all duration-500" />
+                <div className="h-0.5 w-0 group-hover:w-10 bg-[#f7bb3b] rounded-full transition-all duration-500" />
               </div>
             </Reveal>
           ))}
@@ -175,8 +175,8 @@ export default function HowWeWork() {
         <Reveal delay={0.1} className="mt-12">
           <div className="bg-[#021823] rounded-2xl px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-5">
             <div className="flex items-center gap-4">
-              <div className="w-10 h-10 rounded-full bg-[#d4a843]/20 flex items-center justify-center flex-shrink-0">
-                <MdChatBubbleOutline className="w-5 h-5 text-[#d4a843]" />
+              <div className="w-10 h-10 rounded-full bg-[#f7bb3b]/20 flex items-center justify-center flex-shrink-0">
+                <MdChatBubbleOutline className="w-5 h-5 text-[#f7bb3b]" />
               </div>
               <p className="text-white font-semibold text-sm">
                 Have questions about our process?{' '}
@@ -187,7 +187,7 @@ export default function HowWeWork() {
             </div>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] font-bold text-sm px-6 py-3 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-lg flex-shrink-0 whitespace-nowrap"
+              className="inline-flex items-center gap-2 bg-[#f7bb3b] hover:bg-[#bf9630] text-[#021823] font-bold text-sm px-6 py-3 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-lg flex-shrink-0 whitespace-nowrap"
             >
               Hop on a free call
               <FaArrowCircleRight />

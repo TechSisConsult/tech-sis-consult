@@ -23,7 +23,7 @@ export default function ServicesHero() {
   return (
     <section className="relative min-h-[90vh] flex flex-col items-center justify-center overflow-hidden pt-[70px]">
       <Image
-        src="/bg-6.png"
+        src="/bg-1.png"
         alt=""
         fill
         priority
@@ -36,7 +36,7 @@ export default function ServicesHero() {
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
           backgroundImage:
-            'radial-gradient(circle, #d4a843 1.2px, transparent 1.2px)',
+            'radial-gradient(circle, #f7bb3b 1.2px, transparent 1.2px)',
           backgroundSize: '36px 36px',
         }}
       />
@@ -65,7 +65,7 @@ export default function ServicesHero() {
         className="absolute left-6 lg:left-14 top-[15%] bottom-[15%] w-[2px] rounded-full origin-top pointer-events-none"
         style={{
           background:
-            'linear-gradient(to bottom, transparent, #d4a843, transparent)',
+            'linear-gradient(to bottom, transparent, #f7bb3b, transparent)',
         }}
       />
       <motion.article
@@ -75,7 +75,7 @@ export default function ServicesHero() {
         className="absolute right-6 lg:right-14 top-[15%] bottom-[15%] w-[2px] rounded-full origin-top pointer-events-none"
         style={{
           background:
-            'linear-gradient(to bottom, transparent, #d4a843, transparent)',
+            'linear-gradient(to bottom, transparent, #f7bb3b, transparent)',
         }}
       />
 
@@ -85,7 +85,7 @@ export default function ServicesHero() {
           className="text-4xl sm:text-5xl xl:text-[3.6rem] font-extrabold text-white leading-[1.08] tracking-tight"
         >
           Smart Digital Solutions{' '}
-          <span className="relative inline-block text-[#d4a843]">
+          <span className="relative inline-block text-[#f7bb3b]">
             Built to Grow
             <motion.svg
               className="absolute -bottom-2 left-0 w-full overflow-visible"
@@ -95,7 +95,7 @@ export default function ServicesHero() {
             >
               <motion.path
                 d="M2 6 Q150 1 298 6"
-                stroke="#d4a843"
+                stroke="#f7bb3b"
                 strokeWidth="2.5"
                 strokeLinecap="round"
                 fill="none"
@@ -136,7 +136,7 @@ export default function ServicesHero() {
             <Link
               key={s.label}
               href={s.href}
-              className="flex items-center gap-2 bg-white/6 backdrop-blur-sm border border-white/12 hover:border-[#d4a843]/50 hover:bg-[#d4a843]/10 hover:text-[#d4a843] text-white/75 text-xs font-semibold rounded-full px-4 py-2 transition-all duration-200"
+              className="flex items-center gap-2 bg-white/6 backdrop-blur-sm border border-white/12 hover:border-[#f7bb3b]/50 hover:bg-[#f7bb3b]/10 hover:text-[#f7bb3b] text-white/75 text-xs font-semibold rounded-full px-4 py-2 transition-all duration-200"
             >
               {s.label}
             </Link>
@@ -150,14 +150,14 @@ export default function ServicesHero() {
         >
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] font-bold text-sm px-8 py-3.5 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-xl hover:shadow-[#d4a843]/30 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 bg-[#f7bb3b] hover:bg-[#bf9630] text-[#021823] font-bold text-sm px-8 py-3.5 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-xl hover:shadow-[#f7bb3b]/30 hover:-translate-y-0.5"
           >
             Schedule a Free Call
             <FaArrowCircleRight />
           </Link>
           <Link
             href="#services-grid"
-            className="inline-flex items-center gap-2 border-2 border-white/22 hover:border-[#d4a843] text-white hover:text-[#d4a843] font-semibold text-sm px-8 py-3.5 rounded-t-xl rounded-r-xl transition-all duration-200"
+            className="inline-flex items-center gap-2 border-2 border-white/22 hover:border-[#f7bb3b] text-white hover:text-[#f7bb3b] font-semibold text-sm px-8 py-3.5 rounded-t-xl rounded-r-xl transition-all duration-200"
           >
             Explore Services
           </Link>

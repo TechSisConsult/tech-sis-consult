@@ -46,7 +46,7 @@ const SERVICES = [
     shortDesc:
       'We build scalable ecommerce systems that help you showcase products professionally, streamline purchasing, and increase online sales.',
     icon: <FaBagShopping className="w-6 h-6" />,
-    color: 'bg-[#d4a843]',
+    color: 'bg-[#f7bb3b]',
     highlight: true,
     pricingModel: 'Tailored to business needs after consultation',
     deliverables: [
@@ -170,7 +170,7 @@ const SERVICES = [
     shortDesc:
       'We design focused landing pages that help businesses generate leads, promote offers, and convert traffic into measurable results.',
     icon: <MdRocketLaunch className="w-6 h-6" />,
-    color: 'bg-[#d4a843]',
+    color: 'bg-[#f7bb3b]',
     highlight: false,
     pricingModel: 'Tailored to business needs after consultation',
     deliverables: [
@@ -202,7 +202,7 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
       transition={{ duration: 0.6, delay: index * 0.1, ease }}
       className={`group relative rounded-3xl border-2 transition-all duration-500 overflow-hidden ${
         s.highlight
-          ? 'bg-[#d4a843] border-[#d4a843] shadow-2xl shadow-[#d4a843]/25'
+          ? 'bg-[#f7bb3b] border-[#f7bb3b] shadow-2xl shadow-[#f7bb3b]/25'
           : 'bg-white border-gray-100 hover:border-[#021823]/12 hover:shadow-2xl hover:shadow-[#021823]/6'
       }`}
     >
@@ -214,7 +214,7 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
             className={`w-14 h-14 rounded-2xl flex items-center justify-center transition-all duration-300 ${
               s.highlight
                 ? 'bg-[#021823]/20 text-[#021823]'
-                : 'bg-[#021823]/7 text-[#021823] group-hover:bg-[#021823] group-hover:text-[#d4a843]'
+                : 'bg-[#021823]/7 text-[#021823] group-hover:bg-[#021823] group-hover:text-[#f7bb3b]'
             }`}
           >
             {s.icon}
@@ -232,7 +232,7 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
         <div>
           <p
             className={`text-[11px] font-bold uppercase tracking-[0.18em] mb-1.5 ${
-              s.highlight ? 'text-[#021823]/60' : 'text-[#d4a843]'
+              s.highlight ? 'text-[#021823]/60' : 'text-[#f7bb3b]'
             }`}
           >
             {s.tagline}
@@ -281,7 +281,7 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
           className={`inline-flex items-center gap-2 text-sm font-bold transition-all duration-200 w-fit group/btn ${
             s.highlight
               ? 'text-[#021823] hover:text-[#021823]/70'
-              : 'text-[#021823] hover:text-[#d4a843]'
+              : 'text-[#021823] hover:text-[#f7bb3b]'
           }`}
         >
           {expanded ? 'Show Less' : "See What's Included"}
@@ -322,7 +322,7 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
               <div className="pt-5">
                 <p
                   className={`text-[11px] font-bold uppercase tracking-widest mb-4 ${
-                    s.highlight ? 'text-[#021823]/50' : 'text-[#d4a843]'
+                    s.highlight ? 'text-[#021823]/50' : 'text-[#f7bb3b]'
                   }`}
                 >
                   What&apos;s included
@@ -332,11 +332,11 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
                     <li key={d} className="flex items-start gap-3">
                       <div
                         className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5 ${
-                          s.highlight ? 'bg-[#021823]/15' : 'bg-[#d4a843]/12'
+                          s.highlight ? 'bg-[#021823]/15' : 'bg-[#f7bb3b]/12'
                         }`}
                       >
                         <svg
-                          className={`w-3 h-3 ${s.highlight ? 'text-[#021823]' : 'text-[#d4a843]'}`}
+                          className={`w-3 h-3 ${s.highlight ? 'text-[#021823]' : 'text-[#f7bb3b]'}`}
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -367,7 +367,7 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
               >
                 <p
                   className={`text-[11px] font-bold uppercase tracking-widest mb-2 ${
-                    s.highlight ? 'text-[#021823]/50' : 'text-[#d4a843]'
+                    s.highlight ? 'text-[#021823]/50' : 'text-[#f7bb3b]'
                   }`}
                 >
                   Ideal for
@@ -385,7 +385,7 @@ function ServiceCard({ s, index }: { s: (typeof SERVICES)[0]; index: number }) {
                 className={`inline-flex items-center gap-2 font-bold text-sm px-6 py-3 rounded-full transition-all duration-200 hover:-translate-y-0.5 w-fit ${
                   s.highlight
                     ? 'bg-[#021823] text-white hover:bg-[#021823]/90 hover:shadow-lg'
-                    : 'bg-[#d4a843] text-[#021823] hover:bg-[#bf9630] hover:shadow-lg hover:shadow-[#d4a843]/25'
+                    : 'bg-[#f7bb3b] text-[#021823] hover:bg-[#bf9630] hover:shadow-lg hover:shadow-[#f7bb3b]/25'
                 }`}
               >
                 {s.cta}
@@ -423,7 +423,7 @@ export default function ServicesGrid() {
             initial={{ opacity: 0, y: 14 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, ease }}
-            className="text-[#d4a843] text-sm font-bold uppercase tracking-[0.22em] mb-3"
+            className="text-[#f7bb3b] text-sm font-bold uppercase tracking-[0.22em] mb-3"
           >
             Our Services
           </motion.p>
@@ -434,7 +434,7 @@ export default function ServicesGrid() {
             className="text-4xl xl:text-5xl font-extrabold text-[#021823] leading-tight mb-4"
           >
             Everything Your Business Needs{' '}
-            <span className="text-[#d4a843]">to Win Online</span>
+            <span className="text-[#f7bb3b]">to Win Online</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 14 }}

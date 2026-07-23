@@ -7,194 +7,14 @@ import { FaArrowCircleRight } from 'react-icons/fa';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-const SERVICES = [
-  {
-    id: '01',
-    title: 'Business Websites',
-    desc: 'Professional, fast, conversion-focused websites that represent your brand and win customers around the clock.',
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.8}
-          d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-        />
-      </svg>
-    ),
-    tags: ['Custom Design', 'Mobile-First', 'SEO Ready'],
-    highlight: false,
-  },
-  {
-    id: '02',
-    title: 'Ecommerce Stores',
-    desc: 'Sell anything, anywhere. Powerful stores with seamless checkout, inventory management, and payment integrations.',
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.8}
-          d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"
-        />
-      </svg>
-    ),
-    tags: ['Shopify / WooCommerce', 'Payments', 'Analytics'],
-    highlight: true,
-  },
-  {
-    id: '03',
-    title: 'Website Redesign',
-    desc: 'Existing site not converting? We give it a strategic overhaul — improving performance, UX, and identity.',
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.8}
-          d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-        />
-      </svg>
-    ),
-    tags: ['UX Audit', 'Speed Boost', 'Brand Refresh'],
-    highlight: false,
-  },
-  {
-    id: '04',
-    title: 'Business Automation',
-    desc: 'Stop doing repetitive tasks manually. Set up smart workflows for leads, emails, bookings, and more.',
-    icon: (
-      <svg
-        className="w-6 h-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={1.8}
-          d="M13 10V3L4 14h7v7l9-11h-7z"
-        />
-      </svg>
-    ),
-    tags: ['CRM Setup', 'Email Flows', 'Lead Funnels'],
-    highlight: false,
-  },
-];
-
-function Card({ s, i }: { s: (typeof SERVICES)[0]; i: number }) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-50px' });
-
-  return (
-    <motion.article
-      ref={ref}
-      initial={{ y: 44, opacity: 0 }}
-      animate={inView ? { y: 0, opacity: 1 } : {}}
-      transition={{ duration: 0.6, delay: i * 0.1, ease }}
-      className={`group relative flex flex-col gap-5 items-center rounded-3xl p-7 border transition-all duration-400 hover:-translate-y-2 cursor-default ${
-        s.highlight
-          ? 'bg-[#d4a843] border-[#d4a843] shadow-xl shadow-[#d4a843]/25'
-          : 'bg-white border-gray-100 hover:border-[#021823]/10 hover:shadow-2xl hover:shadow-[#021823]/6'
-      }`}
-    >
-      {/* faint number */}
-      <span
-        className={`absolute top-6 right-7 text-5xl font-black leading-none select-none ${
-          s.highlight ? 'text-[#021823]/10' : 'text-[#021823]/6'
-        }`}
-      >
-        {s.id}
-      </span>
-
-      {/* icon box */}
-      <div
-        className={`w-12 h-12 rounded-2xl flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
-          s.highlight
-            ? 'bg-[#021823]/20 text-[#021823]'
-            : 'bg-[#021823]/6 text-[#021823] group-hover:bg-[#021823] group-hover:text-[#d4a843]'
-        }`}
-      >
-        {s.icon}
-      </div>
-
-      {/* copy */}
-      <div className="flex flex-col items-center">
-        <h3
-          className={`text-lg font-extrabold mb-2 ${
-            s.highlight ? 'text-[#021823]' : 'text-[#021823]'
-          }`}
-        >
-          {s.title}
-        </h3>
-        <p
-          className={`text-sm leading-relaxed ${
-            s.highlight ? 'text-[#021823]/72' : 'text-gray-500'
-          }`}
-        >
-          {s.desc}
-        </p>
-      </div>
-
-      {/* tag pills */}
-      <div className="flex flex-wrap gap-2 mt-auto">
-        {s.tags.map((t) => (
-          <span
-            key={t}
-            className={`text-[11px] font-semibold px-3 py-1 rounded-full ${
-              s.highlight
-                ? 'bg-[#021823]/15 text-[#021823]'
-                : 'bg-[#021823]/6 text-[#021823]'
-            }`}
-          >
-            {t}
-          </span>
-        ))}
-      </div>
-
-      {/* arrow link */}
-      <Link
-        href="/contact"
-        className={`inline-flex items-center gap-1.5 text-sm font-bold group/link transition-colors ${
-          s.highlight
-            ? 'text-[#021823] hover:text-[#021823]/70'
-            : 'text-[#021823] hover:text-[#d4a843]'
-        }`}
-      >
-        Book a Free Consultation
-        <FaArrowCircleRight />
-      </Link>
-    </motion.article>
-  );
-}
-
 export default function ServicesPreview() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section
-      id="services"
-      className="py-28 bg-gray-50 relative overflow-hidden"
-    >
+    <section id="services" className="bg-gray-50 relative overflow-hidden">
       {/* top accent line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4a843]/35 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f7bb3b]/35 to-transparent" />
 
       <div className="max-w-[1280px] mx-auto px-6">
         {/* section header */}
@@ -203,22 +23,14 @@ export default function ServicesPreview() {
           className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14"
         >
           <div className="max-w-xl">
-            <motion.p
-              initial={{ opacity: 0, y: 16 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5 }}
-              className="text-[#d4a843] text-[11px] font-bold uppercase tracking-[0.2em] mb-3"
-            >
-              What We Offer
-            </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl xl:text-5xl font-extrabold text-[#021823] leading-tight"
             >
-              Services Built for{' '}
-              <span className="text-[#d4a843]">Modern Businesses</span>
+              What Does Your Business{' '}
+              <span className="text-[#f7bb3b]">Need Right Now?</span>
             </motion.h2>
           </div>
 
@@ -226,18 +38,327 @@ export default function ServicesPreview() {
             initial={{ opacity: 0, y: 16 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gray-500 text-base leading-relaxed max-w-xs lg:text-right"
+            className="bg-gradient-to-l from-[#021823] to-[#f7bb3b] bg-clip-text text-transparent text-base leading-relaxed max-w-xs lg:text-right"
           >
-            From your first website to a fully automated business machine — we
-            cover every digital need, end to end.
+            Whether you need more leads, more sales or less manual work, we
+            build the systems that help your business grow.
           </motion.p>
         </div>
 
         {/* cards grid */}
-        <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6">
-          {SERVICES.map((s, i) => (
-            <Card key={s.id} s={s} i={i} />
-          ))}
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 lg:grid-rows-2 gap-6 mt-16">
+          <motion.article
+            initial={{ opacity: 0, y: 40 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, ease }}
+            className="
+    group
+    relative
+    overflow-hidden
+    rounded-[32px]
+    bg-[#021823]
+    p-10
+    min-h-[420px]
+    flex
+    flex-col
+    justify-between
+    lg:col-span-2
+  "
+          >
+            {/* Decorative glow */}
+            <div className="absolute -top-32 -right-20 h-80 w-80 rounded-full bg-[#f7bb3b]/20 blur-[120px]" />
+
+            {/* Grid pattern */}
+            <div
+              className="absolute inset-0 opacity-[0.04]"
+              style={{
+                backgroundImage: `
+        linear-gradient(to right,#ffffff 1px,transparent 1px),
+        linear-gradient(to bottom,#ffffff 1px,transparent 1px)
+      `,
+                backgroundSize: '50px 50px',
+              }}
+            />
+
+            <div className="relative z-10">
+              <span className="inline-flex rounded-full bg-[#f7bb3b]/15 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#f7bb3b]">
+                Need More Customers?
+              </span>
+
+              <h3 className="mt-8 max-w-lg text-5xl font-black leading-tight text-white">
+                Your Website Should Be
+                <span className="text-[#f7bb3b]"> Your Best Salesperson.</span>
+              </h3>
+
+              <p className="mt-6 max-w-xl text-lg leading-8 text-white/70">
+                Most business websites look nice but fail to generate enquiries.
+                We build websites designed to earn trust, generate leads and
+                turn visitors into paying customers.
+              </p>
+            </div>
+
+            {/* Bottom */}
+
+            <div className="relative z-10 mt-12 flex flex-wrap items-center justify-between gap-6">
+              <div className="flex flex-wrap gap-3">
+                {[
+                  'Lead Generation',
+                  'SEO Ready',
+                  'Fast Loading',
+                  'Mobile First',
+                ].map((item) => (
+                  <span
+                    key={item}
+                    className="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm text-white/80 backdrop-blur-xl"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+
+              <Link
+                href="/contact"
+                className="group inline-flex items-center gap-3 rounded-2xl bg-[#f7bb3b] px-7 py-4 font-bold text-[#021823] transition-all duration-300 hover:scale-105"
+              >
+                Build My Website
+                <FaArrowCircleRight className="transition-transform duration-300 group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </motion.article>
+
+          <motion.article
+            initial={{ opacity: 0, y: 40 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.15, ease }}
+            className="
+    group
+    relative
+    overflow-hidden
+    rounded-[32px]
+    bg-[#f7bb3b]
+    p-8
+    min-h-[420px]
+    flex
+    flex-col
+    justify-between
+    hover:-translate-y-2
+    transition-all
+    duration-500
+  "
+          >
+            {/* Glow */}
+            <div className="absolute -top-20 -right-20 h-60 w-60 rounded-full bg-white/20 blur-[90px]" />
+
+            {/* Number */}
+            <span className="absolute right-8 top-8 text-6xl font-black text-[#021823]/10">
+              02
+            </span>
+
+            <div className="relative z-10">
+              <span className="inline-flex rounded-full bg-[#021823]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#021823]">
+                Ready To Sell Online?
+              </span>
+
+              <h3 className="mt-8 text-4xl font-black leading-tight text-[#021823]">
+                Launch an
+                <br />
+                Ecommerce Store
+              </h3>
+
+              <p className="mt-5 text-[15px] leading-7 text-[#021823]/75">
+                Sell products, accept online payments, manage inventory and grow
+                your business with a premium shopping experience.
+              </p>
+            </div>
+
+            <div className="relative z-10">
+              <div className="mb-8 space-y-3">
+                {[
+                  'Online Payments',
+                  'Inventory Management',
+                  'Customer Accounts',
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-3">
+                    <div className="h-2 w-2 rounded-full bg-[#021823]" />
+
+                    <span className="text-sm font-medium text-[#021823]/80">
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
+
+              <Link
+                href="/services/ecommerce"
+                className="inline-flex items-center gap-2 font-bold text-[#021823] transition-all duration-300 group-hover:gap-4"
+              >
+                Learn More
+                <FaArrowCircleRight />
+              </Link>
+            </div>
+          </motion.article>
+
+          <motion.article
+            initial={{ opacity: 0, y: 40 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.3, ease }}
+            className="
+    group
+    relative
+    overflow-hidden
+    rounded-[32px]
+    bg-white
+    border
+    border-slate-200
+    p-8
+    min-h-[280px]
+    hover:-translate-y-2
+    hover:shadow-2xl
+    transition-all
+    duration-500
+  "
+          >
+            {/* Number */}
+
+            <span className="absolute right-8 top-6 text-5xl font-black text-[#021823]/6">
+              03
+            </span>
+
+            <div className="flex items-center justify-between">
+              <span className="inline-flex rounded-full bg-[#021823]/5 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.18em] text-[#021823]">
+                Your Website Is Costing You Sales!
+              </span>
+            </div>
+
+            <h3 className="mt-8 text-3xl font-black text-[#021823]">
+              Before
+              <span className="mx-3 text-[#f7bb3b]">→</span>
+              After
+            </h3>
+
+            <p className="mt-4 max-w-sm text-[15px] leading-7 text-slate-500">
+              Turn an outdated website into a modern digital asset that builds
+              trust, attracts customers and increases conversions.
+            </p>
+
+            {/* Transformation */}
+
+            <div className="mt-8 flex items-center gap-4">
+              <div className="flex-1 rounded-2xl border border-red-200 bg-red-50 p-4">
+                <p className="text-xs font-bold uppercase tracking-wider text-red-500">
+                  Before
+                </p>
+
+                <ul className="mt-3 space-y-2 text-sm text-slate-500">
+                  <li>Slow Website</li>
+                  <li>No SEO</li>
+                  <li>Old Design</li>
+                </ul>
+              </div>
+
+              <div className="text-2xl font-black text-[#f7bb3b]">→</div>
+
+              <div className="flex-1 rounded-2xl border border-green-200 bg-green-50 p-4">
+                <p className="text-xs font-bold uppercase tracking-wider text-green-600">
+                  After
+                </p>
+
+                <ul className="mt-3 space-y-2 text-sm text-slate-700">
+                  <li>Fast Loading</li>
+                  <li>More Leads</li>
+                  <li>Premium Brand</li>
+                </ul>
+              </div>
+            </div>
+          </motion.article>
+
+          {/* ================= Business Automation ================= */}
+
+          <motion.article
+            initial={{ opacity: 0, y: 40 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.7, delay: 0.45, ease }}
+            className="
+    group
+    relative
+    overflow-hidden
+    rounded-[32px]
+    bg-[#021823]
+    p-8
+    min-h-[200px]
+    lg:col-span-2
+    hover:-translate-y-2
+    transition-all
+    duration-500
+  "
+          >
+            {/* Glow */}
+
+            <div className="absolute right-0 top-0 h-60 w-72 rounded-full bg-[#f7bb3b]/15 blur-[110px]" />
+
+            {/* Grid */}
+
+            <div
+              className="absolute inset-0 opacity-[0.05]"
+              style={{
+                backgroundImage: `
+        linear-gradient(to right,#ffffff 1px,transparent 1px),
+        linear-gradient(to bottom,#ffffff 1px,transparent 1px)
+      `,
+                backgroundSize: '45px 45px',
+              }}
+            />
+
+            <span className="absolute right-8 top-6 text-6xl font-black text-white/5">
+              04
+            </span>
+
+            <div className="relative z-10">
+              <span className="inline-flex rounded-full bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-[#f7bb3b]">
+                Still Doing Everything Manually?
+              </span>
+
+              <h3 className="mt-7 text-4xl font-black leading-tight text-white">
+                Let Your Business
+                <br />
+                Work While You Sleep.
+              </h3>
+
+              <p className="mt-5 max-w-xl text-[15px] leading-7 text-white/70">
+                Connect your website, CRM, WhatsApp, email marketing and lead
+                management into one seamless automated system.
+              </p>
+            </div>
+
+            {/* Workflow */}
+
+            <div className="relative z-10 mt-10 flex flex-wrap items-center justify-center gap-3">
+              {['Website', 'Leads', 'CRM', 'Email', 'WhatsApp', 'Sales'].map(
+                (step, index) => (
+                  <div key={step} className="flex items-center">
+                    <div className="rounded-2xl border border-white/10 bg-white/10 px-5 py-3 backdrop-blur-xl">
+                      <p className="text-sm font-semibold text-white">{step}</p>
+                    </div>
+
+                    {index !== 5 && (
+                      <div className="mx-3 h-[2px] w-8 bg-[#f7bb3b]" />
+                    )}
+                  </div>
+                ),
+              )}
+            </div>
+
+            <div className="relative z-10 mt-10">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-3 rounded-2xl bg-[#f7bb3b] px-7 py-4 font-bold text-[#021823] transition-all duration-300 hover:scale-105"
+              >
+                Automate My Business
+                <FaArrowCircleRight />
+              </Link>
+            </div>
+          </motion.article>
         </div>
       </div>
     </section>

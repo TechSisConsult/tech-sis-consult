@@ -13,12 +13,12 @@ const fadeUp = (delay = 0) => ({
 
 export default function ContactHero() {
   return (
-    <section className="relative bg-gradient-to-t from-[#021823] to-[#d4a843]/80 pt-[70px] overflow-hidden">
+    <section className="relative bg-gradient-to-t from-[#021823] to-[#f7bb3b]/80 pt-[70px] overflow-hidden">
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
           backgroundImage:
-            'radial-gradient(circle, #d4a843 1.2px, transparent 1.2px)',
+            'radial-gradient(circle, #f7bb3b 1.2px, transparent 1.2px)',
           backgroundSize: '36px 36px',
         }}
       />
@@ -47,12 +47,12 @@ export default function ContactHero() {
         >
           <Link
             href="/"
-            className="text-white/40 hover:text-[#d4a843] transition-colors duration-200"
+            className="text-white/40 hover:text-[#f7bb3b] transition-colors duration-200"
           >
             Home
           </Link>
-          <MdArrowRight className="w-6 h-6 text-[#d4a843]" />
-          <span className="text-[#d4a843]">Contact</span>
+          <MdArrowRight className="w-6 h-6 text-[#f7bb3b]" />
+          <span className="text-[#f7bb3b]">Contact</span>
         </motion.nav>
 
         <article className="flex flex-col lg:flex-row lg:items-end justify-between gap-10">
@@ -62,7 +62,7 @@ export default function ContactHero() {
               className="text-3xl sm:text-5xl font-extrabold text-white leading-[1.08] tracking-tight"
             >
               We Look Forward to{' '}
-              <span className="text-[#d4a843]">Hearing From You.</span>
+              <span className="text-[#f7bb3b]">Hearing From You.</span>
             </motion.h1>
             <motion.p
               {...fadeUp(0.28)}
@@ -86,7 +86,7 @@ export default function ContactHero() {
               </p>
               <a
                 href="tel:+2347026766769"
-                className="text-[#d4a843] text-xl font-extrabold hover:text-[#e8bc5a] transition-colors duration-200 tracking-tight"
+                className="text-[#f7bb3b] text-xl font-extrabold hover:text-[#e8bc5a] transition-colors duration-200 tracking-tight"
               >
                 +234 702 676 6769
               </a>
@@ -113,7 +113,7 @@ export default function ContactHero() {
               <a
                 href="#strategy-call"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2.5 bg-[#d4a843] hover:bg-[#e6b74a] text-white font-bold text-sm px-5 py-2.5 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-lg hover:shadow-[#25D366]/25 hover:-translate-y-px w-fit"
+                className="inline-flex items-center gap-2.5 bg-[#f7bb3b] hover:bg-[#e6b74a] text-white font-bold text-sm px-5 py-2.5 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-lg hover:shadow-[#25D366]/25 hover:-translate-y-px w-fit"
               >
                 <FaPhoneAlt className="w-4 h-4" />
                 Book a Free Strategy Call
@@ -131,7 +131,7 @@ export default function ContactHero() {
               </p>
               <a
                 href="mailto:hello@techsisconsult.com"
-                className="text-[#d4a843] font-bold text-sm hover:text-[#e8bc5a] hover:underline transition-colors duration-200"
+                className="text-[#f7bb3b] font-bold text-sm hover:text-[#e8bc5a] hover:underline transition-colors duration-200"
               >
                 hello@techsisconsult.com
               </a>
@@ -140,7 +140,7 @@ export default function ContactHero() {
         </article>
       </main>
 
-      <div className="h-px bg-gradient-to-r from-transparent via-[#d4a843]/30 to-transparent" />
+      <div className="h-px bg-gradient-to-r from-transparent via-[#f7bb3b]/30 to-transparent" />
     </section>
   );
 }

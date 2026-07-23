@@ -6,12 +6,12 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function PortfolioHero() {
   return (
-    <section className="relative bg-gradient-to-r from-[#021823] to-[#d4a843] pt-[70px] overflow-hidden">
+    <section className="relative bg-gradient-to-r from-[#021823] to-[#f7bb3b] pt-[70px] overflow-hidden">
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
           backgroundImage:
-            'radial-gradient(circle, #d4a843 1.2px, transparent 1.2px)',
+            'radial-gradient(circle, #f7bb3b 1.2px, transparent 1.2px)',
           backgroundSize: '36px 36px',
         }}
       />
@@ -35,7 +35,7 @@ export default function PortfolioHero() {
               className="text-4xl sm:text-5xl font-extrabold text-white leading-[1.1] tracking-tight"
             >
               Build a Website that{' '}
-              <span className="text-[#d4a843]">Wins More Customers</span>
+              <span className="text-[#f7bb3b]">Wins More Customers</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
@@ -56,7 +56,7 @@ export default function PortfolioHero() {
             className="flex-shrink-0 flex items-center gap-5 bg-white/5 border border-white/10 rounded-2xl px-7 py-5"
           >
             <div className="text-center">
-              <p className="text-[#d4a843] text-4xl font-extrabold leading-none">
+              <p className="text-[#f7bb3b] text-4xl font-extrabold leading-none">
                 1
               </p>
               <p className="text-white/40 text-[11px] mt-1 tracking-wide">
@@ -67,7 +67,7 @@ export default function PortfolioHero() {
             </div>
             <div className="w-px h-10 bg-white/10" />
             <div className="text-center">
-              <p className="text-[#d4a843] text-4xl font-extrabold leading-none">
+              <p className="text-[#f7bb3b] text-4xl font-extrabold leading-none">
                 +
               </p>
               <p className="text-white/40 text-[11px] mt-1 tracking-wide">
@@ -79,7 +79,7 @@ export default function PortfolioHero() {
           </motion.article> */}
         </div>
       </div>
-      <div className="h-px bg-gradient-to-r from-transparent via-[#d4a843]/30 to-transparent" />
+      <div className="h-px bg-gradient-to-r from-transparent via-[#f7bb3b]/30 to-transparent" />
     </section>
   );
 }

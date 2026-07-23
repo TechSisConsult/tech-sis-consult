@@ -1,16 +1,16 @@
-import AboutSnippet from '@/components/home/AboutSnippet';
+import WhyChooseUs from '@/components/home/WhyChooseUs';
 import CTABanner from '@/components/home/CtaBanner';
 import Hero from '@/components/home/Hero';
 import ServicesPreview from '@/components/home/ServicesPreview';
-import WhyUs from '@/components/home/WhyUs';
+import ResultsSection from '@/components/home/WhyUs';
 
 const HomePage = () => {
   return (
     <div>
       <Hero />
-      <AboutSnippet />
+      <WhyChooseUs />
       <ServicesPreview />
-      <WhyUs />
+      <ResultsSection />
       <CTABanner />
     </div>
   );

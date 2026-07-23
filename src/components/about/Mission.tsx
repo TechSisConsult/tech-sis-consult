@@ -39,7 +39,7 @@ const MVV = [
     statement:
       'To equip every ambitious business with the smart digital tools, strategy, and presence they need to grow — removing the barrier between great businesses and the customers who need them.',
     accent: 'bg-[#021823] text-white',
-    iconBg: 'bg-[#d4a843]/20 text-[#d4a843]',
+    iconBg: 'bg-[#f7bb3b]/20 text-[#f7bb3b]',
     tag: 'Our Mission',
   },
   {
@@ -48,7 +48,7 @@ const MVV = [
     headline: "Where We're Going",
     statement:
       'A future where no business — regardless of size or location — is left behind digitally. Where African businesses in particular have world-class digital infrastructure and compete confidently on a global stage.',
-    accent: 'bg-[#d4a843] text-[#021823]',
+    accent: 'bg-[#f7bb3b] text-[#021823]',
     iconBg: 'bg-[#021823]/15 text-[#021823]',
     tag: 'Our Vision',
   },
@@ -177,7 +177,7 @@ export default function MissionVisionValues() {
 
   return (
     <section className="py-24 bg-gray-50 overflow-hidden relative">
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#d4a843]/30 to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#f7bb3b]/30 to-transparent" />
 
       <div className="max-w-[1280px] mx-auto px-6 flex flex-col gap-20">
         {/* ── Section header ── */}
@@ -186,7 +186,7 @@ export default function MissionVisionValues() {
             initial={{ opacity: 0, y: 14 }}
             animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, ease }}
-            className="text-[#d4a843] text-sm font-bold uppercase tracking-[0.22em] mb-3"
+            className="text-[#f7bb3b] text-sm font-bold uppercase tracking-[0.22em] mb-3"
           >
             What Drives Us
           </motion.p>
@@ -196,7 +196,7 @@ export default function MissionVisionValues() {
             transition={{ duration: 0.6, delay: 0.1, ease }}
             className="text-4xl xl:text-5xl font-extrabold text-[#021823] leading-tight"
           >
-            Mission, Vision &amp; <span className="text-[#d4a843]">Values</span>
+            Mission, Vision &amp; <span className="text-[#f7bb3b]">Values</span>
           </motion.h2>
         </div>
 
@@ -233,7 +233,7 @@ export default function MissionVisionValues() {
                     <span
                       className={`text-[10px] font-bold uppercase tracking-[0.22em] px-3 py-1.5 rounded-full ${
                         item.type === 'Mission'
-                          ? 'bg-[#d4a843]/15 text-[#d4a843]'
+                          ? 'bg-[#f7bb3b]/15 text-[#f7bb3b]'
                           : 'bg-[#021823]/12 text-[#021823]'
                       }`}
                     >
@@ -262,7 +262,7 @@ export default function MissionVisionValues() {
                   <div
                     className={`h-1 w-16 rounded-full ${
                       item.type === 'Mission'
-                        ? 'bg-[#d4a843]/40'
+                        ? 'bg-[#f7bb3b]/40'
                         : 'bg-[#021823]/25'
                     }`}
                   />
@@ -275,7 +275,7 @@ export default function MissionVisionValues() {
         {/* ── Values grid ── */}
         <div>
           <Reveal delay={0.05} className="text-center mb-12">
-            <p className="text-[#d4a843] text-sm font-bold uppercase tracking-[0.22em] mb-3">
+            <p className="text-[#f7bb3b] text-sm font-bold uppercase tracking-[0.22em] mb-3">
               Our Core Values
             </p>
             <h2 className="text-3xl xl:text-4xl font-extrabold text-[#021823] leading-tight">
@@ -288,7 +288,7 @@ export default function MissionVisionValues() {
               <Reveal key={v.title} delay={0.08 + i * 0.08}>
                 <div className="group bg-white rounded-2xl p-7 border border-gray-100 hover:border-[#021823]/12 hover:shadow-xl hover:shadow-[#021823]/5 hover:-translate-y-1.5 transition-all duration-300 cursor-default h-full flex flex-col gap-4">
                   {/* icon */}
-                  <div className="w-11 h-11 rounded-xl bg-[#021823]/6 group-hover:bg-[#021823] text-[#021823] group-hover:text-[#d4a843] flex items-center justify-center transition-all duration-300 flex-shrink-0">
+                  <div className="w-11 h-11 rounded-xl bg-[#021823]/6 group-hover:bg-[#021823] text-[#021823] group-hover:text-[#f7bb3b] flex items-center justify-center transition-all duration-300 flex-shrink-0">
                     {v.icon}
                   </div>
                   <div>
@@ -300,7 +300,7 @@ export default function MissionVisionValues() {
                     </p>
                   </div>
                   {/* hover accent bar */}
-                  <div className="h-0.5 w-0 group-hover:w-12 bg-[#d4a843] rounded-full transition-all duration-500 mt-auto" />
+                  <div className="h-0.5 w-0 group-hover:w-12 bg-[#f7bb3b] rounded-full transition-all duration-500 mt-auto" />
                 </div>
               </Reveal>
             ))}

@@ -27,16 +27,16 @@ export default function CTABanner() {
               className="absolute inset-0 opacity-[0.035]"
               style={{
                 backgroundImage:
-                  'radial-gradient(circle, #d4a843 1px, transparent 1px)',
+                  'radial-gradient(circle, #f7bb3b 1px, transparent 1px)',
                 backgroundSize: '30px 30px',
               }}
             />
             <div
-              className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-[#d4a843]/10"
+              className="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-[#f7bb3b]/10"
               style={{ filter: 'blur(60px)' }}
             />
             <div
-              className="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-[#d4a843]/5"
+              className="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-[#f7bb3b]/5"
               style={{ filter: 'blur(80px)' }}
             />
           </div>
@@ -47,7 +47,7 @@ export default function CTABanner() {
                 initial={{ opacity: 0, y: 14 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.2 }}
-                className="text-[#d4a843] text-[11px] font-bold uppercase tracking-[0.22em] mb-3"
+                className="text-[#f7bb3b] text-[11px] font-bold uppercase tracking-[0.22em] mb-3"
               >
                 Ready to grow?
               </motion.p>
@@ -58,7 +58,7 @@ export default function CTABanner() {
                 className="text-3xl lg:text-4xl xl:text-[2.8rem] font-extrabold text-white leading-tight mb-4"
               >
                 Ready to Experience the{' '}
-                <span className="text-[#d4a843]">Power of Precision?</span>
+                <span className="text-[#f7bb3b]">Power of Precision?</span>
               </motion.h2>
               <motion.p
                 initial={{ opacity: 0, y: 14 }}
@@ -80,14 +80,14 @@ export default function CTABanner() {
             >
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] font-bold px-8 py-4 rounded-t-xl rounded-r-xl text-sm transition-all duration-200 hover:shadow-2xl hover:shadow-[#d4a843]/30 hover:-translate-y-0.5 whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 bg-[#f7bb3b] hover:bg-[#bf9630] text-[#021823] font-bold px-8 py-4 rounded-t-xl rounded-r-xl text-sm transition-all duration-200 hover:shadow-2xl hover:shadow-[#f7bb3b]/30 hover:-translate-y-0.5 whitespace-nowrap"
               >
                 Book a Free Consult
                 <FaArrowCircleRight />
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center border-2 border-white/25 hover:border-[#d4a843] text-white hover:text-[#d4a843] font-semibold px-8 py-4 rounded-t-xl rounded-r-xl text-sm transition-all duration-200 whitespace-nowrap"
+                className="inline-flex items-center justify-center border-2 border-white/25 hover:border-[#f7bb3b] text-white hover:text-[#f7bb3b] font-semibold px-8 py-4 rounded-t-xl rounded-r-xl text-sm transition-all duration-200 whitespace-nowrap"
               >
                 View Services
               </Link>

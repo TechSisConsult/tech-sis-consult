@@ -98,7 +98,7 @@ export default function StrategyCall() {
   };
 
   const inputClass =
-    'w-full bg-white border border-gray-200 text-[#021823] text-sm font-medium rounded-xl px-4 py-3.5 placeholder-gray-400 focus:outline-none focus:border-[#d4a843] focus:ring-2 focus:ring-[#d4a843]/15 transition-all duration-200';
+    'w-full bg-white border border-gray-200 text-[#021823] text-sm font-medium rounded-xl px-4 py-3.5 placeholder-gray-400 focus:outline-none focus:border-[#f7bb3b] focus:ring-2 focus:ring-[#f7bb3b]/15 transition-all duration-200';
 
   const labelClass =
     'block text-[#021823] text-xs font-bold uppercase tracking-widest mb-2';
@@ -119,7 +119,7 @@ export default function StrategyCall() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, ease }}
             >
-              <span className="inline-flex items-center gap-2 bg-[#d4a843]/12 border border-[#d4a843]/30 text-[#d4a843] text-[11px] font-bold uppercase tracking-[0.18em] px-4 py-1.5 rounded-full">
+              <span className="inline-flex items-center gap-2 bg-[#f7bb3b]/12 border border-[#f7bb3b]/30 text-[#f7bb3b] text-[11px] font-bold uppercase tracking-[0.18em] px-4 py-1.5 rounded-full">
                 Limited Spots Available
               </span>
             </motion.article>
@@ -131,7 +131,7 @@ export default function StrategyCall() {
               className="flex flex-col gap-3"
             >
               <h2 className="text-4xl xl:text-[2.8rem] font-extrabold text-[#021823] leading-[1.1]">
-                30-Minute <span className="text-[#d4a843]">Free</span> Strategy
+                30-Minute <span className="text-[#f7bb3b]">Free</span> Strategy
                 Session
               </h2>
               <p className="text-gray-500 text-base leading-relaxed">
@@ -159,7 +159,7 @@ export default function StrategyCall() {
                   transition={{ duration: 0.5, delay: 0.3 + i * 0.08, ease }}
                   className="flex items-start gap-4"
                 >
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#d4a843]/30 flex items-center justify-center shadow-md shadow-[#d4a843]/20">
+                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#f7bb3b]/30 flex items-center justify-center shadow-md shadow-[#f7bb3b]/20">
                     <span className="text-[#021823] text-[10px] font-extrabold">
                       {item.step}
                     </span>
@@ -182,7 +182,7 @@ export default function StrategyCall() {
               </p>
               <div className="flex items-start gap-3">
                 <svg
-                  className="w-4 h-4 text-[#d4a843] flex-shrink-0 mt-0.5"
+                  className="w-4 h-4 text-[#f7bb3b] flex-shrink-0 mt-0.5"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -243,14 +243,14 @@ export default function StrategyCall() {
                       Meet link — tailored around your availability.
                     </p>
                   </div>
-                  <div className="bg-[#d4a843]/8 border border-[#d4a843]/20 rounded-2xl px-5 py-4 text-sm text-[#021823] font-medium leading-relaxed max-w-sm">
+                  <div className="bg-[#f7bb3b]/8 border border-[#f7bb3b]/20 rounded-2xl px-5 py-4 text-sm text-[#021823] font-medium leading-relaxed max-w-sm">
                     While you wait — check your inbox and add{' '}
                     <span className="font-bold">hello@techsisconsult.com</span>{' '}
                     to your contacts so our reply doesn&apos;t go to spam.
                   </div>
                   <button
                     onClick={() => setFormState('idle')}
-                    className="text-sm font-bold text-[#021823]/40 hover:text-[#d4a843] transition-colors mt-1"
+                    className="text-sm font-bold text-[#021823]/40 hover:text-[#f7bb3b] transition-colors mt-1"
                   >
                     Submit another request →
                   </button>
@@ -340,14 +340,14 @@ export default function StrategyCall() {
                             onClick={() => toggleService(s.id)}
                             className={`flex items-center gap-2.5 px-4 py-3 rounded-xl border-2 text-sm font-semibold text-left transition-all duration-200 ${
                               checked
-                                ? 'border-[#d4a843] bg-[#d4a843]/8 text-[#021823]'
+                                ? 'border-[#f7bb3b] bg-[#f7bb3b]/8 text-[#021823]'
                                 : 'border-gray-200 bg-white text-gray-500 hover:border-gray-300'
                             }`}
                           >
                             <div
                               className={`flex-shrink-0 w-4 h-4 rounded border-2 flex items-center justify-center transition-all duration-200 ${
                                 checked
-                                  ? 'border-[#d4a843] bg-[#d4a843]'
+                                  ? 'border-[#f7bb3b] bg-[#f7bb3b]'
                                   : 'border-gray-300'
                               }`}
                             >
