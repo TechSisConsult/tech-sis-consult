@@ -44,7 +44,7 @@ export default function OurStory() {
   const imgInView = useInView(imgRef, { once: true, margin: '-80px' });
 
   return (
-    <section className="pt-15 mt-[70px] bg-gradient-to-r from-white to-[#d4a843] overflow-hidden rounded-r-[25%]">
+    <section className="pt-15 mt-[70px] bg-gradient-to-r from-white to-[#f7bb3b] overflow-hidden rounded-r-[25%]">
       <div className="max-w-[1280px] mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
           {/* Left — copy */}
@@ -52,7 +52,7 @@ export default function OurStory() {
             <Reveal delay={0.13}>
               <h2 className="text-4xl xl:text-[2.8rem] font-extrabold text-[#021823] leading-[1.1]">
                 We Help Businesses Grow Through{' '}
-                <span className="text-[#d4a843]">
+                <span className="text-[#f7bb3b]">
                   Smart Digital Solutions
                 </span>{' '}
               </h2>
@@ -79,7 +79,7 @@ export default function OurStory() {
             </Reveal>
 
             <Reveal delay={0.41}>
-              <p className="text-gray-600 text-base leading-relaxed font-semibold border-l-4 border-[#d4a843] pl-5 italic">
+              <p className="text-gray-600 text-base leading-relaxed font-semibold border-l-4 border-[#f7bb3b] pl-5 italic">
                 “That’s exactly why TechSis Consult exists — to help modern
                 businesses convert their online presence into something that
                 consistently attract customers, builds trust instantly, and
@@ -96,8 +96,8 @@ export default function OurStory() {
                 </p>
                 {WHAT_WE_BELIEVE.map((b, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#d4a843]/15 flex items-center justify-center mt-0.5">
-                      <FaCheck className="w-3 h-3 text-[#d4a843]" />
+                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#f7bb3b]/15 flex items-center justify-center mt-0.5">
+                      <FaCheck className="w-3 h-3 text-[#f7bb3b]" />
                     </div>
                     <p className="text-gray-600 text-sm leading-relaxed">{b}</p>
                   </div>
@@ -123,13 +123,13 @@ export default function OurStory() {
                 className="absolute inset-0 opacity-[0.04]"
                 style={{
                   backgroundImage:
-                    'radial-gradient(circle, #d4a843 1px, transparent 1px)',
+                    'radial-gradient(circle, #f7bb3b 1px, transparent 1px)',
                   backgroundSize: '22px 22px',
                 }}
               />
-              <div className="absolute top-0 right-0 w-1.5 h-full bg-[#d4a843]" />
+              <div className="absolute top-0 right-0 w-1.5 h-full bg-[#f7bb3b]" />
 
-              <div className="absolute top-8 left-8 text-[#d4a843]/10 text-[120px] font-serif leading-none select-none">
+              <div className="absolute top-8 left-8 text-[#f7bb3b]/10 text-[120px] font-serif leading-none select-none">
                 &ldquo;
               </div>
 
@@ -137,7 +137,7 @@ export default function OurStory() {
                 <p className="text-white text-lg font-extrabold leading-snug">
                   Fatima Oyiza Jimoh
                 </p>
-                <p className="text-[#d4a843] text-[10px] font-bold uppercase tracking-widest mb-1.5">
+                <p className="text-[#f7bb3b] text-[10px] font-bold uppercase tracking-widest mb-1.5">
                   Team Lead
                 </p>
               </div>

@@ -11,14 +11,38 @@ const ease = [0.22, 1, 0.36, 1] as const;
 const PROJECTS = [
   {
     id: 1,
+    tag: 'Solar Energy Website',
+    tagColor: 'bg-[#390405] text-[#f4ce79]',
+    client: 'Davelaw Technologies',
+    title:
+      'A Conversion-Focused Website Built to Generate More Solar Enquiries',
+    imgDetail: '/client-sites/davelaw.png',
+    detailBg: 'bg-[#f4ce79]/10',
+    results: [
+      { metric: '100%', label: 'Mobile Responsive' },
+      { metric: 'SEO', label: 'Optimized Structure' },
+      { metric: '24/7', label: 'Lead Generation' },
+    ],
+    services: [
+      'Solar Company Website Design',
+      'Custom UI/UX Design',
+      'Responsive Web Development',
+      'Product Catalogue',
+      'WhatsApp & Contact Integration',
+      'Search Engine Optimization',
+    ],
+    url: 'https://davelawtechnologies.com',
+    featured: true,
+  },
+  {
+    id: 2,
     tag: 'Healthcare Website',
     tagColor: 'bg-[#021823] text-white',
     client: 'Akulue Memorial Hospital',
     title:
       'A Modern Digital Presence Designed to Build Trust and Improve Patient Access',
-    desc: 'Akulue Memorial Hospital needed a professional online presence that reflected the quality of care they provide. We designed and developed a fast, mobile-friendly website that makes it easy for patients to learn about services, access important information, and connect with the hospital from anywhere. The result is a modern healthcare website that strengthens credibility, improves accessibility, and supports patient engagement.',
-    imgDetail: '/client-site.png',
-    detailBg: 'bg-[#d4a843]/10',
+    imgDetail: '/client-sites/hospital-site.png',
+    detailBg: 'bg-[#f7bb3b]/10',
     results: [
       { metric: '100%', label: 'Mobile Responsive' },
       { metric: '24/7', label: 'Online Accessibility' },
@@ -34,13 +58,12 @@ const PROJECTS = [
     featured: true,
   },
   {
-    id: 2,
+    id: 3,
     tag: 'Solar Energy Website',
     tagColor: 'bg-[#390405] text-[#f4ce79]',
     client: 'Jimoh Solar',
     title:
       'A Lead-Driven Solar Website Built Around an Interactive Load Calculator',
-    desc: 'Jimoh Solar is a Concept Project — of a company that needed a tool that could qualify and convert visitors before a single phone call. We designed and built a seven-page solar energy platform centered on a multi-step Smart Load Estimator, letting prospective customers select their appliances and power situation to receive an instant, personalised system recommendation. The site also includes a full services breakdown, a browsable component store, and a contact flow that hands off straight to WhatsApp or email. The result is a fast, fully responsive site that does real selling work before the sales team ever gets involved.',
     imgDetail: '/client-sites/jimoh-solar-site.png',
     detailBg: 'bg-[#f4ce79]/10',
     results: [
@@ -57,29 +80,29 @@ const PROJECTS = [
     url: 'https://techsisconsult25.github.io/demo-solar-site/',
     featured: true,
   },
-{
-  id: 3,
-  tag: 'Developer Portfolio',
-  tagColor: 'bg-[#1E3A8A] text-white',
-  client: 'Personal Brand',
-  title: 'A Professional Full-Stack Developer Portfolio Built to Showcase Skills and Win Opportunities',
-  desc: 'A modern portfolio website designed to present technical skills, featured projects, and professional experience in a clean and engaging way. Built with performance, responsiveness, and user experience in mind, the website helps recruiters, clients, and collaborators quickly understand the developer’s capabilities and easily get in touch. This project demonstrates that we also create high-quality portfolio websites for professionals looking to stand out online.',
-  imgDetail: '/client-sites/developer-portfolio.jpg',
-  detailBg: 'bg-[#1E3A8A]/10',
-  results: [
-    { metric: '100%', label: 'Mobile Responsive' },
-    { metric: 'Fast', label: 'Performance Optimized' },
-    { metric: 'Professional', label: 'Personal Branding' },
-  ],
-  services: [
-    'Portfolio Website Design',
-    'Full-Stack Development',
-    'Responsive Development',
-    'SEO Foundation',
-  ],
-  url: 'https://portfolio-alpha-tan-w839rb33ci.vercel.app',
-  featured: false,
-},
+  {
+    id: 4,
+    tag: 'Developer Portfolio',
+    tagColor: 'bg-[#1E3A8A] text-white',
+    client: 'Personal Brand',
+    title:
+      'A Professional Full-Stack Developer Portfolio Built to Showcase Skills and Win Opportunities',
+    imgDetail: '/client-sites/developer-portfolio.jpg',
+    detailBg: 'bg-[#1E3A8A]/10',
+    results: [
+      { metric: '100%', label: 'Mobile Responsive' },
+      { metric: 'Fast', label: 'Performance Optimized' },
+      { metric: 'Professional', label: 'Personal Branding' },
+    ],
+    services: [
+      'Portfolio Website Design',
+      'Full-Stack Development',
+      'Responsive Development',
+      'SEO Foundation',
+    ],
+    url: 'https://portfolio-alpha-tan-w839rb33ci.vercel.app',
+    featured: false,
+  },
 ];
 
 // const FILTERS = [
@@ -111,36 +134,11 @@ function ProjectCard({ p }: { p: (typeof PROJECTS)[0] }) {
             {p.tag}
           </span>
           {p.featured && (
-            <span className="bg-[#d4a843] text-[#021823] text-[10px] font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-full">
+            <span className="bg-[#f7bb3b] text-[#021823] text-[10px] font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-full">
               Featured
             </span>
           )}
         </div>
-
-        {/* client + service tags */}
-        <div className="flex flex-col gap-1">
-          <p className="text-[#d4a843] text-[11px] font-bold uppercase tracking-[0.2em]">
-            {p.client}
-          </p>
-          <div className="flex flex-wrap gap-1.5 mt-1">
-            {p.services.map((s) => (
-              <span
-                key={s}
-                className="text-[10px] font-semibold text-[#021823]/60 bg-[#021823]/6 px-2.5 py-0.5 rounded-full"
-              >
-                {s}
-              </span>
-            ))}
-          </div>
-        </div>
-
-        {/* title */}
-        <h2 className="text-2xl xl:text-[1.65rem] font-extrabold text-[#021823] leading-snug">
-          {p.title}
-        </h2>
-
-        <p className="text-gray-500 text-sm leading-relaxed">{p.desc}</p>
-
         <div
           className={`relative rounded-2xl overflow-hidden aspect-[16/9] ${p.detailBg} border border-gray-100`}
         >
@@ -161,7 +159,7 @@ function ProjectCard({ p }: { p: (typeof PROJECTS)[0] }) {
                     style={{ width: 60, height: 90 - i * 8 }}
                   >
                     <div className="h-1.5 bg-[#021823]/20 rounded-full w-full" />
-                    <div className="h-1.5 bg-[#d4a843]/30 rounded-full w-3/4" />
+                    <div className="h-1.5 bg-[#f7bb3b]/30 rounded-full w-3/4" />
                     <div className="h-1.5 bg-[#021823]/15 rounded-full w-5/6" />
                   </div>
                 ))}
@@ -169,6 +167,28 @@ function ProjectCard({ p }: { p: (typeof PROJECTS)[0] }) {
             </div>
           )}
         </div>
+
+        {/* client + service tags */}
+        <div className="flex flex-col gap-1">
+          <p className="text-[#f7bb3b] text-[11px] font-bold uppercase tracking-[0.2em]">
+            {p.client}
+          </p>
+          <div className="flex flex-wrap gap-1.5 mt-1">
+            {p.services.map((s) => (
+              <span
+                key={s}
+                className="text-[10px] font-semibold text-[#021823]/60 bg-[#021823]/6 px-2.5 py-0.5 rounded-full"
+              >
+                {s}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* title */}
+        <h2 className="text-2xl xl:text-[1.65rem] font-extrabold text-[#021823] leading-snug">
+          {p.title}
+        </h2>
       </div>
 
       {/* results metrics */}
@@ -205,7 +225,7 @@ function ProjectCard({ p }: { p: (typeof PROJECTS)[0] }) {
         </Link>
         <Link
           href="/contact"
-          className="text-sm font-bold text-[#d4a843] hover:underline transition-all flex items-center"
+          className="text-sm font-bold text-[#f7bb3b] hover:underline transition-all flex items-center"
         >
           Get Mine <FaArrowCircleRight className="ml-2" />
         </Link>

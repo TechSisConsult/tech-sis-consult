@@ -26,7 +26,7 @@ export default function AboutCTA() {
             className="absolute inset-0 opacity-[0.035] pointer-events-none"
             style={{
               backgroundImage:
-                'radial-gradient(circle, #d4a843 1px, transparent 1px)',
+                'radial-gradient(circle, #f7bb3b 1px, transparent 1px)',
               backgroundSize: '28px 28px',
             }}
           />
@@ -44,7 +44,7 @@ export default function AboutCTA() {
               initial={{ opacity: 0, y: 14 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2 }}
-              className="text-[#d4a843] text-sm font-bold uppercase tracking-[0.22em]"
+              className="text-[#f7bb3b] text-sm font-bold uppercase tracking-[0.22em]"
             >
               Let&apos;s Build Together
             </motion.p>
@@ -56,7 +56,7 @@ export default function AboutCTA() {
               className="text-3xl lg:text-4xl xl:text-[2.8rem] font-extrabold text-white leading-tight"
             >
               Ready to Give Your Business the{' '}
-              <span className="text-[#d4a843]">
+              <span className="text-[#f7bb3b]">
                 Digital Presence It Deserves?
               </span>
             </motion.h2>
@@ -80,14 +80,14 @@ export default function AboutCTA() {
             >
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 bg-[#d4a843] hover:bg-[#bf9630] text-[#021823] font-bold px-8 py-4 rounded-t-xl rounded-r-xl text-sm transition-all duration-200 hover:shadow-2xl hover:shadow-[#d4a843]/30 hover:-translate-y-0.5 whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 bg-[#f7bb3b] hover:bg-[#bf9630] text-[#021823] font-bold px-8 py-4 rounded-t-xl rounded-r-xl text-sm transition-all duration-200 hover:shadow-2xl hover:shadow-[#f7bb3b]/30 hover:-translate-y-0.5 whitespace-nowrap"
               >
                 Schedule a Free Consultation
                 <FaArrowCircleRight />
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center border-2 border-white/25 hover:border-[#d4a843] text-white hover:text-[#d4a843] font-semibold px-8 py-4 rounded-t-xl rounded-r-xl text-sm transition-all duration-200 whitespace-nowrap"
+                className="inline-flex items-center justify-center border-2 border-white/25 hover:border-[#f7bb3b] text-white hover:text-[#f7bb3b] font-semibold px-8 py-4 rounded-t-xl rounded-r-xl text-sm transition-all duration-200 whitespace-nowrap"
               >
                 Explore Our Services
               </Link>

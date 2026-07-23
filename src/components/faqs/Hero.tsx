@@ -8,12 +8,12 @@ const ease = [0.22, 1, 0.36, 1] as const;
 
 export default function FAQsHero() {
   return (
-    <section className="relative bg-gradient-to-t from-[#021823] to-[#d4a843] pt-[70px] overflow-hidden">
+    <section className="relative bg-gradient-to-t from-[#021823] to-[#f7bb3b] pt-[70px] overflow-hidden">
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
         style={{
           backgroundImage:
-            'radial-gradient(circle, #d4a843 1.2px, transparent 1.2px)',
+            'radial-gradient(circle, #f7bb3b 1.2px, transparent 1.2px)',
           backgroundSize: '36px 36px',
         }}
       />
@@ -46,12 +46,12 @@ export default function FAQsHero() {
         >
           <Link
             href="/"
-            className="text-white/40 hover:text-[#d4a843] transition-colors duration-200"
+            className="text-white/40 hover:text-[#f7bb3b] transition-colors duration-200"
           >
             Home
           </Link>
           <MdArrowRight className="text-white/40 w-4 h-4" />
-          <span className="text-[#d4a843]">FAQs</span>
+          <span className="text-[#f7bb3b]">FAQs</span>
         </motion.nav>
 
         <section className="flex flex-col items-center">
@@ -61,7 +61,7 @@ export default function FAQsHero() {
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, delay: 0.1, ease }}
-              className="text-[#d4a843] text-sm font-bold uppercase tracking-[0.22em]"
+              className="text-[#f7bb3b] text-sm font-bold uppercase tracking-[0.22em]"
             >
               Got Questions?
             </motion.p>
@@ -71,7 +71,7 @@ export default function FAQsHero() {
               transition={{ duration: 0.65, delay: 0.18, ease }}
               className="text-4xl sm:text-5xl font-extrabold text-white leading-[1.1] tracking-tight"
             >
-              We&apos;ve Got <span className="text-[#d4a843]">Answers</span>
+              We&apos;ve Got <span className="text-[#f7bb3b]">Answers</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
@@ -84,7 +84,7 @@ export default function FAQsHero() {
               decision. Can&apos;t find your answer?{' '}
               <Link
                 href="/contact"
-                className="text-[#d4a843] hover:underline font-semibold"
+                className="text-[#f7bb3b] hover:underline font-semibold"
               >
                 Just ask us directly.
               </Link>
@@ -92,7 +92,7 @@ export default function FAQsHero() {
           </article>
         </section>
       </section>
-      <div className="h-px bg-gradient-to-r from-transparent via-[#d4a843]/30 to-transparent" />
+      <div className="h-px bg-gradient-to-r from-transparent via-[#f7bb3b]/30 to-transparent" />
     </section>
   );
 }

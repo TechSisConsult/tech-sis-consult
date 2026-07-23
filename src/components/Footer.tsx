@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaLinkedin, FaTiktok } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from 'react-icons/fa';
 import { FaLocationDot, FaPhone, FaXTwitter } from 'react-icons/fa6';
 import { MdOutlineEmail } from 'react-icons/md';
 
@@ -24,38 +24,38 @@ const LINKS = {
 };
 
 const SOCIALS = [
-  // {
-  //   label: 'Facebook',
-  //   href: '#',
-  //   svg: <FaFacebook />,
-  // },
+  {
+    label: 'Facebook',
+    href: 'https://www.facebook.com/profile.php?id=61566864326021',
+    svg: <FaFacebook className="w-3.5 h-3.5" />,
+  },
   {
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/company/techsis-consult/',
-    svg: <FaLinkedin />,
+    svg: <FaLinkedin className="w-3.5 h-3.5" />,
   },
   {
     label: 'TikTok',
     href: 'https://www.tiktok.com/@techsisconsult',
-    svg: <FaTiktok />,
+    svg: <FaTiktok className="w-3.5 h-3.5" />,
   },
   {
-    label: 'Twitter',
-    href: '#',
-    svg: <FaXTwitter />,
+    label: 'Twitter/X',
+    href: 'https://x.com/techsisconsult1',
+    svg: <FaXTwitter className="w-3.5 h-3.5" />,
   },
-  // {
-  //   label: 'Instagram',
-  //   href: '#',
-  //   svg: <FaInstagram />,
-  // },
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/techsisconsult_/',
+    svg: <FaInstagram className="w-3.5 h-3.5" />,
+  },
 ];
 
 export default function Footer() {
   return (
     <footer className="bg-[#021823] text-white relative overflow-hidden">
       {/* gold top accent */}
-      <div className="h-px bg-gradient-to-r from-transparent via-[#d4a843] to-transparent" />
+      <div className="h-px bg-gradient-to-r from-transparent via-[#f7bb3b] to-transparent" />
 
       <div className="max-w-[1280px] mx-auto px-6 pt-14 pb-8">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
@@ -74,7 +74,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col leading-none">
                 <span className="text-white text-xl font-extrabold tracking-tight">
-                  TechSis<span className="text-[#d4a843]">Consult</span>
+                  TechSis<span className="text-[#f7bb3b]">Consult</span>
                 </span>
                 <span className="text-white/35 text-[10px] uppercase tracking-[0.18em] mt-0.5">
                   Smart Tech for Modern Businesses
@@ -95,7 +95,7 @@ export default function Footer() {
                   href={s.href}
                   target="_blank"
                   aria-label={s.label}
-                  className="w-9 h-9 rounded-full border border-white/12 hover:border-[#d4a843] hover:bg-[#d4a843]/10 text-white/45 hover:text-[#d4a843] flex items-center justify-center transition-all duration-200"
+                  className="w-9 h-9 rounded-full border border-white/12 hover:border-[#f7bb3b] hover:bg-[#f7bb3b]/10 text-white/45 hover:text-[#f7bb3b] flex items-center justify-center transition-all duration-200"
                 >
                   {s.svg}
                 </Link>
@@ -115,7 +115,7 @@ export default function Footer() {
                   <li key={item.label}>
                     <a
                       href={item.href}
-                      className="text-white/45 hover:text-[#d4a843] text-sm transition-colors duration-200"
+                      className="text-white/45 hover:text-[#f7bb3b] text-sm transition-colors duration-200"
                     >
                       {item.label}
                     </a>
@@ -148,9 +148,9 @@ export default function Footer() {
             <a
               key={item.label}
               href={item.href}
-              className="flex items-center gap-3 text-white/45 hover:text-[#d4a843] text-sm transition-colors duration-200"
+              className="flex items-center gap-3 text-white/45 hover:text-[#f7bb3b] text-sm transition-colors duration-200"
             >
-              <span className="flex-shrink-0 text-[#d4a843]/60">
+              <span className="flex-shrink-0 text-[#f7bb3b]/60">
                 {item.icon}
               </span>
               {item.label}
