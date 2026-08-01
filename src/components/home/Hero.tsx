@@ -55,7 +55,7 @@ function Cursor({ visible }: { visible: boolean }) {
 
 export default function Hero() {
   const LINE_1 = 'Great Websites';
-  const LINE_2 = 'builds Thriving Business';
+  const LINE_2 = 'builds Thriving Businesses';
 
   /* type line 1 first, then line 2 */
   const { displayed: text1, done: done1 } = useTypewriter(LINE_1, 60, 700);
