@@ -1,10 +1,10 @@
 'use client';
 
-import { motion, useInView } from 'motion/react';
+import { motion } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaArrowRight } from 'react-icons/fa';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -48,7 +48,7 @@ function Cursor({ visible }: { visible: boolean }) {
           : { duration: 0 }
       }
       aria-hidden="true"
-      className="inline-block w-[3px] h-[0.85em] bg-[#d4a843] align-middle ml-1 rounded-sm"
+      className="inline-block w-[3px] h-[0.85em] bg-[#f7bb3b] align-middle ml-1 rounded-sm"
     />
   );
 }
@@ -57,18 +57,32 @@ export default function Hero() {
   const LINE_1 = 'Great Websites';
   const LINE_2 = 'builds Thriving Businesses';
 
-  /* type line 1 first, then line 2 */
   const { displayed: text1, done: done1 } = useTypewriter(LINE_1, 60, 700);
-  const { displayed: text2, done: done2 } = useTypewriter(
-    done1 ? LINE_2 : '',
-    55,
-    120,
-  );
+  const { displayed: text2 } = useTypewriter(done1 ? LINE_2 : '', 55, 120);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-[#ffffff] via-[#021823] to-[#f7bb3b]">
-      <div className="mx-auto flex min-h-screen max-w-[1400px] items-center px-6 pt-28 pb-10 md:px-10">
-        <div className="mx-auto max-w-6xl text-center">
+    <section className="relative overflow-hidden min-h-screen">
+      <Image
+        src="/hero-bg.png"
+        alt=""
+        fill
+        priority
+        className="object-cover object-center"
+        style={{ zIndex: 0 }}
+      />
+
+      <div
+        className="absolute inset-0 bg-gradient-to-l from-[#021823]/60 to-[#021823]/30"
+        style={{
+          zIndex: 1,
+        }}
+      />
+
+      <div
+        className="relative mx-auto flex min-h-screen max-w-[1400px] items-center px-6 pt-28 pb-10 md:px-10"
+        style={{ zIndex: 2 }}
+      >
+        <div className="mx-auto max-w-6xl w-full text-center">
           {/* ── Heading ── */}
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
@@ -77,10 +91,9 @@ export default function Hero() {
             className="text-white font-black tracking-[-0.06em] leading-[1.08]
               text-[32px] sm:text-[40px] md:text-[58px] lg:text-[70px]"
           >
-            {/* ── video card — Davelaw ── */}
             <span className="inline-block mx-2 sm:mx-4 align-middle">
-              <div className="relative overflow-hidden rounded-2xl border shadow-2xl">
-                <div className="relative h-16 w-24 sm:h-20 sm:w-32 md:h-28 md:w-44">
+              <div className="relative overflow-hidden rounded-2xl border border-white/20 shadow-2xl">
+                <div className="relative h-16 w-24 sm:h-20 sm:w-32 md:h-36 md:w-60">
                   <video
                     autoPlay
                     muted
@@ -98,18 +111,22 @@ export default function Hero() {
                 </div>
               </div>
             </span>
+
+            {/* Line 1 */}
             <span>
               {text1}
-              {!done1 && <Cursor visible={true} />}
+              {!done1 && <Cursor visible />}
             </span>
 
             <br />
+
+            {/* Line 2 */}
             <span>
               {text2}
-              {done1 && <Cursor visible={!done2 || true} />}
+              {done1 && <Cursor visible />}
             </span>
 
-            {/* ── image card — Hospital ── */}
+            {/* image card — Hospital */}
             <span className="inline-block mx-2 sm:mx-4 align-middle">
               <div className="group relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl">
                 <div className="relative h-16 w-24 sm:h-20 sm:w-32 md:h-28 md:w-44">
@@ -137,8 +154,9 @@ export default function Hero() {
             transition={{ delay: 0.2, duration: 0.7 }}
             className="mx-auto mt-10 max-w-2xl leading-9 text-white/65 text-sm md:text-xl"
           >
-            Premium websites that generate leads, build trust and help your
-            business grow.
+            Every day, potential customers are judging your business online.
+            Make sure they find a brand they trust. We create premium websites
+            that turn visitors into leads and opportunities into growth.
           </motion.p>
 
           {/* ── CTAs ── */}
@@ -146,20 +164,20 @@ export default function Hero() {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.7 }}
-            className="mt-14 flex flex-wrap justify-center gap-5"
+            className="mt-10 flex flex-wrap justify-center gap-5"
           >
             <Link
               href="/contact"
-              className="rounded-2xl bg-[#d4a843] text-[12px] sm:text-[16px] px-5 py-3 sm:px-8 sm:py-5 font-bold text-[#021823] transition hover:scale-105"
+              className="rounded-2xl bg-[#f7bb3b] text-[12px] sm:text-[16px] px-5 py-3 sm:px-8 sm:py-5 font-bold text-[#021823] transition hover:scale-105"
             >
               Book Strategy Call
             </Link>
             <Link
               href="/portfolio"
-              className="inline-flex items-center gap-3 rounded-2xl border border-white/15 text-[12px] sm:text-[16px] px-5 py-3 sm:px-8 sm:py-5 font-bold text-white transition hover:border-[#d4a843]"
+              className="inline-flex items-center gap-3 rounded-2xl border border-white/15 text-[12px] sm:text-[16px] px-5 py-3 sm:px-8 sm:py-5 font-bold text-white transition hover:border-[#f7bb3b]"
             >
               View Portfolio
-              <FaArrowRight className="text-[#d4a843]" />
+              <FaArrowRight className="text-[#f7bb3b]" />
             </Link>
           </motion.div>
         </div>
