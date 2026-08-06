@@ -82,6 +82,29 @@ const PROJECTS = [
   },
   {
     id: 4,
+    tag: 'Real Estate Website',
+    tagColor: 'bg-[#0b2d1f] text-[#d4f7d0]',
+    client: 'Jimoh Estates',
+    title:
+      'A Modern Real Estate Website Designed to Generate Property Enquiries and Build Buyer Trust',
+    imgDetail: '/client-sites/jimoh-estates-site.png',
+    detailBg: 'bg-[#d4f7d0]/10',
+    results: [
+      { metric: '25+', label: 'Premium Property Listings' },
+      { metric: '100%', label: 'Mobile Responsive' },
+      { metric: '8', label: 'Custom-Designed Pages' },
+    ],
+    services: [
+      'Real Estate Website Design',
+      'Property Listing & Search Experience',
+      'Responsive Development',
+      'Lead Capture & WhatsApp Integration',
+    ],
+    url: 'https://techsisconsult25.github.io/real-estate-demo/',
+    featured: true,
+  },
+  {
+    id: 5,
     tag: 'Developer Portfolio',
     tagColor: 'bg-[#1E3A8A] text-white',
     client: 'Personal Brand',
