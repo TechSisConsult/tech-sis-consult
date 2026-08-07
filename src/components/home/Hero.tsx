@@ -63,12 +63,13 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden min-h-screen">
       <Image
-        src="/hero-bg.png"
-        alt=""
+        src="/hero.png"
+        alt="Hero-background-image"
         fill
         priority
         className="object-cover object-center"
         style={{ zIndex: 0 }}
+        sizes="(max-width: 640px) 100vw, 50vw"
       />
 
       <div
