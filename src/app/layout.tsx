@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Raleway } from 'next/font/google';
+import { Raleway, Lobster_Two } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -10,6 +10,12 @@ const raleway = Raleway({
   variable: '--font-raleway',
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
+});
+
+const lobsterTwo = Lobster_Two({
+  variable: '--font-lobster-two',
+  subsets: ['latin'],
+  weight: ['400', '700'],
 });
 
 export const metadata: Metadata = {
@@ -56,7 +62,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${raleway.variable} h-full antialiased`}>
+    <html
+      lang="en"
+      className={`${raleway.variable} ${lobsterTwo.variable} h-full antialiased`}
+    >
       <body className="min-h-full flex flex-col">
         <Header />
         {children}

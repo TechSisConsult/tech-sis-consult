@@ -51,40 +51,37 @@ export default function OurStory() {
           <div className="flex flex-col gap-7">
             <Reveal delay={0.13}>
               <h2 className="text-4xl xl:text-[2.8rem] font-extrabold text-[#021823] leading-[1.1]">
-                We Help Businesses Grow Through{' '}
+                We Started TechSis Consult Because{' '}
                 <span className="text-[#f7bb3b]">
-                  Smart Digital Solutions
+                  Great Businesses Deserve Better Online.
                 </span>{' '}
               </h2>
             </Reveal>
 
             <Reveal delay={0.27}>
               <p className="text-gray-500 text-base leading-relaxed">
-                Social media can help you get attention, but it doesn&apos;t
-                fully represent your brand. Important details can be scattered,
-                credibility isn&apos;t always clear at first glance, and
-                potential customers often have no single place to understand who
-                you are, what you offer, and why you should be trusted.
+                We saw too many businesses doing great work but struggling to
+                communicate that value online. Their services were good. Their
+                teams were capable. But when potential customers searched for
+                them, their online presence often failed to reflect the quality
+                of what they actually offered.
               </p>
             </Reveal>
 
             <Reveal delay={0.34}>
               <p className="text-gray-500 text-base leading-relaxed">
-                That&apos;s where a well-built website changes everything. It
-                brings structure to your business online. It organizes your
-                services, communicates your value clearly, and builds trust
-                instantly — without needing constant explanation or
-                back-and-forth.
+                We wanted to change that. TechSis Consult was created to help
+                ambitious businesses build a digital presence that looks
+                credible, communicates clearly, and gives customers a reason to
+                take the next step.
               </p>
             </Reveal>
 
             <Reveal delay={0.41}>
               <p className="text-gray-600 text-base leading-relaxed font-semibold border-l-4 border-[#f7bb3b] pl-5 italic">
-                “That’s exactly why TechSis Consult exists — to help modern
-                businesses convert their online presence into something that
-                consistently attract customers, builds trust instantly, and
-                gives them a real advantage over competitors who still look
-                unstructured online.”
+                We don&apos;t believe a website should simply exist. It should
+                have a job — to help your business get noticed, trusted, and
+                chosen.
               </p>
             </Reveal>
 

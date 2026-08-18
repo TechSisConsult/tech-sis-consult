@@ -1,12 +1,13 @@
 'use client';
 
-import { motion, useInView } from 'motion/react';
+import { motion } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRef, useState } from 'react';
-import { FaArrowCircleRight, FaExternalLinkAlt } from 'react-icons/fa';
+import { useState } from 'react';
+import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 
-const ease = [0.22, 1, 0.36, 1] as const;
+// const ease = [0.22, 1, 0.36, 1] as const;
 
 const PROJECTS = [
   {
@@ -136,122 +137,64 @@ const PROJECTS = [
 //   'Automation',
 // ];
 
-function ProjectCard({ p }: { p: (typeof PROJECTS)[0] }) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-60px' });
-
+function ProjectCard({ p }: { p: (typeof PROJECTS)[number] }) {
   return (
     <motion.article
-      ref={ref}
-      initial={{ opacity: 0, y: 40 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.7, ease }}
-      className="flex flex-col bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-xl shadow-[#021823]/6 p-8 lg:p-10 gap-7 h-full"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-50px' }}
+      transition={{ duration: 0.5 }}
+      className="group relative overflow-hidden rounded-[2rem] bg-[#021823] aspect-[16/10]"
     >
-      <div className="flex flex-col gap-5">
-        {/* top row: tag + featured badge */}
-        <div className="flex items-center justify-between">
-          <span
-            className={`text-[10px] font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-full ${p.tagColor}`}
-          >
+      {/* Background Image */}
+      <Image
+        src={p.imgDetail}
+        alt={p.title}
+        fill
+        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+      />
+
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-t from-[#021823] via-[#021823]/60 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
+
+      {/* Content */}
+      <div className="absolute inset-0 flex flex-col justify-between p-6 sm:p-8">
+        {/* Top */}
+        <div className="flex items-start justify-between">
+          <span className="inline-flex items-center rounded-full bg-white/10 backdrop-blur-md border border-white/15 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.15em] text-white">
             {p.tag}
           </span>
-          {p.featured && (
-            <span className="bg-[#f7bb3b] text-[#021823] text-[10px] font-extrabold uppercase tracking-widest px-3 py-1.5 rounded-full">
-              Featured
-            </span>
-          )}
-        </div>
-        <div
-          className={`relative rounded-2xl overflow-hidden aspect-[16/9] ${p.detailBg} border border-gray-100`}
-        >
-          {p.imgDetail ? (
-            <Image
-              src={p.imgDetail}
-              alt={`${p.title} detail`}
-              fill
-              className="object-cover"
-            />
-          ) : (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="flex gap-3 items-end px-6">
-                {[1, 2, 3].map((i) => (
-                  <div
-                    key={i}
-                    className="bg-[#021823]/8 rounded-xl border border-[#021823]/10 flex flex-col gap-1.5 p-2"
-                    style={{ width: 60, height: 90 - i * 8 }}
-                  >
-                    <div className="h-1.5 bg-[#021823]/20 rounded-full w-full" />
-                    <div className="h-1.5 bg-[#f7bb3b]/30 rounded-full w-3/4" />
-                    <div className="h-1.5 bg-[#021823]/15 rounded-full w-5/6" />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
 
-        {/* client + service tags */}
-        <div className="flex flex-col gap-1">
-          <p className="text-[#f7bb3b] text-[11px] font-bold uppercase tracking-[0.2em]">
-            {p.client}
-          </p>
-          <div className="flex flex-wrap gap-1.5 mt-1">
-            {p.services.map((s) => (
-              <span
-                key={s}
-                className="text-[10px] font-semibold text-[#021823]/60 bg-[#021823]/6 px-2.5 py-0.5 rounded-full"
-              >
-                {s}
-              </span>
-            ))}
+          <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center text-white opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+            <FaArrowUpRightFromSquare className="w-3.5 h-3.5" />
           </div>
         </div>
 
-        {/* title */}
-        <h2 className="text-2xl xl:text-[1.65rem] font-extrabold text-[#021823] leading-snug">
-          {p.title}
-        </h2>
-      </div>
+        {/* Bottom */}
+        <div className="max-w-xl">
+          <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            {p.title}
+          </h3>
 
-      {/* results metrics */}
-      <div className="flex flex-col gap-4 mt-auto">
-        <p className="text-[11px] font-bold uppercase tracking-widest text-gray-400">
-          Results
-        </p>
-        <div className="grid grid-cols-3 gap-3">
-          {p.results.map((r) => (
-            <div
-              key={r.label}
-              className="bg-gray-50 rounded-xl p-3 text-center border border-gray-100"
+          <div className="mt-5 flex items-center gap-5">
+            <Link
+              href={p.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-bold text-white group/link"
             >
-              <p className="text-[#021823] text-xl font-extrabold leading-none">
-                {r.metric}
-              </p>
-              <p className="text-gray-400 text-[10px] mt-1 leading-snug font-semibold">
-                {r.label}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
+              View Project
+              <FaArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover/link:translate-x-1" />
+            </Link>
 
-      <div className="flex items-center gap-4">
-        <Link
-          href={p.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-[#021823] hover:bg-[#021823]/90 text-white font-bold text-sm px-6 py-3 rounded-t-xl rounded-r-xl transition-all duration-200 hover:shadow-lg hover:-translate-y-px"
-        >
-          View Project
-          <FaExternalLinkAlt />
-        </Link>
-        <Link
-          href="/contact"
-          className="text-sm font-bold text-[#f7bb3b] hover:underline transition-all flex items-center"
-        >
-          Get Mine <FaArrowCircleRight className="ml-2" />
-        </Link>
+            <Link
+              href="/contact"
+              className="text-sm font-bold text-[#f7bb3b] hover:text-white transition-colors"
+            >
+              Get Yours
+            </Link>
+          </div>
+        </div>
       </div>
     </motion.article>
   );

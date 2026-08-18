@@ -60,7 +60,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className="fixed top-0 left-0 right-0 z-50 font-lobster">
       {/* ── TOP BAR ── */}
       <div className="w-full bg-[#021823]">
         <div className="max-w-[1280px] mx-auto px-6 h-9 flex items-center justify-between">
@@ -100,15 +100,19 @@ export default function Navbar() {
       >
         <div className="max-w-[1280px] mx-auto px-6 h-[68px] flex items-center justify-between gap-6">
           {/* Logo */}
-          <Link href="/" className="flex-shrink-0">
+          <Link href="/" className="flex-shrink-0 flex items-center gap-2">
             <Image
               src={WebsiteLogo}
               alt="TechSisConsult"
-              width={160}
+              width={120}
               height={44}
-              className="h-24 w-auto object-contain"
+              className="h-12 w-auto object-contain"
               priority
             />
+            <span className="font-thin font-lobster text-[12px] sm:text-sm">
+              <span className="text-[#021823]">TECHSIS </span>
+              <span className="text-[#f7db3b]">CONSULT</span>
+            </span>
           </Link>
 
           {/* Desktop links */}

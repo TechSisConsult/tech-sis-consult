@@ -1,4 +1,5 @@
 import AboutCTA from '@/components/about/Cta';
+import AboutHero from '@/components/about/Hero';
 import MissionVisionValues from '@/components/about/Mission';
 import OurStory from '@/components/about/OurStory';
 import { Metadata } from 'next';
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <>
+      <AboutHero />
       <OurStory />
       <MissionVisionValues />
       <AboutCTA />

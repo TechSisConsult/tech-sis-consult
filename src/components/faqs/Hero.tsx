@@ -10,11 +10,10 @@ export default function FAQsHero() {
   return (
     <section className="relative bg-gradient-to-t from-[#021823] to-[#f7bb3b] pt-[70px] overflow-hidden">
       <div
-        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        className="absolute inset-0 opacity-[0.4] pointer-events-none"
         style={{
-          backgroundImage:
-            'radial-gradient(circle, #f7bb3b 1.2px, transparent 1.2px)',
-          backgroundSize: '36px 36px',
+          backgroundImage: 'url("/person2.jpg")',
+          backgroundPosition: 'center',
         }}
       />
 

@@ -54,8 +54,8 @@ function Cursor({ visible }: { visible: boolean }) {
 }
 
 export default function Hero() {
-  const LINE_1 = 'Great Websites';
-  const LINE_2 = 'builds Thriving Businesses';
+  const LINE_1 = 'Websites that Sell';
+  const LINE_2 = 'while You Sleep';
 
   const { displayed: text1, done: done1 } = useTypewriter(LINE_1, 60, 700);
   const { displayed: text2 } = useTypewriter(done1 ? LINE_2 : '', 55, 120);
@@ -67,16 +67,10 @@ export default function Hero() {
         alt="Hero-background-image"
         fill
         priority
+        quality={100}
         className="object-cover object-center"
         style={{ zIndex: 0 }}
-        sizes="(max-width: 640px) 100vw, 50vw"
-      />
-
-      <div
-        className="absolute inset-0 bg-gradient-to-l from-[#021823]/60 to-[#021823]/30"
-        style={{
-          zIndex: 1,
-        }}
+        sizes="100vw"
       />
 
       <div
@@ -153,11 +147,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
-            className="mx-auto mt-10 max-w-2xl leading-9 text-white/65 text-sm md:text-xl"
+            className="font-lobster mx-auto mt-6 max-w-2xl leading-9 text-white/65 text-sm md:text-xl bg-[#f7bb3b]/9 py-2 px-4"
           >
-            Every day, potential customers are judging your business online.
-            Make sure they find a brand they trust. We create premium websites
-            that turn visitors into leads and opportunities into growth.
+            From first glance to loyal customer: we build the brand that carries
+            them through every step.
           </motion.p>
 
           {/* ── CTAs ── */}

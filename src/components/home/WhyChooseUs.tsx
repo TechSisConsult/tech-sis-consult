@@ -101,20 +101,6 @@ export default function WhyChooseUs() {
 
                 <div className="absolute -top-24 -right-24 h-80 w-80 rounded-full bg-[#f7bb3b]/20 blur-[120px]" />
 
-                {/* Featured Label */}
-
-                <div className="absolute left-4 top-4 sm:left-8 sm:top-8">
-                  <div className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full border border-white/15 bg-white/10 backdrop-blur-xl px-3 py-1.5 sm:px-5 sm:py-2">
-                    <span className="h-1.5 w-1.5 sm:h-2 sm:w-2 rounded-full bg-[#f7bb3b]" />
-
-                    <span className="text-[9px] sm:text-[11px] font-semibold uppercase tracking-[0.16em] sm:tracking-[0.22em] text-white">
-                      Featured Project
-                    </span>
-                  </div>
-                </div>
-
-                {/* Bottom Text */}
-
                 <div className="absolute bottom-0 inset-x-0 p-5 sm:p-10">
                   <div className="max-w-lg">
                     <p className="text-[#f7bb3b] text-[10px] sm:text-xs uppercase tracking-[0.16em] sm:tracking-[0.22em] font-bold">
@@ -194,7 +180,7 @@ export default function WhyChooseUs() {
               <span className="inline-flex w-fit items-center gap-2 rounded-full border border-[#f7bb3b]/20 bg-[#f7bb3b]/8 px-4 py-1.5 sm:px-5 sm:py-2">
                 <span className="h-2 w-2 rounded-full bg-[#f7bb3b]" />
 
-                <span className="text-[10px] sm:text-[12px] font-bold uppercase tracking-[0.18em] sm:tracking-[0.22em] text-[#8d6c1f]">
+                <span className="text-[10px] sm:text-[12px] font-bold uppercase tracking-[0.18em] sm:tracking-[0.22em] text-[#8d6c1f] font-lobster">
                   Why TechSis Consult
                 </span>
               </span>
@@ -213,7 +199,7 @@ export default function WhyChooseUs() {
             </Reveal>
 
             <Reveal delay={0.2}>
-              <p className="mt-5 sm:mt-8 max-w-xl text-[14px] leading-7 sm:text-[15px] sm:leading-8 text-slate-600">
+              <p className="mt-5 sm:mt-8 max-w-xl text-[14px] leading-7 sm:text-[15px] sm:leading-8 text-slate-600 font-lobster">
                 We combine business strategy, premium design and modern
                 technology to create websites that generate enquiries, build
                 credibility and help ambitious businesses grow around the clock.
