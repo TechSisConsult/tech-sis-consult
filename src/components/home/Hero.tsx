@@ -63,12 +63,22 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden min-h-screen">
       <Image
+        src="/hero-mobile.png"
+        alt=""
+        fill
+        priority
+        className="object-cover object-center sm:hidden"
+        style={{ zIndex: 0 }}
+        sizes="100vw"
+      />
+
+      <Image
         src="/hero.png"
         alt="Hero-background-image"
         fill
         priority
         quality={100}
-        className="object-cover object-center"
+        className="object-cover object-center hidden sm:block"
         style={{ zIndex: 0 }}
         sizes="100vw"
       />
@@ -147,7 +157,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
-            className="font-lobster mx-auto mt-6 max-w-2xl leading-9 text-white/65 text-sm md:text-xl bg-[#f7bb3b]/9 py-2 px-4"
+            className="mx-auto mt-6 max-w-2xl leading-9 text-white/85 text-sm md:text-xl bg-[#f7bb3b]/9 py-2 px-4"
           >
             From first glance to loyal customer: we build the brand that carries
             them through every step.

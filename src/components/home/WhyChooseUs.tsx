@@ -180,7 +180,7 @@ export default function WhyChooseUs() {
               <span className="inline-flex w-fit items-center gap-2 rounded-full border border-[#f7bb3b]/20 bg-[#f7bb3b]/8 px-4 py-1.5 sm:px-5 sm:py-2">
                 <span className="h-2 w-2 rounded-full bg-[#f7bb3b]" />
 
-                <span className="text-[10px] sm:text-[12px] font-bold uppercase tracking-[0.18em] sm:tracking-[0.22em] text-[#8d6c1f] font-lobster">
+                <span className="text-[10px] sm:text-[12px] font-bold uppercase tracking-[0.18em] sm:tracking-[0.22em] text-[#8d6c1f]">
                   Why TechSis Consult
                 </span>
               </span>
