@@ -194,8 +194,9 @@ export default function Hero() {
             transition={{ delay: 0.2, duration: 0.7 }}
             className="mx-auto mt-6 max-w-2xl leading-9 rounded-xl text-[#021823] border border-white/15 bg-white/5 backdrop-blur-md px-4 py-3 shadow-lg"
           >
-            From first glance to loyal customer: We build the brand that carries
-            them through every step.
+            <span className="text-[#f7bb3b] sm:text-[#021823]">From first</span>{' '}
+            glance to loyal customer: We build the brand that carries them
+            through every step.
           </motion.p>
 
           {/* ── CTAs ── */}
