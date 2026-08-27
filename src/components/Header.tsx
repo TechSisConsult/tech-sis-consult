@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FaFacebook, FaLinkedin, FaTiktok } from 'react-icons/fa';
+import { FaFacebook, FaLinkedin, FaTiktok, FaWhatsapp } from 'react-icons/fa';
 import { FaInstagram } from 'react-icons/fa6';
 import { FaXTwitter } from 'react-icons/fa6';
 import { MdCall, MdOutlineEmail } from 'react-icons/md';
@@ -21,6 +21,11 @@ const navLinks = [
 ];
 
 const socials = [
+  {
+    label: 'WhatsApp',
+    href: 'https://wa.me/2347026766769?text=Hi%20TechSisConsult!%20I%27d%20like%20to%20discuss%20a%20project.',
+    icon: <FaWhatsapp className="w-4 h-4" />,
+  },
   {
     label: 'Facebook',
     href: 'https://www.facebook.com/profile.php?id=61566864326021',

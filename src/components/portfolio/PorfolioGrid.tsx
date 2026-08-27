@@ -4,10 +4,7 @@ import { motion } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import { FaArrowRight } from 'react-icons/fa';
 import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
-
-// const ease = [0.22, 1, 0.36, 1] as const;
 
 const PROJECTS = [
   {
@@ -17,6 +14,8 @@ const PROJECTS = [
     client: 'Davelaw Technologies',
     title:
       'A Conversion-Focused Website Built to Generate More Solar Enquiries',
+    blurb:
+      'A solar energy company website built to generate more enquiries and showcase products with a clean, trust-building layout.',
     imgDetail: '/client-sites/davelaw.png',
     detailBg: 'bg-[#f4ce79]/10',
     results: [
@@ -32,6 +31,7 @@ const PROJECTS = [
       'WhatsApp & Contact Integration',
       'Search Engine Optimization',
     ],
+    stack: ['Custom Design', 'Responsive Dev', 'SEO'],
     url: 'https://davelawtechnologies.com',
     featured: true,
   },
@@ -42,6 +42,8 @@ const PROJECTS = [
     client: 'Akulue Memorial Hospital',
     title:
       'A Modern Digital Presence Designed to Build Trust and Improve Patient Access',
+    blurb:
+      'A modern hospital website designed to build trust and make it easier for patients to reach the right department.',
     imgDetail: '/client-sites/hospital-site.png',
     detailBg: 'bg-[#f7bb3b]/10',
     results: [
@@ -55,6 +57,7 @@ const PROJECTS = [
       'SEO Foundation',
       'Patient Contact Integration',
     ],
+    stack: ['Healthcare Design', 'Responsive Dev', 'SEO'],
     url: 'https://akuluehospital.org.ng/',
     featured: true,
   },
@@ -65,6 +68,8 @@ const PROJECTS = [
     client: 'Jimoh Solar',
     title:
       'A Lead-Driven Solar Website Built Around an Interactive Load Calculator',
+    blurb:
+      'A lead-driven solar website built around an interactive calculator that helps customers estimate their energy needs.',
     imgDetail: '/client-sites/jimoh-solar-site.png',
     detailBg: 'bg-[#f4ce79]/10',
     results: [
@@ -78,6 +83,7 @@ const PROJECTS = [
       'Responsive Development',
       'Lead Capture & WhatsApp Integration',
     ],
+    stack: ['Interactive Calculator', 'Responsive Dev', 'WhatsApp'],
     url: 'https://techsisconsult25.github.io/demo-solar-site/',
     featured: true,
   },
@@ -88,6 +94,8 @@ const PROJECTS = [
     client: 'Jimoh Estates',
     title:
       'A Modern Real Estate Website Designed to Generate Property Enquiries and Build Buyer Trust',
+    blurb:
+      'A modern real estate website with property listings and search, built to generate enquiries and build buyer trust.',
     imgDetail: '/client-sites/jimoh-estates-site.png',
     detailBg: 'bg-[#d4f7d0]/10',
     results: [
@@ -101,6 +109,7 @@ const PROJECTS = [
       'Responsive Development',
       'Lead Capture & WhatsApp Integration',
     ],
+    stack: ['Property Listings', 'Responsive Dev', 'WhatsApp'],
     url: 'https://techsisconsult25.github.io/real-estate-demo/',
     featured: true,
   },
@@ -111,6 +120,8 @@ const PROJECTS = [
     client: 'Personal Brand',
     title:
       'A Professional Full-Stack Developer Portfolio Built to Showcase Skills and Win Opportunities',
+    blurb:
+      'A full-stack developer portfolio built to showcase real projects and skills to potential clients and employers.',
     imgDetail: '/client-sites/developer-portfolio.jpg',
     detailBg: 'bg-[#1E3A8A]/10',
     results: [
@@ -124,18 +135,11 @@ const PROJECTS = [
       'Responsive Development',
       'SEO Foundation',
     ],
+    stack: ['Full-Stack Dev', 'Responsive Design', 'SEO'],
     url: 'https://portfolio-alpha-tan-w839rb33ci.vercel.app',
     featured: false,
   },
 ];
-
-// const FILTERS = [
-//   'All',
-//   'Business Website',
-//   'E-commerce',
-//   'Redesign',
-//   'Automation',
-// ];
 
 function ProjectCard({ p }: { p: (typeof PROJECTS)[number] }) {
   return (
@@ -144,57 +148,62 @@ function ProjectCard({ p }: { p: (typeof PROJECTS)[number] }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5 }}
-      className="group relative overflow-hidden rounded-[2rem] bg-[#021823] aspect-[16/10]"
+      className="group relative flex flex-col overflow-hidden rounded-[1.75rem] bg-white border border-[#021823]/8 shadow-[0_2px_20px_rgba(2,24,35,0.06)] transition-shadow duration-300 hover:shadow-[0_8px_30px_rgba(2,24,35,0.12)]"
     >
-      {/* Background Image */}
-      <Image
-        src={p.imgDetail}
-        alt={p.title}
-        fill
-        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-      />
-
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#021823] via-[#021823]/60 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-100" />
+      {/* Image */}
+      <Link
+        href={p.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="relative block aspect-[16/10] overflow-hidden rounded-t-[1.75rem]"
+        aria-label={`View ${p.client} project`}
+      >
+        <Image
+          src={p.imgDetail}
+          alt={p.title}
+          fill
+          className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+        />
+      </Link>
 
       {/* Content */}
-      <div className="absolute inset-0 flex flex-col justify-between p-6 sm:p-8">
-        {/* Top */}
-        <div className="flex items-start justify-between">
-          <span className="inline-flex items-center rounded-full bg-white/10 backdrop-blur-md border border-white/15 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.15em] text-white">
-            {p.tag}
-          </span>
-
-          <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center text-white opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
-            <FaArrowUpRightFromSquare className="w-3.5 h-3.5" />
-          </div>
-        </div>
-
-        {/* Bottom */}
-        <div className="max-w-xl">
-          <h3 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
-            {p.title}
+      <div className="flex flex-1 flex-col gap-3 p-6 sm:p-7">
+        <div className="flex items-start justify-between gap-3">
+          <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-[#021823]">
+            {p.client}
           </h3>
-
-          <div className="mt-5 flex items-center gap-5">
-            <Link
-              href={p.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-bold text-white group/link"
-            >
-              View Project
-              <FaArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover/link:translate-x-1" />
-            </Link>
-
-            <Link
-              href="/contact"
-              className="text-sm font-bold text-[#f7bb3b] hover:text-white transition-colors"
-            >
-              Get Yours
-            </Link>
-          </div>
+          <Link
+            href={p.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Open ${p.client} in a new tab`}
+            className="mt-1 shrink-0 text-[#021823]/40 transition-all duration-300 group-hover:text-[#d4a843] group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+          >
+            <FaArrowUpRightFromSquare className="h-4 w-4" />
+          </Link>
         </div>
+
+        <p className="text-sm leading-relaxed text-[#021823]/55 line-clamp-2">
+          {p.blurb}
+        </p>
+
+        <div className="mt-auto flex flex-wrap gap-2 pt-2">
+          {p.stack.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-full border border-[#021823]/10 bg-[#021823]/[0.04] px-3 py-1 text-xs font-medium text-[#021823]/70"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <Link
+          href="/contact"
+          className="mt-1 text-xs font-bold text-[#d4a843] hover:text-[#021823] transition-colors w-fit"
+        >
+          Get Yours →
+        </Link>
       </div>
     </motion.article>
   );
