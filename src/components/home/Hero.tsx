@@ -3,7 +3,8 @@
 import { motion } from 'motion/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaArrowRight } from 'react-icons/fa';
+import { FaArrowRight, FaCheckCircle, FaBolt, FaCode } from 'react-icons/fa';
+import { MdPeople } from 'react-icons/md';
 import { useEffect, useState } from 'react';
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -53,6 +54,50 @@ function Cursor({ visible }: { visible: boolean }) {
   );
 }
 
+/* ── Highlight stack: horizontal row under CTAs on mobile/tablet, ── */
+/* ── vertical floating stack on the right from xl breakpoint up ── */
+const highlights = [
+  { icon: <FaCheckCircle />, label: '98% Client Satisfaction' },
+  { icon: <FaBolt />, label: 'Fast Turnaround' },
+  { icon: <FaCode />, label: '100% Custom-Built' },
+  { icon: <MdPeople />, label: 'Conversion-Focused Websites' },
+];
+
+function HighlightStack() {
+  return (
+    <div
+      className="mt-10 flex flex-row flex-wrap justify-center gap-3
+        xl:absolute xl:right-8 xl:top-1/2 xl:-translate-y-1/2
+        xl:flex-col xl:flex-nowrap xl:justify-start xl:mt-0"
+      style={{ zIndex: 2 }}
+      aria-label="Why work with TechSis Consult"
+    >
+      {highlights.map((h, i) => (
+        <motion.div
+          key={h.label}
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.6 + i * 0.12, duration: 0.6, ease }}
+          className="flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 backdrop-blur-md
+            px-3 py-2 shadow-lg
+            xl:gap-3 xl:px-4 xl:py-3 xl:w-64"
+        >
+          <span
+            className="text-[#f7bb3b] text-base xl:text-lg shrink-0"
+            aria-hidden="true"
+          >
+            {h.icon}
+          </span>
+          <span className="text-xs sm:text-sm xl:text-sm font-semibold tracking-wide text-[#021823] whitespace-nowrap">
+            {h.label}
+          </span>
+        </motion.div>
+      ))}
+    </div>
+  );
+}
+
 export default function Hero() {
   const LINE_1 = 'Websites that Sell';
   const LINE_2 = 'while You Sleep';
@@ -63,22 +108,12 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden min-h-screen">
       <Image
-        src="/hero-mobile.png"
-        alt=""
-        fill
-        priority
-        className="object-cover object-center sm:hidden"
-        style={{ zIndex: 0 }}
-        sizes="100vw"
-      />
-
-      <Image
         src="/hero.png"
         alt="Hero-background-image"
         fill
         priority
         quality={100}
-        className="object-cover object-center hidden sm:block"
+        className="object-cover object-center"
         style={{ zIndex: 0 }}
         sizes="100vw"
       />
@@ -157,9 +192,9 @@ export default function Hero() {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
-            className="mx-auto mt-6 max-w-2xl leading-9 text-white/85 text-sm md:text-xl bg-[#f7bb3b]/9 py-2 px-4"
+            className="mx-auto mt-6 max-w-2xl leading-9 rounded-xl text-[#021823] border border-white/15 bg-white/5 backdrop-blur-md px-4 py-3 shadow-lg"
           >
-            From first glance to loyal customer: we build the brand that carries
+            From first glance to loyal customer: We build the brand that carries
             them through every step.
           </motion.p>
 
@@ -178,12 +213,15 @@ export default function Hero() {
             </Link>
             <Link
               href="/portfolio"
-              className="inline-flex items-center gap-3 rounded-2xl border border-white/15 text-[12px] sm:text-[16px] px-5 py-3 sm:px-8 sm:py-5 font-bold text-white transition hover:border-[#f7bb3b]"
+              className="inline-flex items-center gap-3 rounded-2xl border border-white/15 text-[12px] sm:text-[16px] px-5 py-3 sm:px-8 sm:py-5 font-bold  text-[#021823] bg-[white]/5 transition backdrop-blur-md shadow-lg hover:border-[#021823] hover:scale-105"
             >
               View Portfolio
               <FaArrowRight className="text-[#f7bb3b]" />
             </Link>
           </motion.div>
+
+          {/* ── Highlight stack (horizontal on mobile/tablet, floats right on xl+) ── */}
+          <HighlightStack />
         </div>
       </div>
     </section>
