@@ -10,19 +10,19 @@ export default function PortfolioHero() {
       <div
         className="absolute inset-0 opacity-[0.4] pointer-events-none"
         style={{
-          backgroundImage: 'url("/person.png")',
+          backgroundImage: 'url("/person.jpg")',
           backgroundPosition: 'center',
         }}
       />
 
-      <div
+      {/* <div
         className="absolute -top-32 -right-32 w-[480px] h-[480px] rounded-full pointer-events-none"
         style={{
           background:
             'radial-gradient(circle, rgba(212,168,67,0.12) 0%, transparent 70%)',
           filter: 'blur(70px)',
         }}
-      />
+      /> */}
 
       <div className="relative max-w-[1280px] mx-auto px-6 py-16 lg:py-20 flex flex-col gap-5">
         <div className="flex flex-col lg:items-center justify-between gap-6">

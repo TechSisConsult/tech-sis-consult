@@ -108,7 +108,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden min-h-screen">
       <Image
-        src="/hero.png"
+        src="/hero.jpg"
         alt="Hero-background-image"
         fill
         priority
