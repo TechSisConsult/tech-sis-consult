@@ -44,23 +44,6 @@ export default function WhyChooseUs() {
       id="about"
       className="relative overflow-hidden bg-white py-12 sm:py-16"
     >
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute -left-40 top-20 h-[500px] w-[500px] rounded-full bg-[#f7bb3b]/5 blur-[130px]" />
-
-        <div className="absolute right-0 bottom-0 h-[500px] w-[500px] rounded-full bg-[#021823]/5 blur-[150px]" />
-
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage: `
-              linear-gradient(to right,#021823 1px,transparent 1px),
-              linear-gradient(to bottom,#021823 1px,transparent 1px)
-            `,
-            backgroundSize: '70px 70px',
-          }}
-        />
-      </div>
-
       <div className="relative max-w-[1280px] mx-auto px-4 sm:px-6">
         <div className="grid lg:grid-cols-[1.15fr_.85fr] gap-10 sm:gap-14 lg:gap-20 items-center">
           <div ref={boxRef} className="relative">
@@ -199,7 +182,7 @@ export default function WhyChooseUs() {
             </Reveal>
 
             <Reveal delay={0.2}>
-              <p className="mt-5 sm:mt-8 max-w-xl text-[14px] leading-7 sm:text-[15px] sm:leading-8 text-slate-600 font-lobster">
+              <p className="mt-5 sm:mt-8 max-w-xl text-[14px] leading-7 sm:text-[15px] sm:leading-8 text-slate-600">
                 We combine business strategy, premium design and modern
                 technology to create websites that generate enquiries, build
                 credibility and help ambitious businesses grow around the clock.

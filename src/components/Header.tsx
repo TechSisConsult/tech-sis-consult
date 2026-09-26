@@ -15,7 +15,7 @@ const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
-  { label: 'Portfolio', href: '/portfolio' },
+  { label: 'Our Works', href: '/portfolio' },
   { label: 'FAQs', href: '/faqs' },
   { label: 'Contact', href: '/contact' },
 ];
@@ -65,7 +65,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 font-lobster">
+    <header className="fixed top-0 left-0 right-0 z-50">
       {/* ── TOP BAR ── */}
       <div className="w-full bg-[#021823]">
         <div className="max-w-[1280px] mx-auto px-6 h-9 flex items-center justify-between">

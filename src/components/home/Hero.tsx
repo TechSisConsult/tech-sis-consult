@@ -128,7 +128,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease }}
-            className="text-white font-black tracking-[-0.06em] leading-[1.08]
+            className="text- font-black tracking-[-0.06em] leading-[1.08]
               text-[32px] sm:text-[40px] md:text-[58px] lg:text-[70px]"
           >
             <span className="inline-block mx-2 sm:mx-4 align-middle">
