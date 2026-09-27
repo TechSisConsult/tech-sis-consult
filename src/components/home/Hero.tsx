@@ -118,6 +118,8 @@ export default function Hero() {
         sizes="100vw"
       />
 
+      <div className="absolute inset-0 bg-gradient-to-r from-[#021823]/90 via-[#021823]/60 to-[#f7bb3b]/30" />
+
       <div
         className="relative mx-auto flex min-h-screen max-w-[1400px] items-center px-6 pt-28 pb-10 md:px-10"
         style={{ zIndex: 2 }}
@@ -192,9 +194,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
-            className="mx-auto mt-6 max-w-2xl leading-9 rounded-xl text-[#021823] border border-white/15 bg-white/5 backdrop-blur-md px-4 py-3 shadow-lg"
+            className="mx-auto mt-6 max-w-2xl leading-9 rounded-xl text-[#ffffff]/85 border border-white/15 bg-white/5 backdrop-blur-md px-4 py-3 shadow-lg"
           >
-            <span className="text-[#f7bb3b] sm:text-[#021823]">From first</span>{' '}
+            <span className="text-[#f7bb3b] sm:text-[#ffffff]/85">
+              From first
+            </span>{' '}
             glance to loyal customer: We build the brand that carries them
             through every step.
           </motion.p>
