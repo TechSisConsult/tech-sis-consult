@@ -99,8 +99,8 @@ function HighlightStack() {
 }
 
 export default function Hero() {
-  const LINE_1 = 'Websites that Sell';
-  const LINE_2 = 'while You Sleep';
+  const LINE_1 = 'LIKE ROCKET FUEL';
+  const LINE_2 = 'FOR BUSINESS';
 
   const { displayed: text1, done: done1 } = useTypewriter(LINE_1, 60, 700);
   const { displayed: text2 } = useTypewriter(done1 ? LINE_2 : '', 55, 120);
@@ -155,7 +155,7 @@ export default function Hero() {
             </span>
 
             {/* Line 1 */}
-            <span>
+            <span className="font-extrabold">
               {text1}
               {!done1 && <Cursor visible />}
             </span>
@@ -163,7 +163,7 @@ export default function Hero() {
             <br />
 
             {/* Line 2 */}
-            <span>
+            <span className="font-extrabold">
               {text2}
               {done1 && <Cursor visible />}
             </span>
@@ -196,11 +196,9 @@ export default function Hero() {
             transition={{ delay: 0.2, duration: 0.7 }}
             className="mx-auto mt-6 max-w-2xl leading-9 rounded-xl text-[#ffffff]/85 border border-white/15 bg-white/5 backdrop-blur-md px-4 py-3 shadow-lg"
           >
-            <span className="text-[#f7bb3b] sm:text-[#ffffff]/85">
-              From first
-            </span>{' '}
-            glance to loyal customer: We build the brand that carries them
-            through every step.
+            Growing a business is hard. We listen, understand what&apos;s
+            holding you back, and build smart technology to help you work
+            better, serve customers better, and grow.
           </motion.p>
 
           {/* ── CTAs ── */}

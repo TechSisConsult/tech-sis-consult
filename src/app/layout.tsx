@@ -5,11 +5,12 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Script from 'next/script';
 import { description, title } from '@/lib/constants';
+import WhatsAppButton from '@/components/WhatsAppButton';
 
 const raleway = Raleway({
   variable: '--font-raleway',
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '900'],
 });
 
 const lobsterTwo = Lobster_Two({
@@ -80,6 +81,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <WhatsAppButton />
         <Script id="tawk-to" strategy="afterInteractive">
           {`
             var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
