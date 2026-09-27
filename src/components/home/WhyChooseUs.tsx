@@ -164,28 +164,32 @@ export default function WhyChooseUs() {
                 <span className="h-2 w-2 rounded-full bg-[#f7bb3b]" />
 
                 <span className="text-[10px] sm:text-[12px] font-bold uppercase tracking-[0.18em] sm:tracking-[0.22em] text-[#8d6c1f]">
-                  Why TechSis Consult
+                  Why Not Start Now
                 </span>
               </span>
             </Reveal>
 
             <Reveal delay={0.12}>
               <h2 className="mt-6 sm:mt-8 text-[28px] leading-[1.1] sm:text-[42px] sm:leading-[1.05] lg:text-[56px] font-black tracking-[-0.03em] sm:tracking-[-0.04em] text-[#021823]">
-                We Build Websites
+                Take Your Business
                 <br />
-                That Actually
+                To the Next Level
                 <span className="relative ml-2 sm:ml-3 inline-block text-[#f7bb3b]">
-                  Grow Businesses
+                  With Working Digital Solutions
                   <span className="absolute bottom-1 sm:bottom-2 left-0 h-2 sm:h-3 w-full rounded-full bg-[#f7bb3b]/20 -z-10" />
                 </span>
               </h2>
             </Reveal>
 
             <Reveal delay={0.2}>
-              <p className="mt-5 sm:mt-8 max-w-xl text-[14px] leading-7 sm:text-[15px] sm:leading-8 text-slate-600">
-                We combine business strategy, premium design and modern
-                technology to create websites that generate enquiries, build
-                credibility and help ambitious businesses grow around the clock.
+              <p className="mt-5 sm:mt-8 max-w-xl text-[16px] leading-7 sm:text-[15px] sm:leading-8 text-slate-600">
+                From websites, SEO, Redesign and automation to digital systems,
+                we build practical technology around your business so you can
+                work smarter and grow further.
+                {/* We combine business strategy, premium
+                design and modern technology to create solutions that generate
+                enquiries, build credibility and help ambitious businesses grow
+                around the clock. */}
               </p>
             </Reveal>
 
