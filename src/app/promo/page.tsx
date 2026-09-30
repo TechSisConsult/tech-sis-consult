@@ -222,7 +222,7 @@ ${form.message}`;
             >
               Turn Your Business Into a{' '}
               <span className="text-[#f7bb3b]">24/7 Sales Asset</span> — Without
-              Spending ₦300,000+
+              Spending the Usual Price
             </motion.h1>
 
             {/* Subheadline */}
