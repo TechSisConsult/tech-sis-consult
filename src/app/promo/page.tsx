@@ -169,7 +169,7 @@ ${form.message}`;
   }
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#021823] text-white">
+    <section className="relative min-h-screen overflow-hidden bg-[#021823] text-white pt-10">
       {/* Background glows */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -left-40 top-0 h-[500px] w-[500px] rounded-full bg-[#f7bb3b]/10 blur-[120px]" />
@@ -221,8 +221,7 @@ ${form.message}`;
               className="max-w-3xl text-[42px] font-black leading-[0.98] tracking-[-0.055em] sm:text-[56px] lg:text-[64px]"
             >
               Turn Your Business Into a{' '}
-              <span className="text-[#f7bb3b]">24/7 Sales Asset</span> — Without
-              Spending ₦300,000+
+              <span className="text-[#f7bb3b]">24/7 Sales Asset</span> — Without Breaking the Bank
             </motion.h1>
 
             {/* Subheadline */}
