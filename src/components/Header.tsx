@@ -87,7 +87,6 @@ export default function Navbar() {
       {/* ── TOP BAR ── */}
       {/* <div className="w-full bg-[#021823]">
         <div className="max-w-[1280px] mx-auto px-6 h-9 flex items-center justify-between">
-          {/* email */}
           <Link
             href="mailto:hello@techsisconsult.com"
             className="flex items-center gap-1.5 text-white/60 hover:text-[#f7bb3b] text-xs font-medium transition-colors duration-200"
@@ -96,7 +95,6 @@ export default function Navbar() {
             hello@techsisconsult.com
           </Link>
 
-          {/* socials */}
           <div className="flex items-center gap-3.5">
             {socials.map((s) => (
               <Link
