@@ -68,7 +68,7 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50">
 {/* ── PROMO BAR ── */}
 <div className="w-full bg-[#021823] text-white">
-  <div className="mx-auto flex items-center justify-center px-4 py-2 text-center text-xs sm:text-sm">
+  <div className="mx-auto flex items-center justify-center px-2 sm:px-4 py-2 text-center text-[10px] sm:text-sm">
     <Link
       href="/promo"
       className="group inline-flex items-center gap-1.5 font-medium transition-opacity hover:opacity-80"
@@ -78,7 +78,7 @@ export default function Navbar() {
       <span>50% OFF</span>
       <span className="hidden sm:inline">·</span>
       <span>3 BUSINESSES ONLY</span>
-      <span className="ml-1 font-semibold underline underline-offset-4">
+      <span className="sm:ml-1 font-semibold underline underline-offset-4">
         CLAIM YOUR SPOT →
       </span>
     </Link>
