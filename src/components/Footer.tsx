@@ -26,7 +26,7 @@ const LINKS = {
 const SOCIALS = [
   {
     label: 'Facebook',
-    href: 'https://www.facebook.com/profile.php?id=61566864326021',
+    href: 'https://www.facebook.com/share/19bPmF5TQq',
     svg: <FaFacebook className="w-3.5 h-3.5" />,
   },
   {
