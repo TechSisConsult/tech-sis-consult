@@ -91,6 +91,67 @@ const PROJECTS = [
     id: 4,
     tag: 'Real Estate Website',
     tagColor: 'bg-[#0b2d1f] text-[#d4f7d0]',
+    client: 'Alley Properties — Demo Build',
+    title:
+      'A Real Estate Showcase Concept for Alley Properties, Built to Show How Listings, Search and Admin Would Work',
+    blurb:
+      'A demo build for Alley Properties: one site across houses for sale, serviced apartments and furnishings, with search, filters and a private admin dashboard.',
+    imgDetail: '/client-sites/alley-properties-site.png',
+    metrics: [
+      { metric: '3', label: 'Listing Categories' },
+      { metric: '100%', label: 'Mobile Responsive' },
+      { metric: 'Admin', label: 'Listing Dashboard' },
+    ],
+    services: [
+      'Real Estate Website Design',
+      'Property Listing & Search Experience',
+      'Admin Dashboard for Listing Management',
+      'Lead Capture & WhatsApp Integration',
+    ],
+    stack: ['Next.js', 'Supabase', 'Property Listings', 'WhatsApp'],
+    url: 'https://alley-properties.vercel.app/',
+    featured: false,
+  },
+  {
+    id: 5,
+
+    tag: 'Car Hire Website',
+
+    tagColor: 'bg-[#0f1f33] text-[#f2df9a]',
+
+    client: 'Car Hire Company — Demo Build',
+
+    title:
+      'A Fleet Showcase Concept for a Car Hiring Company, Built to Show How Bookings, Enquiries and Fleet Management Would Work',
+
+    blurb:
+      'A demo build for a car hiring company: one site across luxury, armoured and executive vehicles, with a browsable fleet, car detail pages, enquiry form and a private admin dashboard.',
+
+    imgDetail: '/client-sites/car-hire-demo-site.png',
+
+    metrics: [
+      { metric: '3', label: 'Vehicle Categories' },
+      { metric: '100%', label: 'Mobile Responsive' },
+      { metric: 'Admin', label: 'Fleet Dashboard' },
+    ],
+
+    services: [
+      'Car Hire Website Design',
+      'Fleet Catalog & Car Detail Pages',
+      'Admin Dashboard for Fleet & Enquiry Management',
+      'Enquiry Form, WhatsApp & Click-to-Call Integration',
+    ],
+
+    stack: ['Next.js', 'Supabase', 'Fleet Listings', 'WhatsApp'],
+
+    url: 'https://fj-cab-services.vercel.app/',
+
+    featured: false,
+  },
+  {
+    id: 6,
+    tag: 'Real Estate Website',
+    tagColor: 'bg-[#0b2d1f] text-[#d4f7d0]',
     client: 'Jimoh Estates',
     title:
       'A Modern Real Estate Website Designed to Generate Property Enquiries and Build Buyer Trust',
@@ -114,7 +175,7 @@ const PROJECTS = [
     featured: true,
   },
   {
-    id: 5,
+    id: 7,
     tag: 'Developer Portfolio',
     tagColor: 'bg-[#1E3A8A] text-white',
     client: 'Personal Brand',
