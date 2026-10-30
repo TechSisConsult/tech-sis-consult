@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import Script from 'next/script';
 import { description, title } from '@/lib/constants';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import SiteChrome from '@/components/SiteChrome';
 
 const raleway = Raleway({
   variable: '--font-raleway',
@@ -78,9 +79,13 @@ export default function RootLayout({
       className={`${raleway.variable} ${lobsterTwo.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Header />
+        <SiteChrome>
+          <Header />
+        </SiteChrome>
         {children}
-        <Footer />
+        <SiteChrome>
+          <Footer />
+        </SiteChrome>
         <WhatsAppButton />
         <Script id="tawk-to" strategy="afterInteractive">
           {`
