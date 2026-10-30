@@ -18,6 +18,7 @@ const navLinks = [
   { label: 'Our Works', href: '/portfolio' },
   { label: 'FAQs', href: '/faqs' },
   { label: 'Contact', href: '/contact' },
+  { label: 'Insights', href: '/insights' },
 ];
 
 const socials = [
