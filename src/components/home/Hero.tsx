@@ -100,7 +100,7 @@ function HighlightStack() {
 
 export default function Hero() {
   const LINE_1 = 'LIKE ROCKET FUEL';
-  const LINE_2 = 'FOR BUSINESS';
+  const LINE_2 = 'FOR BUSINESSES';
 
   const { displayed: text1, done: done1 } = useTypewriter(LINE_1, 60, 700);
   const { displayed: text2 } = useTypewriter(done1 ? LINE_2 : '', 55, 120);
