@@ -1,11 +1,11 @@
 import { createClient } from '@/lib/supabase/server';
 import AdminLayout from '@/components/admin/AdminLayout';
+import DeletePostButton from '@/components/admin/DeletePostButton';
 import Link from 'next/link';
 import { formatDate } from '@/lib/insights';
 import {
   FaPlus,
   FaPenToSquare,
-  FaTrash,
   FaEye,
   FaStar,
   FaCircleCheck,
@@ -206,7 +206,10 @@ export default async function AdminPostsPage() {
                         >
                           <FaPenToSquare className="w-3.5 h-3.5" />
                         </Link>
-                        <DeleteButton postId={post.id} postTitle={post.title} />
+                        <DeletePostButton
+                          postId={post.id}
+                          postTitle={post.title}
+                        />
                       </div>
                     </td>
                   </tr>
@@ -217,38 +220,5 @@ export default async function AdminPostsPage() {
         </div>
       </div>
     </AdminLayout>
-  );
-}
-
-/* ── Inline delete button (client component) ── */
-function DeleteButton({
-  postId,
-  postTitle,
-}: {
-  postId: string;
-  postTitle: string;
-}) {
-  return (
-    <form
-      action={async () => {
-        'use server';
-        const { createClient } = await import('@/lib/supabase/server');
-        const supabase = await createClient();
-        await supabase.from('posts').delete().eq('id', postId);
-      }}
-    >
-      <button
-        type="submit"
-        onClick={(e) => {
-          if (!confirm(`Delete "${postTitle}"? This cannot be undone.`)) {
-            e.preventDefault();
-          }
-        }}
-        className="w-8 h-8 rounded-lg bg-gray-100 hover:bg-red-500 text-gray-500 hover:text-white flex items-center justify-center transition-all duration-200"
-        title="Delete post"
-      >
-        <FaTrash className="w-3 h-3" />
-      </button>
-    </form>
   );
 }
