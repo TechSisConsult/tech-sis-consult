@@ -79,6 +79,7 @@ export default function FeaturedPost({ post }: Props) {
                 </time>
                 <span aria-hidden="true">·</span>
                 <span className="flex items-center gap-1.5">
+                  ````````````````````````````````````
                   <FaClock className="w-3 h-3" />
                   {post.read_time} min read
                 </span>

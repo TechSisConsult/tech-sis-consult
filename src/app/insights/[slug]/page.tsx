@@ -224,6 +224,7 @@ export default async function PostPage({
               prose-code:text-[#d4a843] prose-code:bg-white/5 prose-code:rounded prose-code:px-1
               prose-img:rounded-2xl prose-img:shadow-xl
               prose-hr:border-white/10
+              bg-[#d4a843]/5 p-6 rounded-2xl shadow-lg shadow-[#d4a843]/10
             "
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
