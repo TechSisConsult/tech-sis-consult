@@ -41,7 +41,11 @@ export default async function InsightsPage({
     <main>
       <InsightsHeroClient activeCategory={category} />
       {category === 'All' && featured && <FeaturedPost post={featured} />}
-      <InsightsGrid posts={gridPosts} activeCategory={category} />
+      <InsightsGrid
+        posts={gridPosts}
+        activeCategory={category}
+        hasArticles={posts.length > 0}
+      />
       <InsightsCTA />
     </main>
   );

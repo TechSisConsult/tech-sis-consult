@@ -116,10 +116,17 @@ function PostCard({ post, index }: { post: Post; index: number }) {
 type Props = {
   posts: Post[];
   activeCategory: string;
+  hasArticles: boolean;
 };
 
-export default function InsightsGrid({ posts, activeCategory }: Props) {
+export default function InsightsGrid({
+  posts,
+  activeCategory,
+  hasArticles,
+}: Props) {
   if (posts.length === 0) {
+    if (hasArticles) return null;
+
     return (
       <section className="bg-[#021823] py-20">
         <div className="max-w-[1280px] mx-auto px-6 text-center">
