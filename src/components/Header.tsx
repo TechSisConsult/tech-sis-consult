@@ -23,11 +23,6 @@ const navLinks = [
 
 const socials = [
   {
-    label: 'WhatsApp',
-    href: 'https://wa.me/2347026766769?text=Hi%20TechSisConsult!%20I%27d%20like%20to%20discuss%20a%20project.',
-    icon: <FaWhatsapp className="w-4 h-4" />,
-  },
-  {
     label: 'Facebook',
     href: 'https://www.facebook.com/share/19bPmF5TQq',
     icon: <FaFacebook className="w-3.5 h-3.5" />,
